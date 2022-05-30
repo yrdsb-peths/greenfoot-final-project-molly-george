@@ -20,5 +20,7 @@ public class MyWorld extends World
         
         fish f = new fish();
         addObject(f,50,50);
+        
+        addObject(new Elephant(), 300, 200);
     }
 }
