@@ -14,10 +14,6 @@ public class Molly extends Actor
      */
     public void act()
     {
-<<<<<<< Updated upstream
-        //mdzz
-=======
-        
->>>>>>> Stashed changes
+
     }
 }
