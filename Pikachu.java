@@ -1,24 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Charmander here.
+ * Write a description of class Pikachu here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Charmander extends Actor
+public class Pikachu extends Actor
 {
     /**
-     * Act - do whatever the Charmander wants to do. This method is called whenever
+     * Act - do whatever the Pikachu wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
-        
+        // Add your action code here.
     }
     
-    public void blaze()
-    {
-        //find a image for the blaze
-    }
+    public void 
 }
