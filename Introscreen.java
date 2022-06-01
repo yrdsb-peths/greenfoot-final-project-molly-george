@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Introscreen here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Molly Wu 
+ * @version June 2022
  */
 public class Introscreen extends World
 {
@@ -15,7 +15,9 @@ public class Introscreen extends World
      */
     public Introscreen()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1280, 720, 1); 
+        // Create a new world with 853x480 cells with a cell size of 1x1 pixels.
+        super(853, 480, 1); 
+        
+        setBackground(new GreenfootImage("intropageee.jpg"));
     }
 }
