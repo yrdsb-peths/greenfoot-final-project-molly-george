@@ -18,8 +18,8 @@ public class IntroLine extends Actor
         if(Greenfoot.mouseClicked(this))
         {
             is.removeObject(this);
-            IntroLine introii = new IntroLine();
-            is.addObject(introii, 70, 600);
+            PlayerFirstLine playerFirstLine = new PlayerFirstLine();
+            is.addObject(playerFirstLine, 70, 600);
         }
     }
 }
