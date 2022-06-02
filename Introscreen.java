@@ -19,5 +19,7 @@ public class Introscreen extends World
         super(853, 480, 1); 
         
         setBackground(new GreenfootImage("intropageee.jpg"));
+        Introi introi = new Introi();
+        addObject(introi, 300, 50);
     }
 }

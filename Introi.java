@@ -18,7 +18,8 @@ public class Introi extends Actor
         if(Greenfoot.mouseClicked(this))
         {
             i.removeObject(this);
-            
+            Introii introii = new Introii();
+            addObject(introii, 70, 600);
         }
     }
 }
