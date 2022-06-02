@@ -17,7 +17,7 @@ public class StartLabel extends Actor
     {
         if(Greenfoot.mouseClicked(this))
         {
-            Introscreen introscreen = new Introscreen();
+            IntroScreen introscreen = new IntroScreen();
             Greenfoot.setWorld(introscreen);
         }
     }

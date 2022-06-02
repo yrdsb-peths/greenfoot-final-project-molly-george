@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Introi extends Actor
+public class IntroLine extends Actor
 {
     /**
      * Act - do whatever the Introi wants to do. This method is called whenever
@@ -14,12 +14,12 @@ public class Introi extends Actor
      */
     public void act()
     {
-        Introscreen i = (Introscreen) getWorld();
+        IntroScreen is = (IntroScreen) getWorld();
         if(Greenfoot.mouseClicked(this))
         {
-            i.removeObject(this);
-            Introii introii = new Introii();
-            addObject(introii, 70, 600);
+            is.removeObject(this);
+            IntroLine introii = new IntroLine();
+            is.addObject(introii, 70, 600);
         }
     }
 }

@@ -6,20 +6,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Molly Wu 
  * @version June 2022
  */
-public class Introscreen extends World
+public class IntroScreen extends World
 {
 
     /**
      * Constructor for objects of class Introscreen.
      * 
      */
-    public Introscreen()
+    public IntroScreen()
     {    
         // Create a new world with 853x480 cells with a cell size of 1x1 pixels.
         super(853, 480, 1); 
         
         setBackground(new GreenfootImage("intropageee.jpg"));
-        Introi introi = new Introi();
-        addObject(introi, 300, 50);
+        IntroLine introLine = new IntroLine();
+        addObject(introLine, 300, 50);
     }
 }

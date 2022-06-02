@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=StartLabel
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ StartLabel\ here.\r\n\ \r\n\ @author\ Molly\ Wu\ \r\n\ @version\ May\ 2022\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ StartLabel\ here.\n\ \n\ @author\ Molly\ Wu\ \n\ @version\ May\ 2022\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ StartLabel\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n\ when\ the\ player\ clicks\ start,\ the\ title\ screen\ will\ transfer\ to\ the\ intro\ screen\r\n
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ StartLabel\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n\ when\ the\ player\ clicks\ start,\ the\ title\ screen\ will\ transfer\ to\ the\ intro\ screen\n
 numComments=2
