@@ -14,6 +14,12 @@ public class PlayerSecondLine extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        IntroScreen in = (IntroScreen) getWorld();
+        if(Greenfoot.mouseClicked(this))
+        {
+            in.removeObject(this);
+            BackgroundInfo2 backgroundInfo2 = new BackgroundInfo2();
+            in.addObject(backgroundInfo2, 300, 80);
+        }
     }
 }

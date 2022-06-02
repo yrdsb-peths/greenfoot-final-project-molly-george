@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class BackgroundInfo here.
+ * Write a description of class BackgroundInfo2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BackgroundInfo extends Actor
+public class BackgroundInfo2 extends Actor
 {
     /**
-     * Act - do whatever the BackgroundInfo wants to do. This method is called whenever
+     * Act - do whatever the BackgroundInfo2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
@@ -18,8 +18,8 @@ public class BackgroundInfo extends Actor
         if(Greenfoot.mouseClicked(this))
         {
             ii.removeObject(this);
-            PlayerSecondLine playerSecondLine = new PlayerSecondLine();
-            ii.addObject(playerSecondLine, 300, 450);
+            PlayerThirdLine playerThirdLine = new PlayerThirdLine();
+            ii.addObject(playerThirdLine, 500, 400);
         }
     }
 }
