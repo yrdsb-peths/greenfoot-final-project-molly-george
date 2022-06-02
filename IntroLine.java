@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Introi here.
+ * Write a description of class IntroLine here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -19,7 +19,7 @@ public class IntroLine extends Actor
         {
             is.removeObject(this);
             PlayerFirstLine playerFirstLine = new PlayerFirstLine();
-            is.addObject(playerFirstLine, 70, 600);
+            is.addObject(playerFirstLine, 170, 400);
         }
     }
 }
