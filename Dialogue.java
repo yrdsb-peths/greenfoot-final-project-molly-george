@@ -10,6 +10,7 @@ public class Dialogue extends Actor
 {
     GreenfootImage [] image = new GreenfootImage[6];
     int [][] coordinate = new int[6][2];
+    boolean ifNextButtonClicked = false;
     public  int idx=0;
     public Dialogue()
     {
@@ -27,11 +28,11 @@ public class Dialogue extends Actor
          coordinate[1][0] = 170;
          coordinate[1][1] = 400;
          
-         coordinate[2][0] = 400;
-         coordinate[2][1] = 350;
+         coordinate[2][0] = 370;
+         coordinate[2][1] = 330;
          
          coordinate[3][0] = 300;
-         coordinate[3][1] = 450;
+         coordinate[3][1] = 400;
          
          coordinate[4][0] = 300;
          coordinate[4][1] = 80;
@@ -41,6 +42,8 @@ public class Dialogue extends Actor
          
          setImage(image[idx]);
          setLocation(coordinate[idx][0],coordinate[idx][1]);
+         
+         
     }
     
     /**
@@ -49,12 +52,13 @@ public class Dialogue extends Actor
      */
     public void act()
     {
-        if(Greenfoot.mouseClicked(this)){
+        if(ifNextButtonClicked){
             if(!(idx+1>5)){
             idx++;
             }
             setImage(image[idx]);
             setLocation(coordinate[idx][0],coordinate[idx][1]);
+            ifNextButtonClicked = false;
         }
     }
 }
