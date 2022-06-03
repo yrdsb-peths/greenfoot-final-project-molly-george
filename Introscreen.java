@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class IntroScreen extends World
 {
-
+    GreenfootImage image;
+    Dialogue dialogue;
     /**
      * Constructor for objects of class Introscreen.
      * 
@@ -19,7 +20,13 @@ public class IntroScreen extends World
         super(853, 480, 1); 
         
         setBackground(new GreenfootImage("intropageee.jpg"));
-        IntroLine introLine = new IntroLine();
-        addObject(introLine, 300, 50);
+        
+        dialogue = new Dialogue();
+        addObject(dialogue, 300, 50);
+    }
+    
+    public void act()
+    {
+        
     }
 }

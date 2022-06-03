@@ -17,5 +17,4 @@ public class Pikachu extends Actor
         // Add your action code here.
     }
     
-    public void 
 }
