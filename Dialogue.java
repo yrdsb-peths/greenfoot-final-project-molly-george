@@ -37,7 +37,7 @@ public class Dialogue extends Actor
          coordinate[4][0] = 300;
          coordinate[4][1] = 80;
          
-         coordinate[5][0] = 500;
+         coordinate[5][0] = 470;
          coordinate[5][1] = 400;
          
          setImage(image[idx]);
