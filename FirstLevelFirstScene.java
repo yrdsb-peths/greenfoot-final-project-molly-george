@@ -1,23 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Introscreen here.
+ * Write a description of class FirstLevelFirstScene here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Introscreen extends World
+public class FirstLevelFirstScene extends FirstLevel
 {
 
     /**
-     * Constructor for objects of class Introscreen.
+     * Constructor for objects of class FirstLevelFirstScene.
      * 
      */
-    public Introscreen()
+    public FirstLevelFirstScene()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         
-        super(853, 480, 1); 
-        setBackground(new GreenfootImage("intropageee.jpg"));
     }
 }
