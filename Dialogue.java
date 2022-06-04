@@ -23,7 +23,7 @@ public class Dialogue extends Actor
          image[5] = new GreenfootImage("playerline3.jpg");
          
          coordinate[0][0] = 300;
-         coordinate[0][1] = 50;
+         coordinate[0][1] = 49;
          
          coordinate[1][0] = 170;
          coordinate[1][1] = 400;
