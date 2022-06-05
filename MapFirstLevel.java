@@ -24,8 +24,8 @@ public class MapFirstLevel extends World
     {
         if(Greenfoot.mouseClicked(firstBattle))
         {
-            FirstLevel firstLevel = new FirstLevel();
-            Greenfoot.setWorld(firstLevel);
+            Store store = new Store();
+            Greenfoot.setWorld(store);
         }
     }
 }
