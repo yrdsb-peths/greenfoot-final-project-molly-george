@@ -9,12 +9,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MapFirstLevel extends World
 {
-
+    ToFirstBattle firstBattle = new ToFirstBattle();
     
     public MapFirstLevel()
     {    
         super(1280, 720, 1); 
         setBackground("pokemon map 1.jpg");
         
+        
+        addObject(firstBattle, 250, 400);
+    }
+    
+    public void act()
+    {
+        if(Greenfoot.mouseClicked(firstBattle))
+        {
+            FirstLevel firstLevel = new FirstLevel();
+            Greenfoot.setWorld(firstLevel);
+        }
     }
 }
