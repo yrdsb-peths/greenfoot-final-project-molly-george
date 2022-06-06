@@ -19,4 +19,14 @@ public class Store extends World
         super(1280, 720, 1); 
         
     }
+    
+    public void act()
+    {
+        
+        if(Greenfoot.isKeyDown("space"))
+        {
+            FirstLevel firstLevel = new FirstLevel();
+            Greenfoot.setWorld(firstLevel);
+        }
+    }
 }
