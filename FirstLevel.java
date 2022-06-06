@@ -8,10 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class FirstLevel extends World
 {
-    public double pikachuX = 650;
-    public double pikachuY = 650;
-    public double x = 650;
-    public double y = 150;
+    public int pikachuX = 650;
+    public int pikachuY = 650;
+    
 
     /**
      * Constructor for objects of class FirstLevel.
@@ -23,6 +22,6 @@ public class FirstLevel extends World
         super(1280, 720, 1); 
         
         Pikachu pikachu = new Pikachu();
-        addObject(pikachu, (int)pikachuX, (int)pikachuY);
+        addObject(pikachu, pikachuX, pikachuY);
     }
 }

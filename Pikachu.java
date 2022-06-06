@@ -24,7 +24,22 @@ public class Pikachu extends Actor
     public void act()
     {
         movement();
-        
+        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w"))
+        {
+            setRotation(-45);
+        }
+        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
+        {
+            setRotation(-135);
+        }
+        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("w"))
+        {
+            setRotation(45);
+        }
+        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
+        {
+            setRotation(135);
+        }
     }
     
     
@@ -42,31 +57,29 @@ public class Pikachu extends Actor
         {
             if(Greenfoot.isKeyDown("a"))
             {
-                move(-4);
-                f.pikachuX -= 4;
-                setRotation(180);
-
+                setRotation(270);
+                setLocation(f.pikachuX -= 4, f.pikachuY );
             }
         
             if(Greenfoot.isKeyDown("d"))
             {
-                move(4);
-                f.pikachuX += 4;
-                setRotation(0);
+                setRotation(90);
+                setLocation(f.pikachuX += 4, f.pikachuY );
+                
                 
             }
         
             if(Greenfoot.isKeyDown("w"))
             {
-                setLocation((int)f.pikachuX, (int)(f.pikachuY -= 4));
-                setRotation(90);
+                setRotation(0);
+                setLocation(f.pikachuX, f.pikachuY -=4);
                 
             }
             
             if(Greenfoot.isKeyDown("s"))
             {
-                setLocation((int)f.pikachuX, (int)(f.pikachuY += 4));
-                setRotation(270);
+                setRotation(180);
+                setLocation(f.pikachuX , f.pikachuY += 4);
                 
             }
         }
