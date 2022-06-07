@@ -8,14 +8,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Store2 extends World
 {
-
-    /**
-     * Constructor for objects of class Store2.
-     * 
-     */
+    Label select = new Label("This two Pokemons will be the Pokemons you start with!",50);
+    Label money = new Label("Now you have 50 coins to ",50);
+    
+    
     public Store2()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(1280, 720, 1); 
+        
+        Bulbasaur b = new Bulbasaur();
+        //addObject
+        
+        Pikachu p = new Pikachu();
+        //addObject
+        
+        Charmander c = new Charmander();
     }
 }

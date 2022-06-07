@@ -8,15 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Store1 extends World
 {
-
-    /**
-     * Constructor for objects of class FirstLevel.
-     * 
-     */
+    Label select = new Label("This two Pokemons will be the Pokemons you start with!",50);
+    
     public Store1()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1280, 720, 1); 
+        
+        Pikachu p = new Pikachu();
+        addObject(p,400,300);
+        
+        Charmander c = new Charmander();
+        addObject(c,600,300);
+        
+        addObject(select,500,500);
+        
+        GeneralInformation.character[0] = "P";
+        GeneralInformation.character[1] = "C";
         
     }
     
