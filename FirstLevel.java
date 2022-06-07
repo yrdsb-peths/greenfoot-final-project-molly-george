@@ -46,7 +46,7 @@ public class FirstLevel extends World
         }
         if(enemy1HP == 0 && enemy2HP == 0 && enemy3HP == 0)
         {
-              //send out you win   
+              //send out you win  and click to move to store
         }  
         
     }

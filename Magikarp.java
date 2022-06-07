@@ -1,33 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Pikachu here.
+ * Write a description of class Magikarp here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Pikachu extends Characters
+public class Magikarp extends Characters
 {
-    
-    public int pikachuX;
-    public int pikachuY;
-    
-    public Pikachu()
-    {
-        setImage(new GreenfootImage("arrow.png"));
-        
-    }
+    public int MagikarpX;
+    public int MagikarpY;
     
     
     public void act()
     {
-        pikachuX = getX();
-        pikachuY = getY();
-        movement();
-        
+        int MagikarpX = getX();
+        int MagikarpY = getY();
     }
-    
-    
     
     public void movement()
     {
@@ -41,27 +30,27 @@ public class Pikachu extends Characters
             if(Greenfoot.isKeyDown("a"))
             {
                 setRotation(270);
-                setLocation(pikachuX -= 4, pikachuY);
+                setLocation(MagikarpX -= 4, MagikarpY);
             }
             
             if(Greenfoot.isKeyDown("d"))
             {
                 setRotation(90);
-                setLocation(pikachuX += 4, pikachuY);    
+                setLocation(MagikarpX += 4, MagikarpY);    
                     
             }
             
             if(Greenfoot.isKeyDown("w"))
             {
                 setRotation(0);
-                setLocation(pikachuX , pikachuY -= 4);
+                setLocation(MagikarpX , MagikarpY -= 4);
                     
             }
                 
             if(Greenfoot.isKeyDown("s"))
             {
                 setRotation(180);
-                setLocation(pikachuX , pikachuY += 4);
+                setLocation(MagikarpX , MagikarpY += 4);
                     
             }
         
