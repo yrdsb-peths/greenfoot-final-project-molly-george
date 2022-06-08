@@ -16,6 +16,7 @@ public class Store2 extends World
     UpGradeSecond1 s1 = new UpGradeSecond1();
     UpGradeSecond2 s2 = new UpGradeSecond2();
     UpGradeSecond3 s3 = new UpGradeSecond3();
+    Label toSecondLevel = new Label("click here go to second level",30);
     
     public Store2()
     {    
@@ -29,13 +30,34 @@ public class Store2 extends World
     {
         if(Greenfoot.mouseClicked(b))
         {
-            GeneralInformation.character[0] = "Bulbasaur";
+            GeneralInformation.character[0] = "Pikachu";
         }
         if(Greenfoot.mouseClicked(p))
         {
             GeneralInformation.character[1] = "Bulbasaur";
         }
-        
+        if(Greenfoot.mouseClicked(c))
+        {
+            GeneralInformation.character[1] = "Charmander";
+        }
+        //slect more than two will overwrite the second one
+        if(Greenfoot.mouseClicked(s1))
+        {
+            //enhance 
+        }
+        if(Greenfoot.mouseClicked(s2))
+        {
+            //enhance 
+        }
+        if(Greenfoot.mouseClicked(s3))
+        {
+            //enhance 
+        }
+        if(Greenfoot.mouseClicked(toSecondLevel))
+        {
+            SecondLevel s = new SecondLevel();
+            Greenfoot.setWorld(s);
+        }
     }
     
     

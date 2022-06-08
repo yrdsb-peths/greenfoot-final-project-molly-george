@@ -14,8 +14,33 @@ public class ThirdLevel extends World
      * 
      */
     public ThirdLevel()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+    {   
+        super(1280, 720, 1); 
+        
+        if(GeneralInformation.character[0].equals("Pikachu"))
+        {
+            Pikachu p = new Pikachu();
+            //addObject
+        }
+        if(GeneralInformation.character[1].equals("Charmander"))
+        {
+            Charmander c = new Charmander();
+            //addObject
+        }
+        if(GeneralInformation.character[1].equals("Bulbasaur"))
+        {
+            Bulbasaur b = new Bulbasaur();
+            //addObject
+        }
+        if(GeneralInformation.character[1].equals("Lapras"))
+        {
+            Lapras l = new Lapras();
+            //addObject
+        }
+        if(GeneralInformation.character[1].equals("Squirtle"))
+        {
+            Squirtle s = new Squirtle();
+            //addObject
+        }
     }
 }

@@ -8,14 +8,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MapThirdLevel extends World
 {
-
-    /**
-     * Constructor for objects of class MapThirdLevel.
-     * 
-     */
+    ToFirstBattle firstBattle = new ToFirstBattle();
+    
     public MapThirdLevel()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(1280, 720, 1); 
+    }
+    
+    public void act()
+    {
+        if(Greenfoot.mouseClicked(firstBattle))
+        {
+            Store1 store = new Store1();
+            Greenfoot.setWorld(store);
+        }
     }
 }
