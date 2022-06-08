@@ -1,23 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * This will be the place for the player to choose the level they go to, in
- * this case, it is the first level.
+ * Write a description of class MapThirdLevel here.
  * 
- * @George Lu && Molly Wu 
+ * @author (your name) 
  * @version (a version number or a date)
  */
-public class MapFirstLevel extends World
+public class MapThirdLevel extends World
 {
     ToFirstBattle firstBattle = new ToFirstBattle();
     
-    public MapFirstLevel()
+    public MapThirdLevel()
     {    
         super(1280, 720, 1); 
-        setBackground("pokemon map 1.jpg");
-        
-        
-        addObject(firstBattle, 250, 400);
     }
     
     public void act()

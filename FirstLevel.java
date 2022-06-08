@@ -8,9 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class FirstLevel extends World
 {
-    public int pikachuX = 650;
-    public int pikachuY = 650;
     
+    public Label nextMap = new Label("you passed this level, now click me get to the store!", 50); 
 
     /**
      * Constructor for objects of class FirstLevel.
@@ -18,10 +17,21 @@ public class FirstLevel extends World
      */
     public FirstLevel()
     {    
-        
         super(1280, 720, 1); 
         
-        Pikachu pikachu = new Pikachu();
-        addObject(pikachu, pikachuX, pikachuY);
+        Pikachu p = new Pikachu();
+        addObject(p, 650, 650);
+        
+        Charmander c = new Charmander();
+        addObject(c, 650, 650);
+        
+        
     }
+    
+    public void act()
+    {
+        
+    }  
+        
+    
 }
