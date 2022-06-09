@@ -8,14 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GeneralInformation extends Actor
 {
-    public GreenfootImage[] changeBackground = new GreenfootImage[9];
+    public static GreenfootImage[] changeBackground = new GreenfootImage[9];
     public static String[] character = new String[2];
+    public int c = 0;
     
     public void act()
     {
-        for(int i = 0; i < 9; i++)
+        for(c = 0; c < 9; c++)
         {
-            changeBackground[i] = 
+            changeBackground[c] = "background" + c;
         }
     }
 }
