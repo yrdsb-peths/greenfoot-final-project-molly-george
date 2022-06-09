@@ -8,24 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class NormalAttack extends Actor
 {
-    /**
-     * Act - do whatever the NormalAttack wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act()
+    public NormalAttack(GreenfootImage image, int x)
     {
-        // Add your action code here.
+        setImage(image);
+        setRotation(x);
     }
     
-    public void normalAttack(int x)
+    
+    public void act()
     {
-        setRotation(x);
         move(4);
-        
-        
-        
-        
-        
-        
     }
+    
+    
 }
