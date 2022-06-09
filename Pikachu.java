@@ -8,14 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Pikachu extends Characters
 {
-    
     public int pikachuX;
     public int pikachuY;
+    public int PikachuHP = 65;
     
     public Pikachu()
     {
         setImage(new GreenfootImage("arrow.png"));
-        
+        int PikachuHP = 65;
     }
     
     
@@ -86,4 +86,13 @@ public class Pikachu extends Characters
         }
     
     }
+    
+    public void lightning()
+    {
+        if(isTouching(Rowlet.class))
+        {
+            
+        }
+    }
+    
 }

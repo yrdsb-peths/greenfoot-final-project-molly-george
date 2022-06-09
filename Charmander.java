@@ -10,6 +10,7 @@ public class Charmander extends Characters
 {
     public int CharmanderX;
     public int CharmanderY;
+    public int CharmanderHP = 65;
     
     public void act()
     {
