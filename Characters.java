@@ -74,8 +74,5 @@ public class Characters extends Actor
     
     }
     
-    public void normalAttack()
-    {
-        
-    }
+    
 }
