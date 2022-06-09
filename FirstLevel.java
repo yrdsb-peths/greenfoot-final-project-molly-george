@@ -25,13 +25,25 @@ public class FirstLevel extends World
         Charmander c = new Charmander();
         addObject(c, 650, 650);
         
+        Bulbasaur b = new Bulbasaur();
+        addObject(b, 650, 650);
+        
+        Rowlet r = new Rowlet();
+        addObject(r, 650, 650);
+        
+        Eevee e = new Eevee();
+        addObject(e, 650, 650);
         
     }
     
     public void act()
     {
-        
+        setImage(GeneralInformation.changeBackground[i]);
     }  
+    
+    public void changeBackground()
+    {
         
+    }
     
 }

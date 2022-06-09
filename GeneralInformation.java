@@ -13,6 +13,9 @@ public class GeneralInformation extends Actor
     
     public void act()
     {
-        // Add your action code here.
+        for(int i = 0; i < 9; i++)
+        {
+            changeBackground[i] = 
+        }
     }
 }

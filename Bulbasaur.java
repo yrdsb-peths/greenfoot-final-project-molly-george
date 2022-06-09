@@ -23,6 +23,8 @@ public class Bulbasaur extends Characters
         movement();
     }
     
+    
+    
     public void movement()
     {
         

@@ -15,4 +15,67 @@ public class Characters extends Actor
     {
         // Add your action code here.
     }
+    
+    public void movement(int x, int y)
+    {
+        
+        if(isTouching(Forest.class))
+        {
+                
+        }
+        else if(!isTouching(Forest.class))
+        {
+            if(Greenfoot.isKeyDown("a"))
+            {
+                setRotation(270);
+                setLocation(x -= 4, y);
+            }
+            
+            if(Greenfoot.isKeyDown("d"))
+            {
+                setRotation(90);
+                setLocation(x += 4, y);    
+                    
+            }
+            
+            if(Greenfoot.isKeyDown("w"))
+            {
+                setRotation(0);
+                setLocation(x , y -= 4);
+                    
+            }
+                
+            if(Greenfoot.isKeyDown("s"))
+            {
+                setRotation(180);
+                setLocation(x , y += 4);
+                    
+            }
+        
+        
+        }   
+        
+        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w"))
+        {
+            setRotation(-45);
+        }
+        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
+        {
+            setRotation(-135);
+        }
+        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("w"))
+        {
+            setRotation(45);
+        }
+        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
+        {
+            setRotation(135);
+        }
+    
+    }
+    
+    public void normalAttack()
+    {
+        
+    }
 }
