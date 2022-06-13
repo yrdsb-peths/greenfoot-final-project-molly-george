@@ -38,7 +38,7 @@ public class FirstLevel extends World
     
     public void act()
     {
-        setImage(GeneralInformation.changeBackground[GeneralInformation.c]);
+        
     }  
     
     public void changeBackground()
