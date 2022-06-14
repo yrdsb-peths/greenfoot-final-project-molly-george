@@ -16,7 +16,7 @@ public class Characters extends Actor
         // Add your action code here.
     }
     
-    public void movement(int x, int y)
+    public void movementA(int x, int y)
     {
         
         if(isTouching(Forest.class))
@@ -68,6 +68,64 @@ public class Characters extends Actor
             setRotation(45);
         }
         if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
+        {
+            setRotation(135);
+        }
+    
+    }
+    
+    public void movementB(int x, int y)
+    {
+        
+        if(isTouching(Forest.class))
+        {
+                
+        }
+        else if(!isTouching(Forest.class))
+        {
+            if(Greenfoot.isKeyDown("left"))
+            {
+                setRotation(270);
+                setLocation(x -= 4, y);
+            }
+            
+            if(Greenfoot.isKeyDown("right"))
+            {
+                setRotation(90);
+                setLocation(x += 4, y);    
+                    
+            }
+            
+            if(Greenfoot.isKeyDown("up"))
+            {
+                setRotation(0);
+                setLocation(x , y -= 4);
+                    
+            }
+                
+            if(Greenfoot.isKeyDown("down"))
+            {
+                setRotation(180);
+                setLocation(x , y += 4);
+                    
+            }
+        
+        
+        }   
+        
+        if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("up"))
+        {
+            setRotation(-45);
+        }
+        if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("down"))
+        {
+            setRotation(-135);
+        }
+        if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("up"))
+        {
+            setRotation(45);
+        }
+        if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("down"))
         {
             setRotation(135);
         }

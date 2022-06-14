@@ -23,7 +23,7 @@ public class Pikachu extends Characters
     {
         pikachuX = getX();
         pikachuY = getY();
-        movement(pikachuX, pikachuY);
+        movementA(pikachuX, pikachuY);
         
     }
     

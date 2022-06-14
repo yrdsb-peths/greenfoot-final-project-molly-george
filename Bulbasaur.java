@@ -20,7 +20,7 @@ public class Bulbasaur extends Characters
     {
         int BulbasaurX = getX();
         int BulbasaurY = getY();
-        movement();
+        movementA(BulbasaurX, BulbasaurY);
     }
     
     

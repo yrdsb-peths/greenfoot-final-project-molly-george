@@ -15,13 +15,9 @@ public class Eevee extends Characters
     {
         int EeveeX = getX();
         int EeveeY = getY();
+        movementB(EeveeX, EeveeY);
     }
     
     
-    public void movement()
-    {
-        
-        
     
-    }
 }

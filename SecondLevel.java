@@ -14,21 +14,6 @@ public class SecondLevel extends World
     {  
         super(1280, 720, 1); 
         
-        if(GeneralInformation.character[0].equals("Pikachu"))
-        {
-            Pikachu p = new Pikachu();
-            //addObject
-        }
-        if(GeneralInformation.character[1].equals("Charmander"))
-        {
-            Charmander c = new Charmander();
-            //addObject
-        }
-        if(GeneralInformation.character[1].equals("Bulbasaur"))
-        {
-            Bulbasaur b = new Bulbasaur();
-            //addObject
-        }
     }
     
     public void act()

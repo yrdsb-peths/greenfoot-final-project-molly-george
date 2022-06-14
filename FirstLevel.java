@@ -19,11 +19,7 @@ public class FirstLevel extends World
     {    
         super(1280, 720, 1); 
         
-        Pikachu p = new Pikachu();
-        addObject(p, 650, 650);
         
-        Charmander c = new Charmander();
-        addObject(c, 650, 650);
         
         Bulbasaur b = new Bulbasaur();
         addObject(b, 650, 650);
@@ -43,7 +39,7 @@ public class FirstLevel extends World
     
     public void changeBackground()
     {
-        
+            
     }
     
 }
