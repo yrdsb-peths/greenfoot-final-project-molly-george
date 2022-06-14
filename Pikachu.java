@@ -14,7 +14,7 @@ public class Pikachu extends Characters
     
     public Pikachu()
     {
-        setImage(new GreenfootImage("arrow.png"));
+        
         int PikachuHP = 65;
     }
     
