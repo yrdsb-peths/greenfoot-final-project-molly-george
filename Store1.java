@@ -15,12 +15,15 @@ public class Store1 extends World
         super(1280, 720, 1); 
         
         Pikachu p = new Pikachu();
-        addObject(p,400,300);
+        addObject(p,330,200);
         
         Charmander c = new Charmander();
-        addObject(c,600,300);
+        addObject(c,600,200);
         
-        addObject(select,500,500);
+        addObject(select,640,35);
+        
+        ToMap t = new ToMap();
+        addObject(t,1170, 675);
         
         GeneralInformation.character[0] = "P";
         GeneralInformation.character[1] = "C";
@@ -30,10 +33,6 @@ public class Store1 extends World
     public void act()
     {
         
-        if(Greenfoot.isKeyDown("space"))
-        {
-            FirstLevel firstLevel = new FirstLevel();
-            Greenfoot.setWorld(firstLevel);
-        }
+        
     }
 }
