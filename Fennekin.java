@@ -10,69 +10,36 @@ public class Fennekin extends Characters
 {
     public int FennekinX;
     public int FennekinY;
+    public static int fHP = 45;
+    public static boolean enemy = true;
     
+    public Fennekin()
+    {
+        fHP = 45;
+    }
     
     public void act()
     {
         int FennekinX = getX();
         int FennekinY = getY();
+        if(enemy != true)
+        {
+            movementA(FennekinX, FennekinY);
+        }
+        else
+        {
+            if(isTouching(Attack1.class))
+            {
+                removeTouching(Attack1.class);
+                fHP -= 4;
+            }
+        }
     }
     
     public void movement()
     {
         
-        if(isTouching(Forest.class))
-        {
-                
-        }
-        else if(!isTouching(Forest.class))
-        {
-            if(Greenfoot.isKeyDown("a"))
-            {
-                setRotation(270);
-                setLocation(FennekinX -= 4, FennekinY);
-            }
-            
-            if(Greenfoot.isKeyDown("d"))
-            {
-                setRotation(90);
-                setLocation(FennekinX += 4, FennekinY);    
-                    
-            }
-            
-            if(Greenfoot.isKeyDown("w"))
-            {
-                setRotation(0);
-                setLocation(FennekinX , FennekinY -= 4);
-                    
-            }
-                
-            if(Greenfoot.isKeyDown("s"))
-            {
-                setRotation(180);
-                setLocation(FennekinX , FennekinY += 4);
-                    
-            }
         
-        
-        }   
-        
-        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w"))
-        {
-            setRotation(-45);
-        }
-        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
-        {
-            setRotation(-135);
-        }
-        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("w"))
-        {
-            setRotation(45);
-        }
-        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
-        {
-            setRotation(135);
-        }
     
     }
 }

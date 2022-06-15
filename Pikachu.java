@@ -8,14 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Pikachu extends Characters
 {
-    
-    public int pikachuX;
-    public int pikachuY;
+    public static int pikachuX;
+    public static int pikachuY;
+    public int pHP = 65;
+    private SimpleTimer timer = new SimpleTimer();
     
     public Pikachu()
     {
-        setImage(new GreenfootImage("arrow.png"));
-        
+        int PikachuHP = 65;
     }
     
     
@@ -23,67 +23,22 @@ public class Pikachu extends Characters
     {
         pikachuX = getX();
         pikachuY = getY();
-        movement();
+        movementA(pikachuX, pikachuY);
         
     }
     
     
     
-    public void movement()
+    
+    
+    
+    
+    public void lightning()
     {
-        
-        if(isTouching(Forest.class))
+        if(isTouching(Rowlet.class))
         {
-                
-        }
-        else if(!isTouching(Forest.class))
-        {
-            if(Greenfoot.isKeyDown("a"))
-            {
-                setRotation(270);
-                setLocation(pikachuX -= 4, pikachuY);
-            }
             
-            if(Greenfoot.isKeyDown("d"))
-            {
-                setRotation(90);
-                setLocation(pikachuX += 4, pikachuY);    
-                    
-            }
-            
-            if(Greenfoot.isKeyDown("w"))
-            {
-                setRotation(0);
-                setLocation(pikachuX , pikachuY -= 4);
-                    
-            }
-                
-            if(Greenfoot.isKeyDown("s"))
-            {
-                setRotation(180);
-                setLocation(pikachuX , pikachuY += 4);
-                    
-            }
-        
-        
-        }   
-        
-        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w"))
-        {
-            setRotation(-45);
         }
-        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
-        {
-            setRotation(-135);
-        }
-        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("w"))
-        {
-            setRotation(45);
-        }
-        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
-        {
-            setRotation(135);
-        }
-    
     }
+    
 }

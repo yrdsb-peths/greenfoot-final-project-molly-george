@@ -9,18 +9,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Store1 extends World
 {
     Label select = new Label("This two Pokemons will be the Pokemons you start with!",50);
+    ToMap t = new ToMap();
     
     public Store1()
     {    
         super(1280, 720, 1); 
         
         Pikachu p = new Pikachu();
-        addObject(p,400,300);
+        addObject(p,330,200);
         
         Charmander c = new Charmander();
-        addObject(c,600,300);
+        addObject(c,600,200);
         
-        addObject(select,500,500);
+        addObject(select,640,35);
+        addObject(t,1170, 675);
         
         GeneralInformation.character[0] = "P";
         GeneralInformation.character[1] = "C";
@@ -29,11 +31,11 @@ public class Store1 extends World
     
     public void act()
     {
-        
-        if(Greenfoot.isKeyDown("space"))
+        if(t.click == true)
         {
-            FirstLevel firstLevel = new FirstLevel();
-            Greenfoot.setWorld(firstLevel);
+            FirstLevel f = new FirstLevel();
+            Greenfoot.setWorld(f);
         }
+        
     }
 }

@@ -10,69 +10,30 @@ public class Torchic extends Characters
 {
     public int TorchicX;
     public int TorchicY;
+    public static int tHP = 45;
+    public static boolean enemy = true;
+    
+    public Torchic()
+    {
+        tHP = 45;
+    }
     
     
     public void act()
     {
         int TorchicX = getX();
         int TorchicY = getY();
+        if(isTouching(Attack1.class))
+        {
+            removeTouching(Attack1.class);
+            tHP -= 4;
+        }
     }
     
     public void movement()
     {
         
-        if(isTouching(Forest.class))
-        {
-                
-        }
-        else if(!isTouching(Forest.class))
-        {
-            if(Greenfoot.isKeyDown("a"))
-            {
-                setRotation(270);
-                setLocation(TorchicX -= 4, TorchicY);
-            }
-            
-            if(Greenfoot.isKeyDown("d"))
-            {
-                setRotation(90);
-                setLocation(TorchicX += 4, TorchicY);    
-                    
-            }
-            
-            if(Greenfoot.isKeyDown("w"))
-            {
-                setRotation(0);
-                setLocation(TorchicX , TorchicY -= 4);
-                    
-            }
-                
-            if(Greenfoot.isKeyDown("s"))
-            {
-                setRotation(180);
-                setLocation(TorchicX , TorchicY += 4);
-                    
-            }
         
-        
-        }   
-        
-        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w"))
-        {
-            setRotation(-45);
-        }
-        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
-        {
-            setRotation(-135);
-        }
-        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("w"))
-        {
-            setRotation(45);
-        }
-        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
-        {
-            setRotation(135);
-        }
     
     }
 }

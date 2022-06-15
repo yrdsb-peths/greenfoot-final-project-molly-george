@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class UpGradeSecond3 here.
+ * Write a description of class UpGrade here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class UpGradeSecond3 extends NewLabel
+public class UpGrade extends Actor
 {
     /**
-     * Act - do whatever the UpGradeSecond3 wants to do. This method is called whenever
+     * Act - do whatever the UpGrade wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()

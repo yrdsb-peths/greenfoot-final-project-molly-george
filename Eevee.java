@@ -10,69 +10,33 @@ public class Eevee extends Characters
 {
     public int EeveeX;
     public int EeveeY;
+    public static int eHP = 55;
+    public static boolean enemy = true;
+    
+    public Eevee()
+    {
+        eHP = 65;
+    }
     
     public void act()
     {
         int EeveeX = getX();
         int EeveeY = getY();
+        if(enemy != true)
+        {
+            movementB(EeveeX, EeveeY);
+        }
+        else
+        {
+            if(isTouching(Attack1.class))
+            {
+                removeTouching(Attack1.class);
+                eHP -= 4;
+            }
+        }
+        
     }
     
     
-    public void movement()
-    {
-        
-        if(isTouching(Forest.class))
-        {
-                
-        }
-        else if(!isTouching(Forest.class))
-        {
-            if(Greenfoot.isKeyDown("a"))
-            {
-                setRotation(270);
-                setLocation(EeveeX -= 4, EeveeY);
-            }
-            
-            if(Greenfoot.isKeyDown("d"))
-            {
-                setRotation(90);
-                setLocation(EeveeX += 4, EeveeY);    
-                    
-            }
-            
-            if(Greenfoot.isKeyDown("w"))
-            {
-                setRotation(0);
-                setLocation(EeveeX , EeveeY -= 4);
-                    
-            }
-                
-            if(Greenfoot.isKeyDown("s"))
-            {
-                setRotation(180);
-                setLocation(EeveeX , EeveeY += 4);
-                    
-            }
-        
-        
-        }   
-        
-        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w"))
-        {
-            setRotation(-45);
-        }
-        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
-        {
-            setRotation(-135);
-        }
-        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("w"))
-        {
-            setRotation(45);
-        }
-        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
-        {
-            setRotation(135);
-        }
     
-    }
 }

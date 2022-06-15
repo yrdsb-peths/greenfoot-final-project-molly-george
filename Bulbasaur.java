@@ -10,18 +10,34 @@ public class Bulbasaur extends Characters
 {
     public int BulbasaurX;
     public int BulbasaurY;
+    public static int bHP = 50;
+    public static boolean enemy = true;
     
     public Bulbasaur()
     {
-        
+        bHP = 50;
     }
     
     public void act()
     {
         int BulbasaurX = getX();
         int BulbasaurY = getY();
-        movement();
+        if(enemy != true)
+        {
+            movementA(BulbasaurX, BulbasaurY);
+        }
+        else
+        {
+            if(isTouching(Attack1.class))
+            {
+                removeTouching(Attack1.class);
+                bHP -= 4;
+            }
+        }
+        
     }
+    
+    
     
     public void movement()
     {
