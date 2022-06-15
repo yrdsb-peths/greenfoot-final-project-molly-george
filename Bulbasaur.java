@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bulbasaur extends Characters
 {
-    public int BulbasaurX;
+    public static int BulbasaurX;
     public int BulbasaurY;
     public static int bHP = 50;
     public static boolean enemy = true;

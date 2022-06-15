@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Eevee extends Characters
 {
-    public int EeveeX;
+    public static int EeveeX;
     public int EeveeY;
     public static int eHP = 55;
     public static boolean enemy = true;

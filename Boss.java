@@ -8,44 +8,46 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Boss extends World
 {
-
-    /**
-     * Constructor for objects of class Boss.
-     * 
-     */
+    Ninetales n = new Ninetales();
+    Pikachu p = new Pikachu();
+    Charmander c = new Charmander();
+    Bulbasaur b = new Bulbasaur();
+    Eevee e = new Eevee();
+    Squirtle s = new Squirtle();
+    Torchic t = new Torchic();
+    
     public Boss()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1280, 720, 1);
         
+        setBackground(new GreenfootImage("9.png"));
+        
         if(GeneralInformation.character[0].equals("Pikachu"))
         {
-            Pikachu p = new Pikachu();
-            //addObject
+            addObject(p, 250, 350);
         }
         if(GeneralInformation.character[1].equals("Charmander"))
         {
-            Charmander c = new Charmander();
-            //addObject
+            addObject(c, 250, 350);
         }
-        if(GeneralInformation.character[1].equals("Bulbasaur"))
+        if(GeneralInformation.character[0].equals("Bulbasaur"))
         {
-            Bulbasaur b = new Bulbasaur();
-            //addObject
+            addObject(b, 250, 350);
         }
-        if(GeneralInformation.character[1].equals("Lapras"))
+        if(GeneralInformation.character[1].equals("Eevee"))
         {
-            Lapras l = new Lapras();
-            //addObject
+            addObject(e, 250, 350);
         }
-        if(GeneralInformation.character[1].equals("Squirtle"))
+        if(GeneralInformation.character[0].equals("Squirtle"))
         {
-            Squirtle s = new Squirtle();
-            //addObject
+            addObject(s, 250, 350);
         }
-        if(GeneralInformation.character[1].equals("Ninetales"))
+        if(GeneralInformation.character[1].equals("Torchic"))
         {
-            Ninetales n = new Ninetales();
+            addObject(t, 250, 350);
         }
+        
+        addObject(n, 200, 150);
     }
 }

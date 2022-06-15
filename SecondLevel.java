@@ -15,6 +15,8 @@ public class SecondLevel extends World
     public Magikarp m = new Magikarp();
     public Bulbasaur b = new Bulbasaur();
     public Eevee e = new Eevee();
+    public int bX;
+    public int eX;
     public Label fail = new Label("you failed:(, restart", 50); 
     private SimpleTimer timer = new SimpleTimer();
     
@@ -64,14 +66,13 @@ public class SecondLevel extends World
         if(s.sHP < 0)
         {
             removeObject(s);
-            if(p.pikachuX > 1280 || c.CharmanderX > 1280)
+            if(bX > 1280 || eX > 1280)
             {
                 MapThirdLevel m3 = new MapThirdLevel();
                 Greenfoot.setWorld(m3);
             }
-            if(b.getX() > 1280 || e.getX() > 1280)
+            if(p.pikachuX > 1280 || c.CharmanderX > 1280)
             {
-                System.out.println(b.BulbasaurX);
                 MapThirdLevel m3 = new MapThirdLevel();
                 Greenfoot.setWorld(m3);
             }
@@ -83,6 +84,7 @@ public class SecondLevel extends World
         if(GeneralInformation.character[0].equals("Bulbasaur"))
         {
             attackB();
+            bX = b.getX();
         }
         if(GeneralInformation.character[1].equals("Charmander"))
         {
@@ -91,6 +93,7 @@ public class SecondLevel extends World
         if(GeneralInformation.character[1].equals("Eevee"))
         {
             attackE();
+            eX = e.getX();
         }
     }
     

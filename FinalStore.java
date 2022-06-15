@@ -13,14 +13,14 @@ public class FinalStore extends World
     Charmander c = new Charmander();
     Eevee e = new Eevee();
     Squirtle s = new Squirtle();
-    Ninetales n = new Ninetales();
+    Torchic t = new Torchic();
     UpGrade u1 = new UpGrade();
     UpGrade u2 = new UpGrade();
     UpGrade u3 = new UpGrade();
     UpGrade u4 = new UpGrade();
     UpGrade u5 = new UpGrade();
     UpGrade u6 = new UpGrade();
-    ToMap t = new ToMap();
+    ToMap t1 = new ToMap();
     
     
     private Label tofinalLevel = new Label("click here go to final level",30);
@@ -39,7 +39,7 @@ public class FinalStore extends World
         
         addObject(s,600, 490);
         
-        addObject(n,890, 490);
+        addObject(t,890, 490);
 
         addObject(u1,330,320);
 
@@ -53,7 +53,7 @@ public class FinalStore extends World
         
         addObject(u6,890,610);
         
-        addObject(t, 1170, 675);
+        addObject(t1, 1170, 675);
         
     }
     
@@ -67,9 +67,9 @@ public class FinalStore extends World
         {
             GeneralInformation.character[0] = "Bulbasaur";
         }
-        if(Greenfoot.mouseClicked(n))
+        if(Greenfoot.mouseClicked(t))
         {
-            GeneralInformation.character[0] = "Ninetales";
+            GeneralInformation.character[0] = "Torchic";
         }
         if(Greenfoot.mouseClicked(c))
         {
@@ -85,7 +85,7 @@ public class FinalStore extends World
             GeneralInformation.character[1] = "Squirtle";
         }
         
-        if(t.click == true)
+        if(t1.click == true)
         {
             Boss b = new Boss();
             Greenfoot.setWorld(b);

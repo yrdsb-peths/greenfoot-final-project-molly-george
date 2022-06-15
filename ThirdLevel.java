@@ -15,6 +15,9 @@ public class ThirdLevel extends World
     public Eevee e = new Eevee();
     public Fennekin f = new Fennekin();
     public Torchic t = new Torchic();
+    public int bX;
+    public int eX;
+    public int sX;
     public Label fail = new Label("you failed:(, restart", 50); 
     private SimpleTimer timer = new SimpleTimer();
     
@@ -62,7 +65,7 @@ public class ThirdLevel extends World
         if(t.tHP < 0)
         {
             removeObject(t);
-            if(p.pikachuX > 1280 || c.CharmanderX > 1280 || b.getX() > 1280 || e.EeveeX > 1280 || s.getX() > 1280)
+            if(p.pikachuX > 1280 || c.CharmanderX > 1280 || bX > 1280 || eX > 1280 || sX > 1280)
             {
                 FinalMap f = new FinalMap();
                 Greenfoot.setWorld(f);
@@ -76,6 +79,7 @@ public class ThirdLevel extends World
         if(GeneralInformation.character[0].equals("Bulbasaur"))
         {
             attackB();
+            bX = b.getX();
         }
         if(GeneralInformation.character[1].equals("Charmander"))
         {
@@ -84,10 +88,12 @@ public class ThirdLevel extends World
         if(GeneralInformation.character[1].equals("Eevee"))
         {
             attackE();
+            eX = e.getX();
         }
         if(GeneralInformation.character[1].equals("Squirtle"))
         {
             attackS();
+            sX = s.getX();
         }
     }
     

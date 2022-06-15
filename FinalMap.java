@@ -8,14 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class FinalMap extends World
 {
-
-    /**
-     * Constructor for objects of class FinalMap.
-     * 
-     */
+    public Ninetales n = new Ninetales();
+    
     public FinalMap()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1280, 720, 1); 
+        super(1280, 720, 1);
+        
+        addObject(n, 640, 150);
+    }
+    
+    public void act()
+    {
+        if(Greenfoot.mouseClicked(n))
+        {
+            FinalStore f = new FinalStore();
+            Greenfoot.setWorld(f);
+        }
     }
 }
