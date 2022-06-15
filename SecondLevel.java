@@ -64,8 +64,14 @@ public class SecondLevel extends World
         if(s.sHP < 0)
         {
             removeObject(s);
-            if(p.pikachuX > 1280 || c.CharmanderX > 1280 || b.BulbasaurX > 1280 || e.EeveeX > 1280)
+            if(p.pikachuX > 1280 || c.CharmanderX > 1280)
             {
+                MapThirdLevel m3 = new MapThirdLevel();
+                Greenfoot.setWorld(m3);
+            }
+            if(b.getX() > 1280 || e.getX() > 1280)
+            {
+                System.out.println(b.BulbasaurX);
                 MapThirdLevel m3 = new MapThirdLevel();
                 Greenfoot.setWorld(m3);
             }

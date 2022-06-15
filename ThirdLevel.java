@@ -62,7 +62,7 @@ public class ThirdLevel extends World
         if(t.tHP < 0)
         {
             removeObject(t);
-            if(p.pikachuX > 1280 || c.CharmanderX > 1280 || b.BulbasaurX > 1280 || e.EeveeX > 1280 || s.SquirtleX > 1280)
+            if(p.pikachuX > 1280 || c.CharmanderX > 1280 || b.getX() > 1280 || e.EeveeX > 1280 || s.getX() > 1280)
             {
                 FinalMap f = new FinalMap();
                 Greenfoot.setWorld(f);
