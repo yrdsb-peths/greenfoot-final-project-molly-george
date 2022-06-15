@@ -8,75 +8,84 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class FinalStore extends World
 {
-    private Squirtle s = new Squirtle();
-    private Lapras l = new Lapras();
-    private Bulbasaur b = new Bulbasaur();
-    private Pikachu p = new Pikachu();
-    private Charmander c = new Charmander();
-    private Ninetales n = new Ninetales();
-    private UpGradeThird1 t1 = new UpGradeThird1();
-    private UpGradeThird2 t2 = new UpGradeThird2();
-    private UpGradeSecond1 s1 = new UpGradeSecond1();
-    private UpGradeSecond2 s2 = new UpGradeSecond2();
-    private UpGradeSecond3 s3 = new UpGradeSecond3();
-    private UpGradeFinal f = new UpGradeFinal();
+    Bulbasaur b = new Bulbasaur();
+    Pikachu p = new Pikachu();
+    Charmander c = new Charmander();
+    Eevee e = new Eevee();
+    Squirtle s = new Squirtle();
+    Ninetales n = new Ninetales();
+    UpGrade u1 = new UpGrade();
+    UpGrade u2 = new UpGrade();
+    UpGrade u3 = new UpGrade();
+    UpGrade u4 = new UpGrade();
+    UpGrade u5 = new UpGrade();
+    UpGrade u6 = new UpGrade();
+    ToMap t = new ToMap();
+    
+    
     private Label tofinalLevel = new Label("click here go to final level",30);
     
     public FinalStore()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1280, 720, 1); 
         
-        if(Greenfoot.mouseClicked(b))
+        addObject(p,330,200);
+
+        addObject(c,600,200);
+
+        addObject(b,890,200);
+
+        addObject(e,330,490);
+        
+        addObject(s,600, 490);
+        
+        addObject(n,890, 490);
+
+        addObject(u1,330,320);
+
+        addObject(u2,600,320);
+
+        addObject(u3,890,320);
+
+        addObject(u4,330,610);
+        
+        addObject(u5,600,610);
+        
+        addObject(u6,890,610);
+        
+        addObject(t, 1170, 675);
+        
+    }
+    
+    public void act()
+    {
+        if(Greenfoot.mouseClicked(p))
         {
             GeneralInformation.character[0] = "Pikachu";
         }
-        if(Greenfoot.mouseClicked(p))
+        if(Greenfoot.mouseClicked(b))
         {
-            GeneralInformation.character[1] = "Bulbasaur";
+            GeneralInformation.character[0] = "Bulbasaur";
+        }
+        if(Greenfoot.mouseClicked(n))
+        {
+            GeneralInformation.character[0] = "Ninetales";
         }
         if(Greenfoot.mouseClicked(c))
         {
             GeneralInformation.character[1] = "Charmander";
         }
         //slect more than two will overwrite the second one
-        if(Greenfoot.mouseClicked(l))
+        if(Greenfoot.mouseClicked(e))
         {
-            GeneralInformation.character[1] = "Lapras";
+            GeneralInformation.character[1] = "Eevee";
         }
         if(Greenfoot.mouseClicked(s))
         {
             GeneralInformation.character[1] = "Squirtle";
         }
-        if(Greenfoot.mouseClicked(n))
-        {
-            GeneralInformation.character[1] = "Ninetales";
-        }
-        if(Greenfoot.mouseClicked(s1))
-        {
-            //enhance 
-        }
-        if(Greenfoot.mouseClicked(s2))
-        {
-            //enhance 
-        }
-        if(Greenfoot.mouseClicked(s3))
-        {
-            //enhance 
-        }
-        if(Greenfoot.mouseClicked(t1))
-        {
-            //enhance 
-        }
-        if(Greenfoot.mouseClicked(t2))
-        {
-            //enhance 
-        }
-        if(Greenfoot.mouseClicked(f))
-        {
-            //enhance 
-        }
-        if(Greenfoot.mouseClicked(tofinalLevel))
+        
+        if(t.click == true)
         {
             Boss b = new Boss();
             Greenfoot.setWorld(b);

@@ -10,12 +10,18 @@ public class Lapras extends Characters
 {
     public int LaprasX;
     public int LaprasY;
+    public static int lHP = 130;
     
+    public Lapras()
+    {
+        lHP = 130;
+    }
     
     public void act()
     {
         int LaprasX = getX();
         int LaprasY = getY();
+        
     }
     
     public void movement()

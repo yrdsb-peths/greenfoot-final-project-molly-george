@@ -10,12 +10,18 @@ public class Fennekin extends Characters
 {
     public int FennekinX;
     public int FennekinY;
+    public static int fHP = 45;
     
+    public Fennekin()
+    {
+        fHP = 45;
+    }
     
     public void act()
     {
         int FennekinX = getX();
         int FennekinY = getY();
+        
     }
     
     public void movement()

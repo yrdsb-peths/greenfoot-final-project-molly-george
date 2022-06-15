@@ -10,11 +10,10 @@ public class Pikachu extends Characters
 {
     public int pikachuX;
     public int pikachuY;
-    public int PikachuHP = 65;
+    public int pHP = 65;
     
     public Pikachu()
     {
-        
         int PikachuHP = 65;
     }
     

@@ -10,6 +10,13 @@ public class Torchic extends Characters
 {
     public int TorchicX;
     public int TorchicY;
+    public static int tHP = 45;
+    public static boolean enemy = true;
+    
+    public Torchic()
+    {
+        tHP = 45;
+    }
     
     
     public void act()

@@ -13,54 +13,65 @@ public class Store2 extends World
     Bulbasaur b = new Bulbasaur();
     Pikachu p = new Pikachu();
     Charmander c = new Charmander();
-    UpGradeSecond1 s1 = new UpGradeSecond1();
-    UpGradeSecond2 s2 = new UpGradeSecond2();
-    UpGradeSecond3 s3 = new UpGradeSecond3();
+    Eevee e = new Eevee();
+    UpGrade u1 = new UpGrade();
+    UpGrade u2 = new UpGrade();
+    UpGrade u3 = new UpGrade();
+    UpGrade u4 = new UpGrade();
+    ToMap t = new ToMap();
+
     Label toSecondLevel = new Label("click here go to second level",30);
-    
+
     public Store2()
     {    
         super(1280, 720, 1); 
-        
-        
-        
+
+        addObject(p,330,200);
+
+        addObject(c,600,200);
+
+        addObject(b,890,200);
+
+        addObject(e,330,490);
+
+        addObject(u1,330,320);
+
+        addObject(u2,600,320);
+
+        addObject(u3,890,320);
+
+        addObject(u4,330,610);
+
+        addObject(t, 1170, 675);
     }
-    
+
     public void act()
     {
-        if(Greenfoot.mouseClicked(b))
+        if(Greenfoot.mouseClicked(p))
         {
             GeneralInformation.character[0] = "Pikachu";
         }
-        if(Greenfoot.mouseClicked(p))
+        if(Greenfoot.mouseClicked(b))
         {
-            GeneralInformation.character[1] = "Bulbasaur";
+            GeneralInformation.character[0] = "Bulbasaur";
         }
         if(Greenfoot.mouseClicked(c))
         {
             GeneralInformation.character[1] = "Charmander";
         }
+        if(Greenfoot.mouseClicked(e))
+        {
+            GeneralInformation.character[1] = "Eevee";
+        }
         //slect more than two will overwrite the second one
-        if(Greenfoot.mouseClicked(s1))
-        {
-            //enhance 
-        }
-        if(Greenfoot.mouseClicked(s2))
-        {
-            //enhance 
-        }
-        if(Greenfoot.mouseClicked(s3))
-        {
-            //enhance 
-        }
-        if(Greenfoot.mouseClicked(toSecondLevel))
+
+        if(t.click == true)
         {
             SecondLevel s = new SecondLevel();
             Greenfoot.setWorld(s);
         }
     }
-    
-    
+
     
     
 }

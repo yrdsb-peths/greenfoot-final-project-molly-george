@@ -10,12 +10,20 @@ public class Ninetales extends Characters
 {
     public int NinetalesX;
     public int NinetalesY;
+    public static int nHP = 60;
+    public static boolean enemy = true;
+    
+    public Ninetales()
+    {
+        nHP = 60;
+    }
     
     public void act()
     {
         int NinetalesX = getX();
         int NinetalesY = getY();
         movementA(NinetalesX, NinetalesY);
+        
     }
     
     

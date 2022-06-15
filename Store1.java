@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Store1 extends World
 {
     Label select = new Label("This two Pokemons will be the Pokemons you start with!",50);
+    ToMap t = new ToMap();
     
     public Store1()
     {    
@@ -21,8 +22,6 @@ public class Store1 extends World
         addObject(c,600,200);
         
         addObject(select,640,35);
-        
-        ToMap t = new ToMap();
         addObject(t,1170, 675);
         
         GeneralInformation.character[0] = "P";
@@ -32,7 +31,11 @@ public class Store1 extends World
     
     public void act()
     {
-        
+        if(t.click == true)
+        {
+            FirstLevel f = new FirstLevel();
+            Greenfoot.setWorld(f);
+        }
         
     }
 }

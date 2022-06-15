@@ -10,6 +10,12 @@ public class Squirtle extends Characters
 {
     public int SquirtleX;
     public int SquirtleY;
+    public static int sHP = 55;
+    
+    public Squirtle()
+    {
+        sHP = 55;
+    }
     
     
     public void act()
