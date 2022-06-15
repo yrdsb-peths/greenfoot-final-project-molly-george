@@ -73,7 +73,7 @@ public class FirstLevel extends World
             if(timer.millisElapsed() > 500)
             {
                 Attack1 a = new Attack1();
-                addObject(a, p.pikachuX, p.pikachuY);
+                addObject(a, Pikachu.pikachuX, Pikachu.pikachuY);
                 a.setRotation(p.getRotation());
                 timer.mark();
             }

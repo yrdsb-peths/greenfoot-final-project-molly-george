@@ -8,9 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Pikachu extends Characters
 {
-    public int pikachuX;
-    public int pikachuY;
+    public static int pikachuX;
+    public static int pikachuY;
     public int pHP = 65;
+    private SimpleTimer timer = new SimpleTimer();
     
     public Pikachu()
     {
