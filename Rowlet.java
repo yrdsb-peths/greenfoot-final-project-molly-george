@@ -23,13 +23,13 @@ public class Rowlet extends Characters
     {
         int RowletX = getX();
         int RowletY = getY();
+        if(isTouching(Attack1.class))
+        {
+            removeTouching(Attack1.class);
+            rHP -= 4;
+        }
     }
     
     
-    public void movement()
-    {
-        
-        
     
-    }
 }

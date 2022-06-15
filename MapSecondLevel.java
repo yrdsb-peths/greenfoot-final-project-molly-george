@@ -8,20 +8,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MapSecondLevel extends World
 {
-
-    /**
-     * Constructor for objects of class MapSecondLevel.
-     * 
-     */
+    Squirtle s = new Squirtle();
+    
+    
     public MapSecondLevel()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1280, 720, 1); 
+        
+        addObject(s,1000, 150); 
     }
     
     public void act()
     {
-        if(Greenfoot.isKeyDown("space"))
+        if(Greenfoot.mouseClicked(s))
         {
             Store2 s = new Store2();
             Greenfoot.setWorld(s);

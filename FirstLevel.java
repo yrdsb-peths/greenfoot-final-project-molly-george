@@ -28,32 +28,37 @@ public class FirstLevel extends World
         
         addObject(c, 350, 600);
         
-        addObject(r, 250, 150);
+        addObject(e, 250, 150);
     }
     
     public void act()
     {
-        if(e.eHP == 0)
+        
+        if(e.eHP < 0)
         {
             setBackground(new GreenfootImage("2.png"));
-            
+            removeObject(e);
+            addObject(r, 1000, 100);
         }
-        if(r.rHP == 0)
+        if(r.rHP < 0)
         {
             setBackground(new GreenfootImage("3.png"));
+            removeObject(r);
+            addObject(b, 150, 100);
         }
-        if(b.bHP == 0)
+        if(b.bHP < 0)
         {
-            if(p.pikachuX == 1280 || c.CharmanderX == 1280)
+            removeObject(b);
+            if(p.pikachuX > 1280 || c.CharmanderX > 1280)
             {
-                Store2 s2 = new Store2();
-                Greenfoot.setWorld(s2);
+                MapSecondLevel m2 = new MapSecondLevel();
+                Greenfoot.setWorld(m2);
             }
         }
         
         if(p.pHP == 0 && c.cHP == 0)
         {
-            setBackground(new GreenfootImage("1.png"));
+            
             
             addObject(fail, 640, 360);
         }
@@ -82,9 +87,10 @@ public class FirstLevel extends World
             if(timer.millisElapsed() > 500)
             {
                 Attack1 a = new Attack1();
-                addObject(a, c.CharmanderX, c.CharmanderY);
+                addObject(a, c.getX(), c.getY());
                 a.setRotation(c.getRotation());
                 timer.mark();
+                
             }
         }
     }

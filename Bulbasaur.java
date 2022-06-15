@@ -22,7 +22,19 @@ public class Bulbasaur extends Characters
     {
         int BulbasaurX = getX();
         int BulbasaurY = getY();
-        movementA(BulbasaurX, BulbasaurY);
+        if(enemy != true)
+        {
+            movementA(BulbasaurX, BulbasaurY);
+        }
+        else
+        {
+            if(isTouching(Attack1.class))
+            {
+                removeTouching(Attack1.class);
+                bHP -= 4;
+            }
+        }
+        
     }
     
     

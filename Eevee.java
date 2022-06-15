@@ -22,7 +22,19 @@ public class Eevee extends Characters
     {
         int EeveeX = getX();
         int EeveeY = getY();
-        movementB(EeveeX, EeveeY);
+        if(enemy != true)
+        {
+            movementB(EeveeX, EeveeY);
+        }
+        else
+        {
+            if(isTouching(Attack1.class))
+            {
+                removeTouching(Attack1.class);
+                eHP -= 4;
+            }
+        }
+        
     }
     
     
