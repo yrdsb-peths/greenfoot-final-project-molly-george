@@ -25,6 +25,10 @@ public class Store2 extends World
     public Store2()
     {    
         super(1280, 720, 1); 
+        
+        GeneralInformation.character[0] = "Pikachu";
+        
+        GeneralInformation.character[1] = "Charmander";
 
         addObject(p,330,200);
 
@@ -47,6 +51,7 @@ public class Store2 extends World
 
     public void act()
     {
+        
         if(Greenfoot.mouseClicked(p))
         {
             GeneralInformation.character[0] = "Pikachu";
@@ -54,6 +59,7 @@ public class Store2 extends World
         if(Greenfoot.mouseClicked(b))
         {
             GeneralInformation.character[0] = "Bulbasaur";
+            Bulbasaur.enemy = false;
         }
         if(Greenfoot.mouseClicked(c))
         {
@@ -62,6 +68,7 @@ public class Store2 extends World
         if(Greenfoot.mouseClicked(e))
         {
             GeneralInformation.character[1] = "Eevee";
+            Eevee.enemy = false;
         }
         //slect more than two will overwrite the second one
 

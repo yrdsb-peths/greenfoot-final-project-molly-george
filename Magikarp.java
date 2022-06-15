@@ -21,7 +21,11 @@ public class Magikarp extends Characters
     {
         int MagikarpX = getX();
         int MagikarpY = getY();
-        
+        if(isTouching(Attack1.class))
+        {
+            removeTouching(Attack1.class);
+            mHP -= 4;
+        }
     }
     
     public void movement()

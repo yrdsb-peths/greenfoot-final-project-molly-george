@@ -11,6 +11,7 @@ public class Squirtle extends Characters
     public int SquirtleX;
     public int SquirtleY;
     public static int sHP = 55;
+    public static boolean enemy = true;
     
     public Squirtle()
     {
@@ -22,7 +23,18 @@ public class Squirtle extends Characters
     {
         int SquirtleX = getX();
         int SquirtleY = getY();
-        movementB(SquirtleX, SquirtleY);
+        if(enemy != true)
+        {
+            movementB(SquirtleX, SquirtleY);
+        }
+        else
+        {
+            if(isTouching(Attack1.class))
+            {
+                removeTouching(Attack1.class);
+                sHP -= 4;
+            }
+        }
     }
     
     

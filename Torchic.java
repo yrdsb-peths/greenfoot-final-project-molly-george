@@ -23,6 +23,11 @@ public class Torchic extends Characters
     {
         int TorchicX = getX();
         int TorchicY = getY();
+        if(isTouching(Attack1.class))
+        {
+            removeTouching(Attack1.class);
+            tHP -= 4;
+        }
     }
     
     public void movement()

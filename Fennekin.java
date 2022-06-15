@@ -11,6 +11,7 @@ public class Fennekin extends Characters
     public int FennekinX;
     public int FennekinY;
     public static int fHP = 45;
+    public static boolean enemy = true;
     
     public Fennekin()
     {
@@ -21,7 +22,18 @@ public class Fennekin extends Characters
     {
         int FennekinX = getX();
         int FennekinY = getY();
-        
+        if(enemy != true)
+        {
+            movementA(FennekinX, FennekinY);
+        }
+        else
+        {
+            if(isTouching(Attack1.class))
+            {
+                removeTouching(Attack1.class);
+                fHP -= 4;
+            }
+        }
     }
     
     public void movement()

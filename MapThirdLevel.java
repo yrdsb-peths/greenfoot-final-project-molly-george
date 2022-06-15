@@ -8,19 +8,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MapThirdLevel extends World
 {
-    ToFirstBattle firstBattle = new ToFirstBattle();
+    Ninetales n = new Ninetales();
     
     public MapThirdLevel()
     {    
         super(1280, 720, 1); 
+        
+        addObject(n, 300, 250);
     }
     
     public void act()
     {
-        if(Greenfoot.mouseClicked(firstBattle))
+        if(Greenfoot.mouseClicked(n))
         {
-            Store1 store = new Store1();
-            Greenfoot.setWorld(store);
+            Store3 s3 = new Store3();
+            Greenfoot.setWorld(s3);
         }
     }
 }

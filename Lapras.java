@@ -21,7 +21,11 @@ public class Lapras extends Characters
     {
         int LaprasX = getX();
         int LaprasY = getY();
-        
+        if(isTouching(Attack1.class))
+        {
+            removeTouching(Attack1.class);
+            lHP -= 4;
+        }
     }
     
     public void movement()

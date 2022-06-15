@@ -51,6 +51,7 @@ public class Store3 extends World
     
     public void act()
     {
+        
         if(Greenfoot.mouseClicked(p))
         {
             GeneralInformation.character[0] = "Pikachu";
@@ -58,21 +59,24 @@ public class Store3 extends World
         if(Greenfoot.mouseClicked(b))
         {
             GeneralInformation.character[0] = "Bulbasaur";
+            Bulbasaur.enemy = false;
         }
         if(Greenfoot.mouseClicked(c))
         {
             GeneralInformation.character[1] = "Charmander";
         }
-        //slect more than two will overwrite the second one
         if(Greenfoot.mouseClicked(e))
         {
             GeneralInformation.character[1] = "Eevee";
+            Eevee.enemy = false;
         }
         if(Greenfoot.mouseClicked(s))
         {
             GeneralInformation.character[1] = "Squirtle";
+            Squirtle.enemy = false;
         }
-        
+        //slect more than two will overwrite the second one
+
         if(t.click == true)
         {
             ThirdLevel t = new ThirdLevel();
