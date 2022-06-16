@@ -20,10 +20,10 @@ public class NormalAttack extends Actor
     public void act()
     {
         move(4);
-        remove();
+        damage();
     }
     
-    public void remove()
+    public void damage()
     {
         
         if(isTouching(Eevee.class))

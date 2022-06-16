@@ -35,6 +35,7 @@ public class Battle extends World
     public int hp4;
     public Label fail = new Label("you failed:(, restart", 50); 
     private SimpleTimer timer = new SimpleTimer();
+    private SimpleTimer timer1 = new SimpleTimer();
     
     public Battle()
     {    
@@ -54,6 +55,9 @@ public class Battle extends World
         }
         else if(count == 2)
         {
+            Pikachu.pHP = 65;
+            Charmander.cHP = 65;
+            Bulbasaur.bHP = 50;
             setBackground(new GreenfootImage("7.png"));
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
@@ -76,6 +80,10 @@ public class Battle extends World
         }
         else if(count == 3)
         {
+            Pikachu.pHP = 65;
+            Charmander.cHP = 65;
+            Bulbasaur.bHP = 50;
+            Torchic.tHP = 45;
             setBackground(new GreenfootImage("9.png"));
         
             if(GeneralInformation.character[0].equals("Pikachu"))
@@ -103,17 +111,29 @@ public class Battle extends World
     {
         if(count == 1)
         {
+            if(e.eHP > 0)
+            {
+                attack3(e.getX(), e.getY(), new GreenfootImage("plantAtt.png"));
+            }
             if(e.eHP <= 0)
             {
                 setBackground(new GreenfootImage("2.png"));
                 removeObject(e);
                 addObject(r, 750, 100);
+                if(r.rHP > 0)
+                {
+                    attack3(r.getX(), r.getY(), new GreenfootImage("plantAtt.png"));
+                }
             }
             if(r.rHP <= 0)
             {
                 setBackground(new GreenfootImage("3.png"));
                 removeObject(r);
                 addObject(b, 150, 100);
+                if(b.bHP > 0)
+                {
+                    attack3(b.getX(), b.getY(), new GreenfootImage("plantAtt.png"));
+                }
             }
             if(b.bHP <= 0)
             {
@@ -134,19 +154,29 @@ public class Battle extends World
         }
         else if(count == 2)
         {
+            if(f.fHP > 0)
+            {
+                attack3(f.getX(), f.getY(),  new GreenfootImage("fireAtt.png"));
+            }
             if(f.fHP <= 0)
             {
                 setBackground(new GreenfootImage("8.png"));
                 removeObject(f);
                 addObject(t, 750, 100);
+                if(t.tHP > 0)
+                {
+                    attack3(t.getX(), t.getY(),  new GreenfootImage("fireAtt.png"));
+                }
             }
             if(t.tHP <= 0)
             {
+                
                 removeObject(t);
                 if(p.pikachuX > 900 || cX > 900 || bX > 900)
                 {
                     Map3 s3 = new Map3();
                     Greenfoot.setWorld(s3);
+                    count++;
                 }
             }
             if(GeneralInformation.character[0].equals("Pikachu"))
@@ -170,6 +200,10 @@ public class Battle extends World
         }
         else if(count == 3)
         {
+            if(n.nHP > 0)
+            {
+                attack3(n.getX(), n.getY(),  new GreenfootImage("fireAtt.png"));
+            }
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
                 hp1 = p.pHP;
@@ -186,7 +220,7 @@ public class Battle extends World
             {
                 hp2 = t.tHP;
             }
-            if(n.nHP == 0)
+            if(n.nHP <= 0)
             {
                 removeObject(n);
             }
@@ -260,4 +294,19 @@ public class Battle extends World
         }
     }
     
+    
+    public void attack3(int x, int y, GreenfootImage image)
+    {
+        if(timer1.millisElapsed() > 2000)
+        {
+            for(int i = 1; i < 9; i++)
+            {
+                EnemyAttack e = new EnemyAttack(image);
+                addObject(e,x,y);
+                e.setRotation(i * 45);
+                timer1.mark();
+            }
+            
+        }
+    }
 }

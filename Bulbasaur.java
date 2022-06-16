@@ -30,6 +30,7 @@ public class Bulbasaur extends Characters
         if(enemy != true)
         {
             movementA(BulbasaurX, BulbasaurY);
+            removeTouching(EnemyAttack.class);
         }
         
         

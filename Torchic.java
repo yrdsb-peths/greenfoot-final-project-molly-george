@@ -31,6 +31,7 @@ public class Torchic extends Characters
         if(enemy != true)
         {
             movementB(TorchicX, TorchicY);
+            removeTouching(EnemyAttack.class);
         }
     }
     

@@ -10,7 +10,7 @@ public class Pikachu extends Characters
 {
     public static int pikachuX;
     public static int pikachuY;
-    public int pHP = 65;
+    public static int pHP = 65;
     public static int damage = 4;
     private SimpleTimer timer = new SimpleTimer();
     
@@ -25,7 +25,7 @@ public class Pikachu extends Characters
         pikachuX = getX();
         pikachuY = getY();
         movementA(pikachuX, pikachuY);
-        
+        removeTouching(EnemyAttack.class);
     }
     
     
