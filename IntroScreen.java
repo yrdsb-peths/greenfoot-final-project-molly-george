@@ -37,8 +37,8 @@ public class IntroScreen extends World
             dialogue.ifNextButtonClicked = true;
             if(dialogue.idx == 5)
             {
-                MapFirstLevel mapFirstLevel = new MapFirstLevel();
-                Greenfoot.setWorld(mapFirstLevel);
+                Map1 m1 = new Map1();
+                Greenfoot.setWorld(m1);
             }
         }
         

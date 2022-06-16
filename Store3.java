@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Store3 here.
+ * Write a description of class FinalStore here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -11,47 +11,41 @@ public class Store3 extends World
     Bulbasaur b = new Bulbasaur();
     Pikachu p = new Pikachu();
     Charmander c = new Charmander();
-    Eevee e = new Eevee();
-    Squirtle s = new Squirtle();
+    Torchic t = new Torchic();
     UpGrade u1 = new UpGrade();
     UpGrade u2 = new UpGrade();
     UpGrade u3 = new UpGrade();
     UpGrade u4 = new UpGrade();
-    UpGrade u5 = new UpGrade();
-    ToMap t = new ToMap();
-    
-    private Label toThirdLevel = new Label("click here go to Third level",30);
-    
+    ToMap t1 = new ToMap();
+
+    private Label tofinalLevel = new Label("click here go to final level",30);
     public Store3()
     {    
-        super(1280, 720, 1); 
+        super(900, 506, 1); 
+
+        addObject(p,230,140);
+
+        addObject(c,430,140);
+
+        addObject(b,630,140);
+
+        addObject(t,230, 340);
         
-        addObject(p,330,200);
-
-        addObject(c,600,200);
-
-        addObject(b,890,200);
-
-        addObject(e,330,490);
+        addObject(u1,230,240);
+        addObject(u2,430,240);
+        addObject(u3,630,240);
+        addObject(u4,230,440);
+        addObject(t1, 750, 490);
         
-        addObject(s,600, 490);
-
-        addObject(u1,330,320);
-
-        addObject(u2,600,320);
-
-        addObject(u3,890,320);
-
-        addObject(u4,330,610);
+        GeneralInformation.character[0] = "Pikachu";
         
-        addObject(u5,600,610);
         
-        addObject(t, 1170, 675);
+        
+        GeneralInformation.character[1] = "Charmander";
     }
-    
+
     public void act()
     {
-        
         if(Greenfoot.mouseClicked(p))
         {
             GeneralInformation.character[0] = "Pikachu";
@@ -61,26 +55,23 @@ public class Store3 extends World
             GeneralInformation.character[0] = "Bulbasaur";
             Bulbasaur.enemy = false;
         }
+        if(Greenfoot.mouseClicked(t))
+        {
+            GeneralInformation.character[1] = "Torchic";
+            Torchic.enemy = false;
+        }
         if(Greenfoot.mouseClicked(c))
         {
             GeneralInformation.character[1] = "Charmander";
         }
-        if(Greenfoot.mouseClicked(e))
-        {
-            GeneralInformation.character[1] = "Eevee";
-            Eevee.enemy = false;
-        }
-        if(Greenfoot.mouseClicked(s))
-        {
-            GeneralInformation.character[1] = "Squirtle";
-            Squirtle.enemy = false;
-        }
         //slect more than two will overwrite the second one
 
-        if(t.click == true)
+        
+        if(t1.click == true)
         {
-            ThirdLevel t = new ThirdLevel();
-            Greenfoot.setWorld(t);
+            Battle b = new Battle();
+            Greenfoot.setWorld(b);
         }
     }
+    
 }

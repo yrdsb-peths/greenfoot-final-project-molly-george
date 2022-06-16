@@ -11,6 +11,7 @@ public class Pikachu extends Characters
     public static int pikachuX;
     public static int pikachuY;
     public int pHP = 65;
+    public static int damage = 4;
     private SimpleTimer timer = new SimpleTimer();
     
     public Pikachu()
@@ -30,15 +31,5 @@ public class Pikachu extends Characters
     
     
     
-    
-    
-    
-    public void lightning()
-    {
-        if(isTouching(Rowlet.class))
-        {
-            
-        }
-    }
     
 }
