@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class NormalAttack extends Actor
+public class NormalAttack extends Damage
 {
     public int damage1;
     
@@ -21,6 +21,10 @@ public class NormalAttack extends Actor
     {
         move(4);
         damage();
+        if(isTouching(EeveeAttack.class))
+        {
+            removeTouching(EeveeAttack.class);
+        }
     }
     
     public void damage()

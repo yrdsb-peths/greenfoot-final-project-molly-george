@@ -24,6 +24,7 @@ public class Charmander extends Characters
         int CharmanderY = getY();
         movementB(CharmanderX,CharmanderY);
         removeTouching(EnemyAttack.class);
+        
     }
     
     

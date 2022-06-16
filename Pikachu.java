@@ -26,6 +26,8 @@ public class Pikachu extends Characters
         pikachuY = getY();
         movementA(pikachuX, pikachuY);
         removeTouching(EnemyAttack.class);
+        
+        
     }
     
     

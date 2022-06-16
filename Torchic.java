@@ -32,6 +32,7 @@ public class Torchic extends Characters
         {
             movementB(TorchicX, TorchicY);
             removeTouching(EnemyAttack.class);
+            
         }
     }
     

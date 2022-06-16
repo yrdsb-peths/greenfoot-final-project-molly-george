@@ -36,6 +36,8 @@ public class Battle extends World
     public Label fail = new Label("you failed:(, restart", 50); 
     private SimpleTimer timer = new SimpleTimer();
     private SimpleTimer timer1 = new SimpleTimer();
+    private SimpleTimer timerAtt = new SimpleTimer();
+    private SimpleTimer timerAtt1 = new SimpleTimer();
     
     public Battle()
     {    
@@ -113,7 +115,9 @@ public class Battle extends World
         {
             if(e.eHP > 0)
             {
+                System.out.println(p.pHP + " " + c.cHP);
                 attack3(e.getX(), e.getY(), new GreenfootImage("plantAtt.png"));
+                EeveeAtt(pX - 150, pY - 150, new GreenfootImage("EeveeAtt.png"));
             }
             if(e.eHP <= 0)
             {
@@ -308,5 +312,19 @@ public class Battle extends World
             }
             
         }
+    }
+    
+    public void EeveeAtt(int x, int y, GreenfootImage image)
+    {
+        EeveeAttack ea = new EeveeAttack(image);
+        if(timerAtt.millisElapsed() > 8000)
+        {
+            addObject(ea,x,y);
+            
+            timerAtt.mark();
+        }
+        
+        
+        
     }
 }
