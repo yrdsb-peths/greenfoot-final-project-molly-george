@@ -6,23 +6,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MapThirdLevel extends World
+public class Map2 extends World
 {
-    Ninetales n = new Ninetales();
+    Torchic t = new Torchic();
     
-    public MapThirdLevel()
+    public Map2()
     {    
-        super(1280, 720, 1); 
+        super(900, 506, 1); 
         
-        addObject(n, 300, 250);
+        addObject(t, 300, 250);
     }
     
     public void act()
     {
-        if(Greenfoot.mouseClicked(n))
+        if(Greenfoot.mouseClicked(t))
         {
-            Store3 s3 = new Store3();
-            Greenfoot.setWorld(s3);
+            Store2 s2 = new Store2();
+            Greenfoot.setWorld(s2);
         }
     }
 }

@@ -25,8 +25,8 @@ public class Store extends World
         
         if(Greenfoot.isKeyDown("space"))
         {
-            FirstLevel firstLevel = new FirstLevel();
-            Greenfoot.setWorld(firstLevel);
+            Battle b = new Battle();
+            Greenfoot.setWorld(b);
         }
     }
 }

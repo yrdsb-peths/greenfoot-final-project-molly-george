@@ -22,8 +22,7 @@ public class Ninetales extends Characters
     {
         int NinetalesX = getX();
         int NinetalesY = getY();
-        movementA(NinetalesX, NinetalesY);
-        
+        removeTouching(NormalAttack.class);
     }
     
     

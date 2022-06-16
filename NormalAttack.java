@@ -8,16 +8,48 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class NormalAttack extends Actor
 {
-    public NormalAttack(GreenfootImage image, int x)
+    public int damage1;
+    
+    public NormalAttack(GreenfootImage image, int damage)
     {
         setImage(image);
-        setRotation(x);
+        damage1 = damage;
     }
     
     
     public void act()
     {
         move(4);
+        damage();
+    }
+    
+    public void damage()
+    {
+        
+        if(isTouching(Eevee.class))
+        {
+            Eevee.eHP -= damage1;
+        }
+        if(isTouching(Fennekin.class))
+        {
+            Fennekin.fHP -= damage1;
+        }
+        if(isTouching(Ninetales.class))
+        {
+            Ninetales.nHP -= damage1;
+        }
+        if(isTouching(Rowlet.class))
+        {
+            Rowlet.rHP -= damage1;
+        }
+        if(isTouching(Bulbasaur.class) && Bulbasaur.enemy == true)
+        {
+            Bulbasaur.bHP -= damage1;
+        }
+        if(isTouching(Torchic.class) && Torchic.enemy == true)
+        {
+            Torchic.tHP -= damage1;
+        }
     }
     
     

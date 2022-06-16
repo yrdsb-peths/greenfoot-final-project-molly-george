@@ -10,14 +10,13 @@ public class ThirdLevel extends World
 {
     public Pikachu p = new Pikachu();
     public Charmander c = new Charmander();
-    public Squirtle s = new Squirtle();
+    
     public Bulbasaur b = new Bulbasaur();
     public Eevee e = new Eevee();
     public Fennekin f = new Fennekin();
     public Torchic t = new Torchic();
     public int bX;
     public int eX;
-    public int sX;
     public Label fail = new Label("you failed:(, restart", 50); 
     private SimpleTimer timer = new SimpleTimer();
     
@@ -45,10 +44,7 @@ public class ThirdLevel extends World
         {
             addObject(e, 250, 600);
         }
-        if(GeneralInformation.character[1].equals("Squirtle"))
-        {
-            addObject(s, 250, 600);
-        }
+        
         
         addObject(f, 250, 150); 
         
@@ -65,109 +61,21 @@ public class ThirdLevel extends World
         if(t.tHP < 0)
         {
             removeObject(t);
-            if(p.pikachuX > 1280 || c.CharmanderX > 1280 || bX > 1280 || eX > 1280 || sX > 1280)
+            if(p.pikachuX > 1280 || c.CharmanderX > 1280 || bX > 1280 || eX > 1280)
             {
-                FinalMap f = new FinalMap();
-                Greenfoot.setWorld(f);
+                Map3 s3 = new Map3();
+                Greenfoot.setWorld(s3);
             }
         }
         
-        if(GeneralInformation.character[0].equals("Pikachu"))
-        {
-            attackP();
-        }
-        if(GeneralInformation.character[0].equals("Bulbasaur"))
-        {
-            attackB();
-            bX = b.getX();
-        }
-        if(GeneralInformation.character[1].equals("Charmander"))
-        {
-            attackC();
-        }
-        if(GeneralInformation.character[1].equals("Eevee"))
-        {
-            attackE();
-            eX = e.getX();
-        }
-        if(GeneralInformation.character[1].equals("Squirtle"))
-        {
-            attackS();
-            sX = s.getX();
-        }
+        
+        
     }
     
-    public void attackP()
-    {
-        if(Greenfoot.isKeyDown("space"))
-        {
-            if(timer.millisElapsed() > 500)
-            {
-                Attack1 a = new Attack1();
-                addObject(a, p.getX(), p.getY());
-                a.setRotation(p.getRotation());
-                timer.mark();
-            }
-        }
-    }
     
-    public void attackC()
-    {
-        if(Greenfoot.isKeyDown("e"))
-        {
-            if(timer.millisElapsed() > 500)
-            {
-                Attack1 a = new Attack1();
-                addObject(a, c.getX(), c.getY());
-                a.setRotation(c.getRotation());
-                timer.mark();
-                
-            }
-        }
-    }
-    
-    public void attackB()
-    {
-        if(Greenfoot.isKeyDown("space"))
-        {
-            if(timer.millisElapsed() > 500)
-            {
-                Attack1 a = new Attack1();
-                addObject(a, b.getX(), b.getY());
-                a.setRotation(b.getRotation());
-                timer.mark();
-                
-            }
-        }
-    }
-    
-    public void attackE()
-    {
-        if(Greenfoot.isKeyDown("e"))
-        {
-            if(timer.millisElapsed() > 500)
-            {
-                Attack1 a = new Attack1();
-                addObject(a, e.getX(), e.getY());
-                a.setRotation(e.getRotation());
-                timer.mark();
-                
-            }
-        }
-    }
     
     public void attackS()
     {
-        if(Greenfoot.isKeyDown("e"))
-        {
-            if(timer.millisElapsed() > 500)
-            {
-                Attack1 a = new Attack1();
-                addObject(a, s.getX(), s.getY());
-                a.setRotation(s.getRotation());
-                timer.mark();
-                
-            }
-        }
+        
     }
 }

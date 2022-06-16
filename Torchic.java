@@ -12,6 +12,7 @@ public class Torchic extends Characters
     public int TorchicY;
     public static int tHP = 45;
     public static boolean enemy = true;
+    public static int damage = 4;
     
     public Torchic()
     {
@@ -23,10 +24,14 @@ public class Torchic extends Characters
     {
         int TorchicX = getX();
         int TorchicY = getY();
-        if(isTouching(Attack1.class))
+        if(enemy == true)
         {
-            removeTouching(Attack1.class);
-            tHP -= 4;
+            removeTouching(NormalAttack.class);
+        }
+        if(enemy != true)
+        {
+            movementB(TorchicX, TorchicY);
+            removeTouching(EnemyAttack.class);
         }
     }
     

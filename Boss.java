@@ -13,7 +13,7 @@ public class Boss extends World
     Charmander c = new Charmander();
     Bulbasaur b = new Bulbasaur();
     Eevee e = new Eevee();
-    Squirtle s = new Squirtle();
+    
     Torchic t = new Torchic();
     
     public Boss()
@@ -39,10 +39,7 @@ public class Boss extends World
         {
             addObject(e, 250, 350);
         }
-        if(GeneralInformation.character[0].equals("Squirtle"))
-        {
-            addObject(s, 250, 350);
-        }
+        
         if(GeneralInformation.character[1].equals("Torchic"))
         {
             addObject(t, 250, 350);

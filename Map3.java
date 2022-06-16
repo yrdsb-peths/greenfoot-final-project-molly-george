@@ -6,14 +6,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class FinalMap extends World
+public class Map3 extends World
 {
     public Ninetales n = new Ninetales();
     
-    public FinalMap()
+    public Map3()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1280, 720, 1);
+        super(900, 506, 1);
         
         addObject(n, 640, 150);
     }
@@ -22,8 +22,8 @@ public class FinalMap extends World
     {
         if(Greenfoot.mouseClicked(n))
         {
-            FinalStore f = new FinalStore();
-            Greenfoot.setWorld(f);
+            Store3 s3 = new Store3();
+            Greenfoot.setWorld(s3);
         }
     }
 }

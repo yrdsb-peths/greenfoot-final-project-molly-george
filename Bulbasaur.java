@@ -12,6 +12,7 @@ public class Bulbasaur extends Characters
     public int BulbasaurY;
     public static int bHP = 50;
     public static boolean enemy = true;
+    public static int damage = 4;
     
     public Bulbasaur()
     {
@@ -22,18 +23,16 @@ public class Bulbasaur extends Characters
     {
         int BulbasaurX = getX();
         int BulbasaurY = getY();
+        if(enemy == true)
+        {
+            removeTouching(NormalAttack.class);
+        }
         if(enemy != true)
         {
             movementA(BulbasaurX, BulbasaurY);
+            removeTouching(EnemyAttack.class);
         }
-        else
-        {
-            if(isTouching(Attack1.class))
-            {
-                removeTouching(Attack1.class);
-                bHP -= 4;
-            }
-        }
+        
         
     }
     

@@ -7,11 +7,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @George Lu && Molly Wu 
  * @version (a version number or a date)
  */
-public class MapFirstLevel extends World
+public class Map1 extends World
 {
     Bulbasaur b = new Bulbasaur();
     
-    public MapFirstLevel()
+    public Map1()
     {    
         super(1280, 720, 1); 
         setBackground("pokemon map 1.jpg");

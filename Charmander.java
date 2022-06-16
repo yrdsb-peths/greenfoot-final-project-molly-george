@@ -11,6 +11,7 @@ public class Charmander extends Characters
     public int CharmanderX;
     public int CharmanderY;
     public static int cHP = 65;
+    public static int damage = 4;
     
     public Charmander()
     {
@@ -22,6 +23,7 @@ public class Charmander extends Characters
         int CharmanderX = getX();
         int CharmanderY = getY();
         movementB(CharmanderX,CharmanderY);
+        removeTouching(EnemyAttack.class);
     }
     
     

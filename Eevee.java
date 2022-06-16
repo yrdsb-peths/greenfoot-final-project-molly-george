@@ -11,7 +11,6 @@ public class Eevee extends Characters
     public static int EeveeX;
     public int EeveeY;
     public static int eHP = 55;
-    public static boolean enemy = true;
     
     public Eevee()
     {
@@ -22,19 +21,7 @@ public class Eevee extends Characters
     {
         int EeveeX = getX();
         int EeveeY = getY();
-        if(enemy != true)
-        {
-            movementB(EeveeX, EeveeY);
-        }
-        else
-        {
-            if(isTouching(Attack1.class))
-            {
-                removeTouching(Attack1.class);
-                eHP -= 4;
-            }
-        }
-        
+        removeTouching(NormalAttack.class);
     }
     
     

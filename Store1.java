@@ -24,8 +24,8 @@ public class Store1 extends World
         addObject(select,640,35);
         addObject(t,1170, 675);
         
-        GeneralInformation.character[0] = "P";
-        GeneralInformation.character[1] = "C";
+        GeneralInformation.character[0] = "Pikachu";
+        GeneralInformation.character[1] = "Charmander";
         
     }
     
@@ -33,8 +33,8 @@ public class Store1 extends World
     {
         if(t.click == true)
         {
-            FirstLevel f = new FirstLevel();
-            Greenfoot.setWorld(f);
+            Battle b = new Battle();
+            Greenfoot.setWorld(b);
         }
         
     }
