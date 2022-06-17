@@ -80,6 +80,17 @@ public class Battle extends World
             
             eHPLabel = new Label("Eevee: " + Eevee.eHP, 20);
             addObject(eHPLabel, 100, 50);
+            
+            
+            rHPLabel = new Label("RowletHP: " + r.rHP, 20);
+            addObject(rHPLabel, 100, 80);
+            
+            
+            
+            bHPLabel = new Label("BulbasaurHP: " + b.bHP, 20);
+            addObject(bHPLabel, 100, 110);
+            
+        
         }
         else if(count == 2)
         {
@@ -159,8 +170,7 @@ public class Battle extends World
                 removeObject(e);
                 addObject(r, 750, 100);
                 removeObject(eHPLabel);
-                rHPLabel = new Label("RowletHP: " + r.rHP, 20);
-                addObject(rHPLabel, 100, 50);
+            
                 rHPLabel.setValue("RowletHP: " + r.rHP);
                 if(r.rHP > 0)
                 {
@@ -175,6 +185,9 @@ public class Battle extends World
                 removeObject(r);
                 removeObject(rHPLabel);
                 addObject(b, 150, 100);
+                
+                bHPLabel.setValue("BulbasaurHP: " + b.bHP);
+                
                 if(b.bHP > 0)
                 {
                     attack3(b.getX(), b.getY(), new GreenfootImage("plantAtt.png"));
