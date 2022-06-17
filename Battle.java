@@ -36,7 +36,8 @@ public class Battle extends World
     private SimpleTimer timer = new SimpleTimer();
     private SimpleTimer timer1 = new SimpleTimer();
     private SimpleTimer timerAtt1 = new SimpleTimer();
-    private SimpleTimer timerAtt = new SimpleTimer();
+    private SimpleTimer timerEP = new SimpleTimer();
+    private SimpleTimer timerEC = new SimpleTimer();
     private SimpleTimer timerAttR = new SimpleTimer();
     private SimpleTimer timerAttE = new SimpleTimer();
     private SimpleTimer timerAttB = new SimpleTimer();
@@ -73,6 +74,9 @@ public class Battle extends World
             
             cHPLabel = new Label("Charmander: " + Charmander.cHP, 20);
             addObject(cHPLabel, 800, 80);
+            
+            eHPLabel = new Label("Eevee: " + e.eHP, 20);
+            addObject(eHPLabel, 100, 50);
         }
         else if(count == 2)
         {
@@ -136,10 +140,11 @@ public class Battle extends World
             cHPLabel.setValue("CharmanderHP: " + Charmander.cHP);
             if(e.eHP > 0)
             {
-                eeveeAtt(pX - 150, pY - 150, new GreenfootImage("EeveeAtt.png"));
-                eeveeAtt1(cX - 150, cY - 150, new GreenfootImage("EeveeAtt.png"));
+                eeveeAtt(pX - 150, pY - 150, new GreenfootImage("EeveeAtt.png"), timerEP);   
+                eeveeAtt(cX - 150, cY - 150, new GreenfootImage("EeveeAtt.png"), timerEC); 
                 attack3(e.getX(), e.getY(), new GreenfootImage("plantAtt.png"));
             }
+            
             if(e.eHP <= 0)
             {
                 setBackground(new GreenfootImage("2.png"));
@@ -338,27 +343,16 @@ public class Battle extends World
         }
     }
     
-    public void eeveeAtt(int x, int y, GreenfootImage image)
+    public void eeveeAtt(int x, int y, GreenfootImage image, SimpleTimer timer)
     {
         EeveeAttack ea = new EeveeAttack(image);
-        if(timerAtt.millisElapsed() > 6000)
+        if(timer.millisElapsed() > 6000)
         {
             addObject(ea,x,y);
-            
-            timerAtt.mark();
+            timer.mark();
         }
     }
-    
-    public void eeveeAtt1(int x, int y, GreenfootImage image)
-    {
-        EeveeAttack ea = new EeveeAttack(image);
-        if(timerAttE.millisElapsed() > 6000)
-        {
-            addObject(ea,x,y);
-            
-            timerAttE.mark();
-        }
-    }
+
     
     public void rowletAtt(int x, int y, GreenfootImage image)
     {
