@@ -38,6 +38,7 @@ public class Battle extends World
     private SimpleTimer timerAtt1 = new SimpleTimer();
     private SimpleTimer timerAtt = new SimpleTimer();
     private SimpleTimer timerAttR = new SimpleTimer();
+    private SimpleTimer timerAttE = new SimpleTimer();
     private SimpleTimer timerAttB = new SimpleTimer();
     private SimpleTimer timerAttF = new SimpleTimer();
     public Label pHPLabel;
@@ -135,9 +136,9 @@ public class Battle extends World
             cHPLabel.setValue("CharmanderHP: " + Charmander.cHP);
             if(e.eHP > 0)
             {
-                attack3(e.getX(), e.getY(), new GreenfootImage("plantAtt.png"));
                 eeveeAtt(pX - 150, pY - 150, new GreenfootImage("EeveeAtt.png"));
-                eeveeAtt(cX - 150, cY - 150, new GreenfootImage("EeveeAtt.png"));
+                eeveeAtt1(cX - 150, cY - 150, new GreenfootImage("EeveeAtt.png"));
+                attack3(e.getX(), e.getY(), new GreenfootImage("plantAtt.png"));
             }
             if(e.eHP <= 0)
             {
@@ -345,6 +346,17 @@ public class Battle extends World
             addObject(ea,x,y);
             
             timerAtt.mark();
+        }
+    }
+    
+    public void eeveeAtt1(int x, int y, GreenfootImage image)
+    {
+        EeveeAttack ea = new EeveeAttack(image);
+        if(timerAttE.millisElapsed() > 6000)
+        {
+            addObject(ea,x,y);
+            
+            timerAttE.mark();
         }
     }
     
