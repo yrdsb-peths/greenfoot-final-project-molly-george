@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * This is the actual first level that the player battles in.
  * 
  * @author (your name) 
- * @version (a version number or a date)
+ * @version check
  */
 public class Battle extends World
 {
