@@ -158,6 +158,10 @@ public class Battle extends World
                 setBackground(new GreenfootImage("2.png"));
                 removeObject(e);
                 addObject(r, 750, 100);
+                removeObject(eHPLabel);
+                rHPLabel = new Label("RowletHP: " + r.rHP, 20);
+                addObject(rHPLabel, 100, 50);
+                rHPLabel.setValue("RowletHP: " + r.rHP);
                 if(r.rHP > 0)
                 {
                     attack3(r.getX(), r.getY(), new GreenfootImage("plantAtt.png"));
@@ -169,6 +173,7 @@ public class Battle extends World
             {
                 setBackground(new GreenfootImage("3.png"));
                 removeObject(r);
+                removeObject(rHPLabel);
                 addObject(b, 150, 100);
                 if(b.bHP > 0)
                 {
