@@ -12,6 +12,7 @@ public class Charmander extends Characters
     public int CharmanderY;
     public static int cHP = 65;
     public static int damage = 4;
+    public static int speed = 4;
     
     public Charmander()
     {
@@ -23,11 +24,19 @@ public class Charmander extends Characters
     {
         int CharmanderX = getX();
         int CharmanderY = getY();
-        movementB(CharmanderX,CharmanderY);
+        movementB(CharmanderX,CharmanderY, speed);
         removeTouching(EnemyAttack.class);
         if(isTouching(EeveeAttack.class))
         {
             Charmander.cHP -= 6;
+        }
+        if(isTouching(RowletAttack.class))
+        {
+            speed = 0;
+        }
+        else
+        {
+            speed = 4;
         }
         removeTouching(EeveeAttack.class);
         removeTouching(BulbasaurAttack.class);

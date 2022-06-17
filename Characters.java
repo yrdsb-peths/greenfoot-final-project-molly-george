@@ -76,7 +76,7 @@ public class Characters extends Actor
     
     }
     
-    public void movementB(int x, int y)
+    public void movementB(int x, int y, int s)
     {
         
         if(isTouching(Forest.class))
@@ -88,27 +88,27 @@ public class Characters extends Actor
             if(Greenfoot.isKeyDown("left"))
             {
                 setRotation(270);
-                setLocation(x -= 4, y);
+                setLocation(x -= s, y);
             }
             
             if(Greenfoot.isKeyDown("right"))
             {
                 setRotation(90);
-                setLocation(x += 4, y);    
+                setLocation(x += s, y);    
                     
             }
             
             if(Greenfoot.isKeyDown("up"))
             {
                 setRotation(0);
-                setLocation(x , y -= 4);
+                setLocation(x , y -= s);
                     
             }
                 
             if(Greenfoot.isKeyDown("down"))
             {
                 setRotation(180);
-                setLocation(x , y += 4);
+                setLocation(x , y += s);
                     
             }
         

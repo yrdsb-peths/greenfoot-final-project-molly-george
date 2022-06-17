@@ -35,8 +35,8 @@ public class Battle extends World
     public int hp4;
     private SimpleTimer timer = new SimpleTimer();
     private SimpleTimer timer1 = new SimpleTimer();
-    private SimpleTimer timerAtt = new SimpleTimer();
     private SimpleTimer timerAtt1 = new SimpleTimer();
+    private SimpleTimer timerAtt = new SimpleTimer();
     private SimpleTimer timerAttR = new SimpleTimer();
     private SimpleTimer timerAttB = new SimpleTimer();
     private SimpleTimer timerAttF = new SimpleTimer();
@@ -137,7 +137,7 @@ public class Battle extends World
             {
                 attack3(e.getX(), e.getY(), new GreenfootImage("plantAtt.png"));
                 eeveeAtt(pX - 150, pY - 150, new GreenfootImage("EeveeAtt.png"));
-                
+                eeveeAtt(cX - 150, cY - 150, new GreenfootImage("EeveeAtt.png"));
             }
             if(e.eHP <= 0)
             {
@@ -376,6 +376,7 @@ public class Battle extends World
     
     public void fennekinAtt()
     {
+        
         if(timerAttF.millisElapsed() > 20000)
         {
             for(int i = 0; i < 3; i++)
