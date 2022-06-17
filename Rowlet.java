@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Rowlet extends Characters
 {
-    public int RowletX;
-    public int RowletY;
+    public static int rowletX;
+    public static int rowletY;
     public static int rHP = 60;
     public static boolean enemy = true;
     
@@ -23,7 +23,9 @@ public class Rowlet extends Characters
     {
         int RowletX = getX();
         int RowletY = getY();
+        movementC(rowletX, rowletY);
         removeTouching(NormalAttack.class);
+
     }
     
     

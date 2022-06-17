@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Torchic extends Characters
 {
-    public int TorchicX;
-    public int TorchicY;
+    public static int TorchicX;
+    public static int TorchicY;
     public static int tHP = 45;
     public static boolean enemy = true;
     public static int damage = 4;
@@ -27,6 +27,7 @@ public class Torchic extends Characters
         if(enemy == true)
         {
             removeTouching(NormalAttack.class);
+            movementC(TorchicX, TorchicY);
         }
         if(enemy != true)
         {

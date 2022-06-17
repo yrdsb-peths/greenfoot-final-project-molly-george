@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ninetales extends Characters
 {
-    public int NinetalesX;
-    public int NinetalesY;
+    public static int ninetalesX;
+    public static int ninetalesY;
     public static int nHP = 60;
     public static boolean enemy = true;
     
@@ -23,6 +23,7 @@ public class Ninetales extends Characters
         int NinetalesX = getX();
         int NinetalesY = getY();
         removeTouching(NormalAttack.class);
+        movementC(ninetalesX, ninetalesY);
     }
     
     

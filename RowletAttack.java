@@ -1,16 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class EeveeAttack here.
+ * Write a description of class RowletAttack here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class EeveeAttack extends Damage
+public class RowletAttack extends Damage
 {
-    private SimpleTimer timer = new SimpleTimer();
     
-    public EeveeAttack(GreenfootImage image)
+    
+    public RowletAttack(GreenfootImage image)
     {
         setImage(image);
     }

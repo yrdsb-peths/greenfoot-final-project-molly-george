@@ -25,6 +25,10 @@ public class NormalAttack extends Damage
         {
             removeTouching(EeveeAttack.class);
         }
+        if(isTouching(RowletAttack.class))
+        {
+            removeTouching(RowletAttack.class);
+        }
     }
     
     public void damage()

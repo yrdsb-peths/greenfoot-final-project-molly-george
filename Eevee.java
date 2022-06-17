@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Eevee extends Characters
 {
-    public static int EeveeX;
-    public int EeveeY;
+    public static int eeveeX;
+    public static int eeveeY;
     public static int eHP = 55;
     
     public Eevee()
@@ -19,8 +19,9 @@ public class Eevee extends Characters
     
     public void act()
     {
-        int EeveeX = getX();
-        int EeveeY = getY();
+        int eeveeX = getX();
+        int eeveeY = getY();
+        movementC(eeveeX, eeveeY);
         removeTouching(NormalAttack.class);
     }
     

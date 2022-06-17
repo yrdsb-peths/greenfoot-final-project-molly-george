@@ -24,7 +24,12 @@ public class Charmander extends Characters
         int CharmanderY = getY();
         movementB(CharmanderX,CharmanderY);
         removeTouching(EnemyAttack.class);
-        
+        if(isTouching(EeveeAttack.class))
+        {
+            Charmander.cHP -= 6;
+        }
+        removeTouching(EeveeAttack.class);
+        removeTouching(BulbasaurAttack.class);
     }
     
     

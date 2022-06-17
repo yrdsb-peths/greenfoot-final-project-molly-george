@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fennekin extends Characters
 {
-    public int FennekinX;
-    public int FennekinY;
+    public static int fennekinX;
+    public static int fennekinY;
     public static int fHP = 45;
     public static boolean enemy = true;
     
@@ -22,6 +22,7 @@ public class Fennekin extends Characters
     {
         int FennekinX = getX();
         int FennekinY = getY();
+        movementC(fennekinX,fennekinY);
         removeTouching(NormalAttack.class);
     }
     
