@@ -15,6 +15,7 @@ public class Eevee extends Characters
     public Eevee()
     {
         eHP = 65;
+        setImage(new GreenfootImage("Eevee.png"));
     }
     
     public void act()

@@ -22,7 +22,9 @@ public class Store3 extends World
     public Store3()
     {    
         super(900, 506, 1); 
-
+        
+        setBackground("Store.png");
+        
         addObject(p,230,140);
 
         addObject(c,430,140);

@@ -18,6 +18,7 @@ public class Bulbasaur extends Characters
     public Bulbasaur()
     {
         bHP = 50;
+        setImage(new GreenfootImage("bulbasaur.png"));
     }
     
     public void act()

@@ -16,6 +16,7 @@ public class Charmander extends Characters
     public Charmander()
     {
         cHP = 65;
+        setImage(new GreenfootImage("Charmander.png"));
     }
     
     public void act()

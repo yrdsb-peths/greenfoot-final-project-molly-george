@@ -21,8 +21,9 @@ public class Store2 extends World
     
     public Store2()
     {    
-        super(1280, 720, 1); 
+        super(900, 506, 1); 
         
+        setBackground("Store.png");
         addObject(p,330,200);
 
         addObject(c,600,200);

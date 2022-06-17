@@ -13,7 +13,7 @@ public class Map2 extends World
     public Map2()
     {    
         super(900, 506, 1); 
-        
+        setBackground("pokemon map 1.jpg");
         addObject(t, 300, 250);
     }
     

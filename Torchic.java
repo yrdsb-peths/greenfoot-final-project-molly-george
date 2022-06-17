@@ -17,6 +17,7 @@ public class Torchic extends Characters
     public Torchic()
     {
         tHP = 45;
+        setImage(new GreenfootImage("Torchic.png"));
     }
     
     

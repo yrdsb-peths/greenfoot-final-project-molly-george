@@ -13,8 +13,9 @@ public class Store1 extends World
     
     public Store1()
     {    
-        super(1280, 720, 1); 
+        super(900, 506, 1); 
         
+        setBackground("Store.png");
         Pikachu p = new Pikachu();
         addObject(p,330,200);
         

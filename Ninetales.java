@@ -16,6 +16,7 @@ public class Ninetales extends Characters
     public Ninetales()
     {
         nHP = 60;
+        setImage(new GreenfootImage("Ninetales.png"));
     }
     
     public void act()
