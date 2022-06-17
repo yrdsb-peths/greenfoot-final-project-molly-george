@@ -8,10 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class NextLabel extends Actor
 {
-    /**
-     * Act - do whatever the NextLabel wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public NextLabel()
+    {
+        setImage(new GreenfootImage("Next.png"));
+    }
+    
+    
     public void act()
     {
         if(Greenfoot.mouseClicked(this))

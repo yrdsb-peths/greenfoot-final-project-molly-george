@@ -10,6 +10,11 @@ public class ToMap extends Actor
 {
     public boolean click;
     
+    public ToMap()
+    {
+        setImage(new GreenfootImage("toMap.png"));
+    }
+    
     public void act()
     {
         click  = Greenfoot.mouseClicked(this);
