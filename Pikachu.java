@@ -13,6 +13,7 @@ public class Pikachu extends Characters
     public static int pHP = 65;
     public static int damage = 4;
     public static int speed = 4;
+    public static boolean live = true;
     private SimpleTimer timer = new SimpleTimer();
     
     public Pikachu()
@@ -26,23 +27,32 @@ public class Pikachu extends Characters
     {
         pikachuX = getX();
         pikachuY = getY();
-        movementA(pikachuX, pikachuY, speed);
-        removeTouching(EnemyAttack.class);
-        if(isTouching(EeveeAttack.class))
+        if(live == true)
         {
-            Pikachu.pHP -= 6;
+            movementA(pikachuX, pikachuY, speed);
+            removeTouching(EnemyAttack.class);
+            if(isTouching(EeveeAttack.class))
+            {
+                Pikachu.pHP -= 6;
+            }
+            removeTouching(EeveeAttack.class);
+            if(isTouching(RowletAttack.class))
+            {
+                speed = 0;
+            }
+            else
+            {
+                speed = 4;
+            }
+            removeTouching(BulbasaurAttack.class);
+            removeTouching(FennekinAttack.class);
         }
-        removeTouching(EeveeAttack.class);
-        if(isTouching(RowletAttack.class))
+        if(pHP <= 0)
         {
-            speed = 0;
+            live = false;
+            pHP = 0;
         }
-        else
-        {
-            speed = 4;
-        }
-        removeTouching(BulbasaurAttack.class);
-        removeTouching(FennekinAttack.class);
+        
     }
     
     

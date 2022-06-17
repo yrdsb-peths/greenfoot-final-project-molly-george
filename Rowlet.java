@@ -24,7 +24,7 @@ public class Rowlet extends Characters
     {
         int RowletX = getX();
         int RowletY = getY();
-        movementC(rowletX, rowletY);
+        
         removeTouching(NormalAttack.class);
 
     }

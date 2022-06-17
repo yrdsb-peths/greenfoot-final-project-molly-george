@@ -14,6 +14,7 @@ public class Torchic extends Characters
     public static boolean enemy = true;
     public static int damage = 4;
     public static int speed = 4;
+    public static boolean live = true;
     
     public Torchic()
     {
@@ -33,8 +34,16 @@ public class Torchic extends Characters
         }
         if(enemy != true)
         {
-            movementB(TorchicX, TorchicY, speed);
-            removeTouching(EnemyAttack.class);
+            if(live == true)
+            {
+                movementB(TorchicX, TorchicY, speed);
+                removeTouching(EnemyAttack.class);
+            }
+            if(tHP <= 0)
+            {
+                live = false;
+                tHP = 0;
+            }
             
         }
     }

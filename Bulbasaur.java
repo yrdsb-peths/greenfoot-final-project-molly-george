@@ -14,6 +14,7 @@ public class Bulbasaur extends Characters
     public static boolean enemy = true;
     public static int damage = 4;
     public static int speed = 4;
+    public static boolean live = true;
     
     public Bulbasaur()
     {
@@ -33,8 +34,16 @@ public class Bulbasaur extends Characters
         }
         if(enemy != true)
         {
-            movementA(bulbasaurX, bulbasaurY, speed);
-            removeTouching(EnemyAttack.class);
+            if(live == true)
+            {
+                movementA(bulbasaurX, bulbasaurY, speed);
+                removeTouching(EnemyAttack.class);
+            }
+            if(bHP <= 0)
+            {
+                live = false;
+                bHP = 0;
+            }
         }
         
         

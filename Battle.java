@@ -35,7 +35,8 @@ public class Battle extends World
     public int hp4;
     private SimpleTimer timer = new SimpleTimer();
     private SimpleTimer timer1 = new SimpleTimer();
-    private SimpleTimer timerAtt1 = new SimpleTimer();
+    private SimpleTimer timerRP = new SimpleTimer();
+    private SimpleTimer timerRC = new SimpleTimer();
     private SimpleTimer timerEP = new SimpleTimer();
     private SimpleTimer timerEC = new SimpleTimer();
     private SimpleTimer timerAttR = new SimpleTimer();
@@ -60,6 +61,8 @@ public class Battle extends World
         
         if(count == 1)
         {
+            Pikachu.live = true;
+            Charmander.live = true;
             setBackground(new GreenfootImage("1.png"));
         
             addObject(p, 250, 400);
@@ -75,7 +78,7 @@ public class Battle extends World
             cHPLabel = new Label("Charmander: " + Charmander.cHP, 20);
             addObject(cHPLabel, 800, 80);
             
-            eHPLabel = new Label("Eevee: " + e.eHP, 20);
+            eHPLabel = new Label("Eevee: " + Eevee.eHP, 20);
             addObject(eHPLabel, 100, 50);
         }
         else if(count == 2)
@@ -83,6 +86,9 @@ public class Battle extends World
             Pikachu.pHP = 65;
             Charmander.cHP = 65;
             Bulbasaur.bHP = 50;
+            Pikachu.live = true;
+            Charmander.live = true;
+            Bulbasaur.live = true;
             setBackground(new GreenfootImage("7.png"));
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
@@ -138,6 +144,8 @@ public class Battle extends World
         {
             pHPLabel.setValue("PikachuHP: " + Pikachu.pHP);
             cHPLabel.setValue("CharmanderHP: " + Charmander.cHP);
+            eHPLabel.setValue("EeveeHP: " + Eevee.eHP);
+            
             if(e.eHP > 0)
             {
                 eeveeAtt(pX - 150, pY - 150, new GreenfootImage("EeveeAtt.png"), timerEP);   
@@ -153,7 +161,8 @@ public class Battle extends World
                 if(r.rHP > 0)
                 {
                     attack3(r.getX(), r.getY(), new GreenfootImage("plantAtt.png"));
-                    rowletAtt(pX - 100, pY - 100, new GreenfootImage("RowletAtt.png"));
+                    rowletAtt(pX - 100, pY - 100, new GreenfootImage("RowletAtt.png"), timerRP);
+                    rowletAtt(cX - 100, cY - 100, new GreenfootImage("RowletAtt.png"), timerRC);
                 }
             }
             if(r.rHP <= 0)
@@ -179,9 +188,10 @@ public class Battle extends World
             }
             if(p.pHP <= 0 && c.cHP <= 0)
             {
-                
                 Store1 s1 = new Store1();
                 Greenfoot.setWorld(s1);
+                Pikachu.live = true;
+                Charmander.live = true;
             }
         }
         else if(count == 2)
@@ -354,14 +364,13 @@ public class Battle extends World
     }
 
     
-    public void rowletAtt(int x, int y, GreenfootImage image)
+    public void rowletAtt(int x, int y, GreenfootImage image, SimpleTimer timer)
     {
         RowletAttack ra = new RowletAttack(image);
-        
-        if(timerAttR.millisElapsed() > 8000)
+        if(timer.millisElapsed() > 8000)
         {
             addObject(ra, x, y);
-            timerAttR.mark();
+            timer.mark();
         }
     }
     

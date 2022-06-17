@@ -13,6 +13,7 @@ public class Charmander extends Characters
     public static int cHP = 65;
     public static int damage = 4;
     public static int speed = 4;
+    public static boolean live = true;
     
     public Charmander()
     {
@@ -24,22 +25,31 @@ public class Charmander extends Characters
     {
         int CharmanderX = getX();
         int CharmanderY = getY();
-        movementB(CharmanderX,CharmanderY, speed);
-        removeTouching(EnemyAttack.class);
-        if(isTouching(EeveeAttack.class))
+        if(live = true)
         {
-            Charmander.cHP -= 6;
+            movementB(CharmanderX,CharmanderY, speed);
+            removeTouching(EnemyAttack.class);
+            if(isTouching(EeveeAttack.class))
+            {
+                Charmander.cHP -= 6;
+            }
+            if(isTouching(RowletAttack.class))
+            {
+                speed = 0;
+            }
+            else
+            {
+                speed = 4;
+            }
+            removeTouching(EeveeAttack.class);
+            removeTouching(BulbasaurAttack.class);
         }
-        if(isTouching(RowletAttack.class))
+        if(cHP <= 0)
         {
-            speed = 0;
+            live = false;
+            cHP = 0;
         }
-        else
-        {
-            speed = 4;
-        }
-        removeTouching(EeveeAttack.class);
-        removeTouching(BulbasaurAttack.class);
+        
     }
     
     
