@@ -16,6 +16,7 @@ public class Store2 extends World
     UpGrade u2 = new UpGrade();
     UpGrade u3 = new UpGrade();
     ToMap t = new ToMap();
+    private Label coin = new Label(Battle.coins, 30);
     
     private Label toThirdLevel = new Label("click here go to Third level",30);
     
@@ -30,13 +31,15 @@ public class Store2 extends World
 
         addObject(b,135,360);
 
-        addObject(u1,330,320);
+        addObject(u1,135,230);
 
-        addObject(u2,600,320);
+        addObject(u2,440,230);
 
-        addObject(u3,890,320);
+        addObject(u3,135,470);
         
-        addObject(t, 1170, 675);
+        addObject(t, 750, 400);
+        
+        addObject(coin, 725, 200);
         
         GeneralInformation.character[0] = "Pikachu";
         
