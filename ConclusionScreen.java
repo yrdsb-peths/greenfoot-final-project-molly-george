@@ -18,6 +18,8 @@ public class ConclusionScreen extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         
+        setBackground(new GreenfootImage("conclusionscreen.jpg"));
+        
         prepare();
     }
     
@@ -32,5 +34,8 @@ public class ConclusionScreen extends World
         
         ConStateI constateI = new ConStateI();
         addObject(constateI, 300, 150);
+        
+        ConStateii constateii = new ConStateii();
+        addObject(constateii, 300, 250);
     }
 }
