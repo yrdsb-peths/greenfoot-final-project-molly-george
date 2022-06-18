@@ -9,14 +9,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Map1 extends World
 {
-    Bulbasaur b = new Bulbasaur();
+    BulbLogo b = new BulbLogo();
     
     public Map1()
     {    
-        super(1280, 720, 1); 
+        super(900, 506, 1); 
         setBackground("pokemon map 1.jpg");
         
-        addObject(b, 250, 400);
+        addObject(b, 180, 270);
     }
     
     
