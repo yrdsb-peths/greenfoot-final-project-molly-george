@@ -102,18 +102,20 @@ public class Battle extends World
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
                 addObject(p, 250, 400);
+                pHPLabel = new Label("PikachuHP: " + Pikachu.pHP, 20);
+                addObject(pHPLabel, 800, 100);
             }
             if(GeneralInformation.character[0].equals("Bulbasaur"))
             {
                 addObject(b, 250, 400);
+                bHPLabel = new Label("BulbasaurHP: " + Bulbasaur.bHP, 20);
+                addObject(bHPLabel, 800, 100);
             }
             if(GeneralInformation.character[1].equals("Charmander"))
             {
                 addObject(c, 350, 400);
-            }
-            if(GeneralInformation.character[1].equals("Eevee"))
-            {
-                addObject(e, 350, 400);
+                cHPLabel = new Label("CharmanderHP: " + Charmander.cHP, 20);
+                addObject(cHPLabel, 800, 130);
             }
             
             addObject(f, 250, 150); 
@@ -124,6 +126,8 @@ public class Battle extends World
             
             tHPLabel = new Label("TorchicHP: " + t.tHP, 20);
             addObject(tHPLabel, 100, 110);
+            
+            
         }
         else if(count == 3)
         {
@@ -222,6 +226,8 @@ public class Battle extends World
         {
             fHPLabel.setValue("FennekinHP: " + f.fHP);
             tHPLabel.setValue("TorchicHP: " + t.tHP);
+            pHPLabel.setValue("PikachuHP: " + Pikachu.pHP);
+            cHPLabel.setValue("CharmanderHP: " + Charmander.cHP);
             if(f.fHP > 0)
             {
                 attack3(f.getX(), f.getY(),  new GreenfootImage("fireAtt.png"));
@@ -231,6 +237,7 @@ public class Battle extends World
             {
                 setBackground(new GreenfootImage("8.png"));
                 removeObject(f);
+                removeObject(fHPLabel);
                 addObject(t, 750, 100);
                 if(t.tHP > 0)
                 {
@@ -239,7 +246,7 @@ public class Battle extends World
             }
             if(t.tHP <= 0)
             {
-                
+                removeObject(tHPLabel);
                 removeObject(t);
                 if(p.pikachuX > 900 || cX > 900 || bX > 900)
                 {
@@ -248,6 +255,7 @@ public class Battle extends World
                     count++;
                 }
             }
+            
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
                 hp1 = p.pHP;
