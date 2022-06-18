@@ -1,19 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Restart1 here.
+ * Write a description of class Restart2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Restart1 extends World
+public class Restart2 extends World
 {
 
     GeneralInformation g = new GeneralInformation();
     
-    public Restart1()
+    public Restart2()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 506, 1); 
         
         addObject(g, 800, 450);
@@ -24,7 +23,7 @@ public class Restart1 extends World
     {
         if(GeneralInformation.click == true)
         {
-            Store1 b = new Store1();
+            Store2 b = new Store2();
             Greenfoot.setWorld(b);
         }
     }

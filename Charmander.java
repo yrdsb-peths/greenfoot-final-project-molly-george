@@ -25,7 +25,7 @@ public class Charmander extends Characters
     {
         int CharmanderX = getX();
         int CharmanderY = getY();
-        if(live = true)
+        if(live == true)
         {
             movementB(CharmanderX,CharmanderY, speed);
             removeTouching(EnemyAttack.class);

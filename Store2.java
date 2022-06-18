@@ -8,9 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Store2 extends World
 {
-    Bulbasaur b = new Bulbasaur();
-    Pikachu p = new Pikachu();
-    Charmander c = new Charmander();
+    BulbLogo2 b = new BulbLogo2();
+    PikachuLogo p = new PikachuLogo();
+    CharmanderLogo c = new CharmanderLogo();
     
     UpGrade u1 = new UpGrade();
     UpGrade u2 = new UpGrade();
@@ -24,11 +24,11 @@ public class Store2 extends World
         super(900, 506, 1); 
         
         setBackground("Store.png");
-        addObject(p,330,200);
+        addObject(p,135,125);
 
-        addObject(c,600,200);
+        addObject(c,440,125);
 
-        addObject(b,890,200);
+        addObject(b,135,360);
 
         addObject(u1,330,320);
 

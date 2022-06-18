@@ -16,7 +16,7 @@ public class Battle extends World
     public Fennekin f = new Fennekin();
     public Torchic t = new Torchic();
     public Ninetales n = new Ninetales();
-    public static int  count = 1;
+    public static int  count = 2;
     public int bX = 0;
     public int bY;
     public int bZ;
@@ -215,7 +215,9 @@ public class Battle extends World
             {
                 removeObject(b);
                 removeObject(bHPLabel);
-                if(p.getX() > 900 || c.getX() > 900)
+                ToMap2 t2 = new ToMap2();
+                addObject(t2, 450, 250);
+                if(pX > 900 || cX > 900)
                 {
                     Map2 m2 = new Map2();
                     Greenfoot.setWorld(m2);
@@ -293,8 +295,8 @@ public class Battle extends World
             }
             if(hp1 <= 0 && hp2 <= 0)
             {
-                Map2 m2 = new Map2();
-                Greenfoot.setWorld(m2);
+                Restart2 r2 = new Restart2();
+                Greenfoot.setWorld(r2);
                 
             }
             
