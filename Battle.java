@@ -42,7 +42,8 @@ public class Battle extends World
     private SimpleTimer timerAttR = new SimpleTimer();
     private SimpleTimer timerAttE = new SimpleTimer();
     private SimpleTimer timerAttB = new SimpleTimer();
-    private SimpleTimer timerAttF = new SimpleTimer();
+    private SimpleTimer timerFA = new SimpleTimer();
+    private SimpleTimer timerFA1 = new SimpleTimer();
     public Label pHPLabel;
     public Label cHPLabel;
     public Label eHPLabel;
@@ -224,10 +225,22 @@ public class Battle extends World
         }
         else if(count == 2)
         {
+            if(GeneralInformation.character[0].equals("Pikachu"))
+            {
+                pHPLabel.setValue("PikachuHP: " + Pikachu.pHP);
+            }
+            if(GeneralInformation.character[0].equals("Bulbasaur"))
+            {
+                bHPLabel.setValue("BulbasaurHP: " + b.bHP);
+            }
+            if(GeneralInformation.character[1].equals("Charmander"))
+            {
+                cHPLabel.setValue("CharmanderHP: " + Charmander.cHP);
+            }
             fHPLabel.setValue("FennekinHP: " + f.fHP);
             tHPLabel.setValue("TorchicHP: " + t.tHP);
-            pHPLabel.setValue("PikachuHP: " + Pikachu.pHP);
-            cHPLabel.setValue("CharmanderHP: " + Charmander.cHP);
+            
+            
             if(f.fHP > 0)
             {
                 attack3(f.getX(), f.getY(),  new GreenfootImage("fireAtt.png"));
@@ -340,7 +353,6 @@ public class Battle extends World
     }  
     
     
-    
     public void attack1(int x, int y, int z, int damage, GreenfootImage image)
     {
         if(Greenfoot.isKeyDown("space"))
@@ -425,16 +437,29 @@ public class Battle extends World
     
     public void fennekinAtt()
     {
+        FennekinAttack fa = new FennekinAttack();
+        FennekinAttack fa1 = new FennekinAttack();
+        FennekinAttack fa2 = new FennekinAttack();
+        int i = (int)Math.floor(Math.random()*(3-1+1)+1);
+        int x = (int)Math.floor(Math.random()*(3-1+1)+1);
+        int y = (int)Math.floor(Math.random()*(3-1+1)+1);
         
-        if(timerAttF.millisElapsed() > 20000)
+        if(timerFA.millisElapsed() > 5000)
         {
-            for(int i = 0; i < 3; i++)
-            {
-                FennekinAttack fa = new FennekinAttack();
-                addObject(fa, 150 + i*300, 100 + i*200);
-            }
-            timerAttF.mark();
+            addObject(fa, 200, i *200);
+            addObject(fa1, 400, x *200);
+            addObject(fa2, 600, y *200);
+            timerFA.mark();
         }
+        
+        if(timerFA1.millisElapsed() > 7000)
+        {
+            removeObject(fa);
+            removeObject(fa1);
+            removeObject(fa2);
+            timerFA1.mark();
+        }
+        
         
     }
 }
