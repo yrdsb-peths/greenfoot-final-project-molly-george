@@ -16,7 +16,7 @@ public class Battle extends World
     public Fennekin f = new Fennekin();
     public Torchic t = new Torchic();
     public Ninetales n = new Ninetales();
-    public static int  count = 1;
+    public static int  count = 2;
     public int bX = 0;
     public int bY;
     public int bZ;
@@ -51,7 +51,6 @@ public class Battle extends World
     public Label fHPLabel;
     public Label tHPLabel;
     public Label nHPLabel;
-    int c1 = 0;
     
     public Battle()
     {    
@@ -86,7 +85,6 @@ public class Battle extends World
             addObject(rHPLabel, 100, 80);
             
             
-            
             bHPLabel = new Label("BulbasaurHP: " + b.bHP, 20);
             addObject(bHPLabel, 100, 110);
             
@@ -119,6 +117,13 @@ public class Battle extends World
             }
             
             addObject(f, 250, 150); 
+            
+            fHPLabel = new Label("FennekinHP: " + f.fHP, 20);
+            addObject(fHPLabel, 100, 80);
+            
+            
+            tHPLabel = new Label("TorchicHP: " + t.tHP, 20);
+            addObject(tHPLabel, 100, 110);
         }
         else if(count == 3)
         {
@@ -197,6 +202,7 @@ public class Battle extends World
             if(b.bHP <= 0)
             {
                 removeObject(b);
+                removeObject(bHPLabel);
                 if(p.getX() > 900 || c.getX() > 900)
                 {
                     Map2 m2 = new Map2();
@@ -214,6 +220,8 @@ public class Battle extends World
         }
         else if(count == 2)
         {
+            fHPLabel.setValue("FennekinHP: " + f.fHP);
+            tHPLabel.setValue("TorchicHP: " + t.tHP);
             if(f.fHP > 0)
             {
                 attack3(f.getX(), f.getY(),  new GreenfootImage("fireAtt.png"));

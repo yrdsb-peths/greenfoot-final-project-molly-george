@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Store1 extends World
 {
-    Label select = new Label("This two Pokemons will be the Pokemons you start with!",50);
+   
     ToMap t = new ToMap();
     
     public Store1()
@@ -17,12 +17,12 @@ public class Store1 extends World
         
         setBackground("Store.png");
         Pikachu p = new Pikachu();
-        addObject(p,330,200);
+        addObject(p,250,160);
         
         Charmander c = new Charmander();
         addObject(c,600,200);
         
-        addObject(select,640,35);
+        
         addObject(t,1170, 675);
         
         GeneralInformation.character[0] = "Pikachu";
