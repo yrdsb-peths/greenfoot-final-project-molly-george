@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class NewLabel extends Actor
+public class NewLabel extends NewLabelClass
 {
     /**
      * Act - do whatever the NewLabel wants to do. This method is called whenever

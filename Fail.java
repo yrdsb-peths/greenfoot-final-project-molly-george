@@ -1,28 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class GeneralInformation here.
+ * Write a description of class Fail here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GeneralInformation extends Actor
+public class Fail extends NewLabelClass
 {
-    
-    public static String[] character = new String[2];
-    public int c = 1;
     public static boolean click;
-    public static boolean pressSpace;
     
-    public GeneralInformation()
+    public Fail()
     {
         setImage(new GreenfootImage("toMap1.png"));
     }
     
-    
     public void act()
     {
         click = Greenfoot.mouseClicked(this);
-        pressSpace = Greenfoot.isKeyDown("space");
     }
 }

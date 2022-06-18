@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class UpGrade here.
+ * Write a description of class CharmanderLogo here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class UpGrade extends NewLabelClass
+public class CharmanderLogo extends Charmander
 {
     
-    public UpGrade()
+    public CharmanderLogo()
     {
-        setImage(new GreenfootImage("upGrade.png"));
+        setImage(new GreenfootImage("CharmanderLogo.png"));
     }
     
     public void act()

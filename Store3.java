@@ -71,7 +71,7 @@ public class Store3 extends World
         
         if(t1.click == true)
         {
-            Battle b = new Battle();
+            Load3 b = new Load3();
             Greenfoot.setWorld(b);
         }
     }

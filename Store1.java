@@ -10,20 +10,23 @@ public class Store1 extends World
 {
    
     ToMap t = new ToMap();
+    Label coin = new Label(Battle.coins, 30);
     
     public Store1()
     {    
         super(900, 506, 1); 
         
         setBackground("Store.png");
-        Pikachu p = new Pikachu();
-        addObject(p,250,160);
+        PikachuLogo p = new PikachuLogo();
+        addObject(p,130,120);
         
-        Charmander c = new Charmander();
-        addObject(c,600,200);
+        CharmanderLogo c = new CharmanderLogo();
+        addObject(c,450,120);
         
         
-        addObject(t,1170, 675);
+        addObject(t,750, 400);
+        
+        addObject(coin, 720, 200);
         
         GeneralInformation.character[0] = "Pikachu";
         GeneralInformation.character[1] = "Charmander";
@@ -34,8 +37,8 @@ public class Store1 extends World
     {
         if(t.click == true)
         {
-            Battle b = new Battle();
-            Greenfoot.setWorld(b);
+            Load1 t = new Load1();
+            Greenfoot.setWorld(t);
         }
         
     }

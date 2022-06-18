@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class NextLabel extends Actor
+public class NextLabel extends NewLabelClass
 {
     public NextLabel()
     {
