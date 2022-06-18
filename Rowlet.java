@@ -16,7 +16,7 @@ public class Rowlet extends Characters
     public Rowlet()
     {
         rHP = 60;
-        setImage(new GreenfootImage("Rowlet.jpg.png"));
+        setImage(new GreenfootImage("Rowlet.png"));
     }
     
     

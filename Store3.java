@@ -8,15 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Store3 extends World
 {
-    Bulbasaur b = new Bulbasaur();
-    Pikachu p = new Pikachu();
-    Charmander c = new Charmander();
-    Torchic t = new Torchic();
+    BulbLogo2 b = new BulbLogo2();
+    PikachuLogo p = new PikachuLogo();
+    CharmanderLogo c = new CharmanderLogo();
+    TorchicLogo2 t = new TorchicLogo2();
     UpGrade u1 = new UpGrade();
     UpGrade u2 = new UpGrade();
     UpGrade u3 = new UpGrade();
     UpGrade u4 = new UpGrade();
     ToMap t1 = new ToMap();
+    private Label coin = new Label(Battle.coins, 30);
 
     private Label tofinalLevel = new Label("click here go to final level",30);
     public Store3()
@@ -25,23 +26,28 @@ public class Store3 extends World
         
         setBackground("Store.png");
         
-        addObject(p,230,140);
+        addObject(p,135,125);
 
-        addObject(c,430,140);
+        addObject(c,440,125);
 
-        addObject(b,630,140);
-
-        addObject(t,230, 340);
+        addObject(b,135,360);
         
-        addObject(u1,230,240);
-        addObject(u2,430,240);
-        addObject(u3,630,240);
-        addObject(u4,230,440);
-        addObject(t1, 750, 490);
+        addObject(t,440,360);
+
+        
+        addObject(u1,135,230);
+
+        addObject(u2,440,230);
+
+        addObject(u3,135,470);
+        
+        addObject(u4,440,470);
+        
+        addObject(t1, 750, 400);
+        
+        addObject(coin, 725, 200);
         
         GeneralInformation.character[0] = "Pikachu";
-        
-        
         
         GeneralInformation.character[1] = "Charmander";
     }

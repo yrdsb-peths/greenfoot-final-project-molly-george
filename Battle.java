@@ -100,12 +100,7 @@ public class Battle extends World
         }
         else if(count == 2)
         {
-            Pikachu.pHP = 65;
-            Charmander.cHP = 65;
-            Bulbasaur.bHP = 50;
-            Pikachu.live = true;
-            Charmander.live = true;
-            Bulbasaur.live = true;
+            
             setBackground(new GreenfootImage("7.png"));
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
@@ -124,6 +119,19 @@ public class Battle extends World
                 addObject(c, 350, 400);
                 cHPLabel = new Label("CharmanderHP: " + Charmander.cHP, 20);
                 addObject(cHPLabel, 800, 130);
+            }
+            
+            if(GeneralInformation.character[0].equals("Pikachu"))
+            {
+                hp1 = p.pHP;
+            }
+            if(GeneralInformation.character[0].equals("Bulbasaur"))
+            {
+                hp1 = b.bHP;
+            }
+            if(GeneralInformation.character[1].equals("Charmander"))
+            {
+                hp2 = c.cHP;
             }
             
             addObject(f, 250, 150); 
@@ -215,7 +223,9 @@ public class Battle extends World
             {
                 removeObject(b);
                 removeObject(bHPLabel);
-                if(p.getX() > 900 || c.getX() > 900)
+                ToMap2 t2 = new ToMap2();
+                addObject(t2, 450, 250);
+                if(pX > 900 || cX > 900)
                 {
                     Map2 m2 = new Map2();
                     Greenfoot.setWorld(m2);
@@ -225,7 +235,7 @@ public class Battle extends World
             }
             if(p.pHP <= 0 && c.cHP <= 0)
             {
-                Restart1 s1 = new Restart1();
+                Load1 s1 = new Load1();
                 Greenfoot.setWorld(s1);
                 Pikachu.live = true;
                 Charmander.live = true;
@@ -270,13 +280,26 @@ public class Battle extends World
             {
                 removeObject(tHPLabel);
                 removeObject(t);
+                
+                ToMap3 t3 = new ToMap3();
+                addObject(t3, 450, 250);
                 if(p.pikachuX > 900 || cX > 900 || bX > 900)
                 {
                     Map3 s3 = new Map3();
                     Greenfoot.setWorld(s3);
                     count++;
-                    coins += 10;
+                    coins += 20;
                 }
+            }
+            
+            if(hp1 <= 0 && hp2 <= 0)
+            {
+                Load2 s2 = new Load2();
+                Greenfoot.setWorld(s2);
+                Pikachu.live = true;
+                Charmander.live = true;
+                Bulbasaur.live = true;
+                
             }
             
             if(GeneralInformation.character[0].equals("Pikachu"))
@@ -291,12 +314,9 @@ public class Battle extends World
             {
                 hp2 = c.cHP;
             }
-            if(hp1 <= 0 && hp2 <= 0)
-            {
-                Map2 m2 = new Map2();
-                Greenfoot.setWorld(m2);
-                
-            }
+            
+            
+            
             
         }
         else if(count == 3)
