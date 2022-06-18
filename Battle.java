@@ -272,6 +272,9 @@ public class Battle extends World
             {
                 removeObject(tHPLabel);
                 removeObject(t);
+                
+                ToMap3 t3 = new ToMap3();
+                addObject(t3, 450, 250);
                 if(p.pikachuX > 900 || cX > 900 || bX > 900)
                 {
                     Map3 s3 = new Map3();
