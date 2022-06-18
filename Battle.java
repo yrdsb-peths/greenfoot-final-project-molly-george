@@ -16,7 +16,7 @@ public class Battle extends World
     public Fennekin f = new Fennekin();
     public Torchic t = new Torchic();
     public Ninetales n = new Ninetales();
-    public static int  count = 2;
+    public static int  count = 1;
     public int bX = 0;
     public int bY;
     public int bZ;
@@ -235,7 +235,7 @@ public class Battle extends World
             }
             if(p.pHP <= 0 && c.cHP <= 0)
             {
-                Restart1 s1 = new Restart1();
+                Load1 s1 = new Load1();
                 Greenfoot.setWorld(s1);
                 Pikachu.live = true;
                 Charmander.live = true;
@@ -294,7 +294,7 @@ public class Battle extends World
             
             if(hp1 <= 0 && hp2 <= 0)
             {
-                Restart2 s2 = new Restart2();
+                Load2 s2 = new Load2();
                 Greenfoot.setWorld(s2);
                 Pikachu.live = true;
                 Charmander.live = true;
