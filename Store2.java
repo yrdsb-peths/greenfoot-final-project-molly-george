@@ -18,7 +18,6 @@ public class Store2 extends World
     ToMap t = new ToMap();
     private Label coin = new Label(Battle.coins, 30);
     
-    private Label toThirdLevel = new Label("click here go to Third level",30);
     
     public Store2()
     {    
@@ -44,6 +43,13 @@ public class Store2 extends World
         GeneralInformation.character[0] = "Pikachu";
         
         GeneralInformation.character[1] = "Charmander";
+        
+        Pikachu.pHP = 65;
+        Charmander.cHP = 65;
+        Bulbasaur.bHP = 50;
+        Pikachu.live = true;
+        Charmander.live = true;
+        Bulbasaur.live = true;
     }
     
     public void act()

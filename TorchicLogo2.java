@@ -14,4 +14,8 @@ public class TorchicLogo2 extends Torchic
         setImage(new GreenfootImage("TorchicLogo.png"));
     }
     
+    public void act()
+    {
+        // Add your action code here.
+    }
 }

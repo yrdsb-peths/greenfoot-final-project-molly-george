@@ -15,7 +15,7 @@ public class Load1 extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 506, 1); 
         
-        
+        addObject(g,450,250);
     }
     
     public void act()
