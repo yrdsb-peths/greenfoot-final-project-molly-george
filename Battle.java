@@ -16,7 +16,7 @@ public class Battle extends World
     public Fennekin f = new Fennekin();
     public Torchic t = new Torchic();
     public Ninetales n = new Ninetales();
-    public static int  count = 2;
+    public static int  count = 1;
     public int bX = 0;
     public int bY;
     public int bZ;
@@ -52,12 +52,19 @@ public class Battle extends World
     public Label fHPLabel;
     public Label tHPLabel;
     public Label nHPLabel;
+    public boolean isThereFire = false; // To detect if there is any fire on the map
+    FennekinAttack fa = new FennekinAttack();
+    FennekinAttack fa1 = new FennekinAttack();
+    FennekinAttack fa2 = new FennekinAttack();
+    public static int coins = 0;
+    GeneralInformation g;
+   
     
     public Battle()
     {    
         super(900, 506, 1, false); 
-        
-        GeneralInformation g = new GeneralInformation();
+        timerFA.mark();
+        g = new GeneralInformation();
         
         if(count == 1)
         {
@@ -102,7 +109,7 @@ public class Battle extends World
             setBackground(new GreenfootImage("7.png"));
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
-                addObject(p, 250, 400);
+                addObject(p, 320, 400);
                 pHPLabel = new Label("PikachuHP: " + Pikachu.pHP, 20);
                 addObject(pHPLabel, 800, 100);
             }
@@ -213,14 +220,16 @@ public class Battle extends World
                     Map2 m2 = new Map2();
                     Greenfoot.setWorld(m2);
                     count++;
+                    coins += 10;
                 }
             }
             if(p.pHP <= 0 && c.cHP <= 0)
             {
-                Store1 s1 = new Store1();
+                Restart1 s1 = new Restart1();
                 Greenfoot.setWorld(s1);
                 Pikachu.live = true;
                 Charmander.live = true;
+                
             }
         }
         else if(count == 2)
@@ -266,6 +275,7 @@ public class Battle extends World
                     Map3 s3 = new Map3();
                     Greenfoot.setWorld(s3);
                     count++;
+                    coins += 10;
                 }
             }
             
@@ -285,6 +295,7 @@ public class Battle extends World
             {
                 Map2 m2 = new Map2();
                 Greenfoot.setWorld(m2);
+                
             }
             
         }
@@ -437,27 +448,28 @@ public class Battle extends World
     
     public void fennekinAtt()
     {
-        FennekinAttack fa = new FennekinAttack();
-        FennekinAttack fa1 = new FennekinAttack();
-        FennekinAttack fa2 = new FennekinAttack();
-        int i = (int)Math.floor(Math.random()*(3-1+1)+1);
-        int x = (int)Math.floor(Math.random()*(3-1+1)+1);
-        int y = (int)Math.floor(Math.random()*(3-1+1)+1);
         
-        if(timerFA.millisElapsed() > 5000)
+        int i = (int)(Math.random()*2)+1;
+        int x = (int)(Math.random()*2)+1;
+        int y = (int)(Math.random()*2)+1;
+        
+        
+        if(timerFA.millisElapsed() > 5000 && !isThereFire)
         {
-            addObject(fa, 200, i *200);
-            addObject(fa1, 400, x *200);
-            addObject(fa2, 600, y *200);
+            addObject(fa,  200, i * 200);
+            addObject(fa1, 400, x * 200);
+            addObject(fa2, 600, y * 200);
+            isThereFire = true; //
             timerFA.mark();
         }
         
-        if(timerFA1.millisElapsed() > 7000)
+        else if(timerFA.millisElapsed() > 2000 && isThereFire)
         {
             removeObject(fa);
             removeObject(fa1);
             removeObject(fa2);
-            timerFA1.mark();
+            isThereFire = false; //
+            timerFA.mark();
         }
         
         

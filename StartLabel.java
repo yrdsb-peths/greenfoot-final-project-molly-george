@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Molly Wu 
  * @version May 2022
  */
-public class StartLabel extends Actor
+public class StartLabel extends NewLabelClass
 {
     
     public StartLabel()

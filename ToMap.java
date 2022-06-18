@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ToMap extends Actor
+public class ToMap extends NewLabelClass
 {
     public boolean click;
     
