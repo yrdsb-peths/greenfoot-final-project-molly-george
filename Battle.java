@@ -33,8 +33,8 @@ public class Battle extends World
     public int hp2;
     public int hp3;
     public int hp4;
-    
     private SimpleTimer[] timerArray = new SimpleTimer[11];
+    private Label[] labelArray = new Label[8];
     public Label pHPLabel;
     public Label cHPLabel;
     public Label eHPLabel;
