@@ -70,9 +70,9 @@ public class Pikachu extends Characters
             removeTouching(FennekinAttack.class);
             
             if(timer.millisElapsed() < 100)
-                {
-                    return;
-                }
+            {
+                return;
+            }
                 
             if(Greenfoot.isKeyDown("a"))
             {
