@@ -74,12 +74,51 @@ public class Store2 extends World
         }
         
         
+        
+        upGrade();  
+        
+        coin.setValue(Battle.coins);
         //slect more than two will overwrite the second one
 
         if(t.click == true)
         {
             Load2 b = new Load2();
             Greenfoot.setWorld(b);
+        }
+    }
+    
+    public void upGrade()
+    {
+        if(Greenfoot.mouseClicked(u1))
+        {
+            if(Battle.coins > 0)
+            {
+                Pikachu.pHP += 10;
+                Pikachu.damage = 5;
+                Pikachu.upGrade = true;
+                Battle.coins -= 10;
+            }
+            
+        }
+        if(Greenfoot.mouseClicked(u2))
+        {
+            if(Battle.coins > 0)
+            {
+                Charmander.cHP += 10;
+                Charmander.damage = 5;
+                Charmander.upGrade = true;
+                Battle.coins -= 10;
+            }
+        }
+        if(Greenfoot.mouseClicked(u3))
+        {
+            if(Battle.coins > 0)
+            {
+                Bulbasaur.bHP += 10;
+                Bulbasaur.damage = 5;
+                Bulbasaur.upGrade = true;
+                Battle.coins -= 10;
+            }
         }
     }
 }

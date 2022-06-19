@@ -18,6 +18,7 @@ public class Charmander extends Characters
     private GreenfootImage[] faceRight = new GreenfootImage[6];
     private GreenfootImage[] faceLeft = new GreenfootImage[6];
     private int stepCheck = 0;
+    public static boolean upGrade = false;
     
     public Charmander()
     {

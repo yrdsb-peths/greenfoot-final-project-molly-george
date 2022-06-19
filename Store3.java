@@ -39,14 +39,26 @@ public class Store3 extends World
         
         addObject(t,440,360);
 
+        if(Pikachu.upGrade == false)
+        {
+            addObject(u1,135,230);
+        }
         
-        addObject(u1,135,230);
-
-        addObject(u2,440,230);
-
-        addObject(u3,135,470);
+        if(Charmander.upGrade == false)
+        {
+            addObject(u2,440,230);
+        }
         
-        addObject(u4,440,470);
+        if(Bulbasaur.upGrade == false)
+        {
+            addObject(u3,135,470);
+        }
+        
+        if(Torchic.upGrade == false)
+        {
+            addObject(u4,440,470);
+        }
+        
         
         addObject(t1, 750, 400);
         
@@ -59,6 +71,9 @@ public class Store3 extends World
 
     public void act()
     {
+        upGrade();
+        coin.setValue(Battle.coins);
+        
         if(Greenfoot.mouseClicked(p))
         {
             GeneralInformation.character[0] = "Pikachu";
@@ -84,6 +99,50 @@ public class Store3 extends World
         {
             Load3 b = new Load3();
             Greenfoot.setWorld(b);
+        }
+    }
+    
+    public void upGrade()
+    {
+        if(Greenfoot.mouseClicked(u1))
+        {
+            if(Battle.coins > 0)
+            {
+                Pikachu.pHP = 75;
+                Pikachu.damage = 5;
+                Pikachu.upGrade = true;
+                Battle.coins -= 10;
+            } 
+        }
+        if(Greenfoot.mouseClicked(u2))
+        {
+            if(Battle.coins > 0)
+            {
+                Charmander.cHP = 75;
+                Charmander.damage = 5;
+                Charmander.upGrade = true;
+                Battle.coins -= 10;
+            }
+        }
+        if(Greenfoot.mouseClicked(u3))
+        {
+            if(Battle.coins > 0)
+            {
+                Bulbasaur.bHP = 75;
+                Bulbasaur.damage = 5;
+                Bulbasaur.upGrade = true;
+                Battle.coins -= 10;
+            }
+        }
+        if(Greenfoot.mouseClicked(u4))
+        {
+            if(Battle.coins > 0)
+            {
+                Torchic.tHP = 55;
+                Torchic.damage = 5;
+                Torchic.upGrade = true;
+                Battle.coins -= 10;
+            } 
         }
     }
     

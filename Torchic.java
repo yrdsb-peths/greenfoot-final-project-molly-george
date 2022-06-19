@@ -19,6 +19,7 @@ public class Torchic extends Characters
     private GreenfootImage[] faceRight = new GreenfootImage[5];
     private GreenfootImage[] faceLeft = new GreenfootImage[5];
     private int stepCheck = 0;
+    public static boolean upGrade = false;
     
     public Torchic()
     {
