@@ -21,11 +21,11 @@ public class Characters extends Actor
     public void movementA(int x, int y, int s)
     {
         
-        if(isTouching(Forest.class))
+        if(isTouching(Blocker.class))
         {
                 
         }
-        else if(!isTouching(Forest.class))
+        else if(!isTouching(Blocker.class))
         {
             if(Greenfoot.isKeyDown("a"))
             {
@@ -79,11 +79,11 @@ public class Characters extends Actor
     public void movementB(int x, int y, int s)
     {
         
-        if(isTouching(Forest.class))
+        if(isTouching(Blocker.class))
         {
                 
         }
-        else if(!isTouching(Forest.class))
+        else if(!isTouching(Blocker.class))
         {
             if(Greenfoot.isKeyDown("left"))
             {
@@ -142,19 +142,19 @@ public class Characters extends Actor
         {
             setLocation( randomX * 1 + x, randomY * 1 + y);
         }
-        if( x >= 850)
+        if( x >= 850 || isTouching(Blocker.class))
         {
              touchRight = true;
         }
-        if( x <= 50)
+        if( x <= 50 || isTouching(Blocker.class))
         {
             touchLeft = true;
         }
-        if( y >= 500)
+        if( y >= 500 || isTouching(Blocker.class))
         {
             touchDown = true;
         }
-        if( y <= 100)
+        if( y <= 100 || isTouching(Blocker.class))
         {
             touchUp = true;
         }
