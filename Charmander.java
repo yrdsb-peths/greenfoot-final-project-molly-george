@@ -14,17 +14,31 @@ public class Charmander extends Characters
     public static int damage = 4;
     public static int speed = 4;
     public static boolean live = true;
+    private SimpleTimer timer = new SimpleTimer();
+    private GreenfootImage[] faceRight = new GreenfootImage[6];
+    private GreenfootImage[] faceLeft = new GreenfootImage[6];
+    private int stepCheck = 0;
     
     public Charmander()
     {
         cHP = 65;
         setImage(new GreenfootImage("Charmander.png"));
+        for(int i = 1; i <= faceRight.length; i++){
+            faceRight[i - 1] = new GreenfootImage("c" + (i ) + ".png");
+            
+            faceLeft[i - 1] = new GreenfootImage("c" + (i ) + ".png");
+            faceLeft[i - 1].mirrorHorizontally();
+            setImage(faceLeft[0]);
+            
+            timer.mark();
+        }
     }
     
     public void act()
     {
         int CharmanderX = getX();
         int CharmanderY = getY();
+        
         if(live == true)
         {
             movementB(CharmanderX,CharmanderY, speed);
@@ -48,6 +62,48 @@ public class Charmander extends Characters
                 cHP -= 5;
             }
             removeTouching(FennekinAttack.class);
+            
+            if(timer.millisElapsed() < 100)
+            {
+                return;
+            }
+                
+            if(Greenfoot.isKeyDown("left"))
+            {
+                
+                setImage(faceLeft[stepCheck]);
+                stepCheck++;
+                stepCheck %= 6;
+            }
+            else if(Greenfoot.isKeyDown("right"))
+            {
+                setImage(faceRight[stepCheck]);
+                stepCheck++;
+                stepCheck %= 6;
+            }
+            else if(Greenfoot.isKeyDown("up"))
+            {
+                setRotation(270);
+                setImage(faceLeft[stepCheck]);
+                stepCheck++;
+                stepCheck %= 6;
+            }
+            else if(Greenfoot.isKeyDown("down"))
+            {
+                setRotation(90);
+                setImage(faceLeft[stepCheck]);
+                stepCheck++;
+                stepCheck %= 6;
+            }
+            if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("down"))
+            {
+                setRotation(45);
+                setImage(faceRight[stepCheck]);
+                stepCheck++;
+                stepCheck %= 6;
+            }
+                
+            timer.mark();
         }
         if(cHP <= 0)
         {
