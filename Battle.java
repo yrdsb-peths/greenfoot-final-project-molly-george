@@ -16,7 +16,7 @@ public class Battle extends World
     public Fennekin f = new Fennekin();
     public Torchic t = new Torchic();
     public Ninetales n = new Ninetales();
-    public static int  count = 2;
+    public static int  count = 1;
     public int bX = 0;
     public int bY;
     public int bZ;
@@ -33,17 +33,8 @@ public class Battle extends World
     public int hp2;
     public int hp3;
     public int hp4;
-    private SimpleTimer timer = new SimpleTimer();
-    private SimpleTimer timer1 = new SimpleTimer();
-    private SimpleTimer timerRP = new SimpleTimer();
-    private SimpleTimer timerRC = new SimpleTimer();
-    private SimpleTimer timerEP = new SimpleTimer();
-    private SimpleTimer timerEC = new SimpleTimer();
-    private SimpleTimer timerAttR = new SimpleTimer();
-    private SimpleTimer timerAttE = new SimpleTimer();
-    private SimpleTimer timerAttB = new SimpleTimer();
-    private SimpleTimer timerFA = new SimpleTimer();
-    private SimpleTimer timerFA1 = new SimpleTimer();
+    
+    private SimpleTimer[] timerArray = new SimpleTimer[11];
     public Label pHPLabel;
     public Label cHPLabel;
     public Label eHPLabel;
@@ -67,8 +58,14 @@ public class Battle extends World
     public Battle()
     {    
         super(900, 506, 1, false); 
-        timerFA.mark();
+        for( int i = 0; i < 11; i++)
+        {
+            timerArray[i] =  new SimpleTimer();
+        }
+        timerArray[7].mark();
         g = new GeneralInformation();
+        
+        
         
         if(count == 1)
         {
@@ -191,8 +188,8 @@ public class Battle extends World
             
             if(e.eHP > 0)
             {
-                eeveeAtt(pX - 150, pY - 150, new GreenfootImage("EeveeAtt.png"), timerEP);   
-                eeveeAtt(cX - 150, cY - 150, new GreenfootImage("EeveeAtt.png"), timerEC); 
+                eeveeAtt(pX - 150, pY - 150, new GreenfootImage("EeveeAtt.png"), timerArray[4]);   
+                eeveeAtt(cX - 150, cY - 150, new GreenfootImage("EeveeAtt.png"), timerArray[5]); 
                 attack3(e.getX(), e.getY(), new GreenfootImage("plantAtt.png"));
             }
             
@@ -207,8 +204,8 @@ public class Battle extends World
                 if(r.rHP > 0)
                 {
                     attack3(r.getX(), r.getY(), new GreenfootImage("plantAtt.png"));
-                    rowletAtt(pX - 100, pY - 100, new GreenfootImage("RowletAtt.png"), timerRP);
-                    rowletAtt(cX - 100, cY - 100, new GreenfootImage("RowletAtt.png"), timerRC);
+                    rowletAtt(pX - 100, pY - 100, new GreenfootImage("RowletAtt.png"), timerArray[2]);
+                    rowletAtt(cX - 100, cY - 100, new GreenfootImage("RowletAtt.png"), timerArray[3]);
                 }
             }
             if(r.rHP <= 0)
@@ -478,11 +475,11 @@ public class Battle extends World
     {
         if(Greenfoot.isKeyDown("space"))
         {
-            if(timer.millisElapsed() > 500)
+            if(timerArray[0].millisElapsed() > 500)
             {
                 NormalAttack a = new NormalAttack(image, damage);
                 addObject(a,x,y);
-                timer.mark();
+                timerArray[0].mark();
                 
             }
         }
@@ -492,11 +489,11 @@ public class Battle extends World
     {
         if(Greenfoot.isKeyDown("r"))
         {
-            if(timer.millisElapsed() > 500)
+            if(timerArray[0].millisElapsed() > 500)
             {
                 NormalAttack a = new NormalAttack(image, damage);
                 addObject(a,x,y);
-                timer.mark();
+                timerArray[0].mark();
                 
             }
         }
@@ -505,14 +502,14 @@ public class Battle extends World
     
     public void attack3(int x, int y, GreenfootImage image)
     {
-        if(timer1.millisElapsed() > 3000)
+        if(timerArray[1].millisElapsed() > 3000)
         {
             for(int i = 1; i < 9; i++)
             {
                 EnemyAttack e = new EnemyAttack(image);
                 addObject(e,x,y);
                 e.setRotation(i * 45);
-                timer1.mark();
+                timerArray[1].mark();
             }
             
         }
@@ -541,14 +538,14 @@ public class Battle extends World
     
     public void bulbasaurAttack(int x, int y, GreenfootImage image)
     {
-        if(timerAttB.millisElapsed() > 5000)
+        if(timerArray[6].millisElapsed() > 5000)
         {
             for(int i = 1; i < 9; i++)
             {
                 BulbasaurAttack ba = new BulbasaurAttack(image);
                 addObject(ba,x,y);
                 ba.setRotation(i * 45);
-                timerAttB.mark();
+                timerArray[6].mark();
             }
             
         }
@@ -562,22 +559,22 @@ public class Battle extends World
         int y = (int)(Math.random()*2)+1;
         
         
-        if(timerFA.millisElapsed() > 5000 && !isThereFire)
+        if(timerArray[7].millisElapsed() > 5000 && !isThereFire)
         {
             addObject(fa,  200, i * 200);
             addObject(fa1, 400, x * 200);
             addObject(fa2, 600, y * 200);
             isThereFire = true; //
-            timerFA.mark();
+            timerArray[7].mark();
         }
         
-        else if(timerFA.millisElapsed() > 2000 && isThereFire)
+        else if(timerArray[7].millisElapsed() > 2000 && isThereFire)
         {
             removeObject(fa);
             removeObject(fa1);
             removeObject(fa2);
             isThereFire = false; //
-            timerFA.mark();
+            timerArray[7].mark();
         }
         
         
