@@ -23,7 +23,9 @@ public class Characters extends Actor
         
         if(isTouching(Blocker.class))
         {
-                
+            int face = getRotation();
+            setRotation(face + 180);
+            move(10);
         }
         else if(!isTouching(Blocker.class))
         {
@@ -73,6 +75,8 @@ public class Characters extends Actor
         {
             setRotation(225);
         }
+        
+        
     
     }
     
@@ -136,25 +140,25 @@ public class Characters extends Actor
     
     public void movementC(int x, int y)
     {
-        int randomX = (int)Math.random()*(2-(-1)+1)+(-1);   
-        int randomY = (int)Math.random()*(2-(-1)+1)+(-1);  
+        int randomX = (int)Math.random()*(2)+(-1);   
+        int randomY = (int)Math.random()*(2)+(-1);  
         if( touchRight == false && touchLeft == false && touchUp == false && touchDown == false)
         {
             setLocation( randomX * 1 + x, randomY * 1 + y);
         }
-        if( x >= 850 || isTouching(Blocker.class))
+        if( x >= 850 )
         {
              touchRight = true;
         }
-        if( x <= 50 || isTouching(Blocker.class))
+        if( x <= 50)
         {
             touchLeft = true;
         }
-        if( y >= 500 || isTouching(Blocker.class))
+        if( y >= 500)
         {
             touchDown = true;
         }
-        if( y <= 100 || isTouching(Blocker.class))
+        if( y <= 100)
         {
             touchUp = true;
         }
