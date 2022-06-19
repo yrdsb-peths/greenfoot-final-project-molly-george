@@ -2,6 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Load2 here.
+ * start screen for level 2
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

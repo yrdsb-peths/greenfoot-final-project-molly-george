@@ -2,9 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Transition here.
+ * transition screen 1
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Molly Wu and George Lu
+ * @version June 2022
  */
 public class Transition extends World
 {

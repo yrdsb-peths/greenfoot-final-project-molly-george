@@ -2,6 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Load3 here.
+ * startscreen for level 3
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022
