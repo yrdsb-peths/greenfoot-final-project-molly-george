@@ -53,7 +53,13 @@ public class Pikachu extends Characters
                 speed = 4;
             }
             removeTouching(BulbasaurAttack.class);
+            if(isTouching(FennekinAttack.class))
+            {
+                pHP -= 5;
+            }
+            
             removeTouching(FennekinAttack.class);
+            
         }
         if(pHP <= 0)
         {

@@ -16,17 +16,6 @@ public class FennekinAttack extends Damage
     
     public void act()
     {
-        if(isTouching(Pikachu.class))
-        {
-            Pikachu.pHP -= 4;
-        }
-        if(isTouching(Charmander.class))
-        {
-            Pikachu.pHP -= 4;
-        }
-        if(isTouching(Bulbasaur.class) && Bulbasaur.enemy)
-        {
-            Pikachu.pHP -= 4;
-        }
+        
     }
 }

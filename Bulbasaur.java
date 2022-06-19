@@ -51,6 +51,11 @@ public class Bulbasaur extends Characters
             {
                 movementA(bulbasaurX, bulbasaurY, speed);
                 removeTouching(EnemyAttack.class);
+                if(isTouching(FennekinAttack.class))
+                {
+                    bHP -= 5;
+                }
+                removeTouching(FennekinAttack.class);
                 if(timer.millisElapsed() < 100)
                 {
                     return;

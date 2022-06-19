@@ -43,6 +43,11 @@ public class Charmander extends Characters
             }
             removeTouching(EeveeAttack.class);
             removeTouching(BulbasaurAttack.class);
+            if(isTouching(FennekinAttack.class))
+            {
+                cHP -= 5;
+            }
+            removeTouching(FennekinAttack.class);
         }
         if(cHP <= 0)
         {

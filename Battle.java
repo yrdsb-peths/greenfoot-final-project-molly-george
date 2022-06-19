@@ -111,32 +111,24 @@ public class Battle extends World
                 addObject(p, 320, 400);
                 pHPLabel = new Label("PikachuHP: " + Pikachu.pHP, 20);
                 addObject(pHPLabel, 800, 100);
+                hp1 = p.pHP;
             }
             if(GeneralInformation.character[0].equals("Bulbasaur"))
             {
                 addObject(b, 250, 400);
                 bHPLabel = new Label("BulbasaurHP: " + Bulbasaur.bHP, 20);
                 addObject(bHPLabel, 800, 100);
+                hp1 = b.bHP;
             }
             if(GeneralInformation.character[1].equals("Charmander"))
             {
                 addObject(c, 350, 400);
                 cHPLabel = new Label("CharmanderHP: " + Charmander.cHP, 20);
                 addObject(cHPLabel, 800, 130);
-            }
-            
-            if(GeneralInformation.character[0].equals("Pikachu"))
-            {
-                hp1 = p.pHP;
-            }
-            if(GeneralInformation.character[0].equals("Bulbasaur"))
-            {
-                hp1 = b.bHP;
-            }
-            if(GeneralInformation.character[1].equals("Charmander"))
-            {
                 hp2 = c.cHP;
             }
+            
+            
             
             addObject(f, 250, 150); 
             
@@ -155,23 +147,33 @@ public class Battle extends World
             Charmander.cHP = 65;
             Bulbasaur.bHP = 50;
             Torchic.tHP = 45;
+            nHPLabel = new Label("NinetalesHP: " + n.nHP, 20);
+            addObject(nHPLabel, 100, 80);
             setBackground(new GreenfootImage("9.png"));
         
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
                 addObject(p, 250, 350);
+                pHPLabel = new Label("PikachuHP: " + Pikachu.pHP, 20);
+                addObject(pHPLabel, 800, 100);
             }
             if(GeneralInformation.character[1].equals("Charmander"))
             {
                 addObject(c, 250, 350);
+                cHPLabel = new Label("CharmanderHP: " + Charmander.cHP, 20);
+                addObject(cHPLabel, 800, 130);
             }
             if(GeneralInformation.character[0].equals("Bulbasaur"))
             {
                 addObject(b, 250, 350);
+                bHPLabel = new Label("BulbasaurHP: " + Bulbasaur.bHP, 20);
+                addObject(bHPLabel, 800, 100);
             }
             if(GeneralInformation.character[1].equals("Torchic"))
             {
                 addObject(t, 250, 350);
+                tHPLabel = new Label("TorchicHP: " + Torchic.tHP, 20);
+                addObject(tHPLabel, 800, 130);
             }
             
             addObject(n, 200, 150);
@@ -249,16 +251,20 @@ public class Battle extends World
         }
         else if(count == 2)
         {
+            
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
+                hp1 = p.pHP;
                 pHPLabel.setValue("PikachuHP: " + Pikachu.pHP);
             }
             if(GeneralInformation.character[0].equals("Bulbasaur"))
             {
+                hp1 = b.bHP;
                 bHPLabel.setValue("BulbasaurHP: " + b.bHP);
             }
             if(GeneralInformation.character[1].equals("Charmander"))
             {
+                hp2 = c.cHP;
                 cHPLabel.setValue("CharmanderHP: " + Charmander.cHP);
             }
             fHPLabel.setValue("FennekinHP: " + f.fHP);
@@ -306,26 +312,12 @@ public class Battle extends World
                 Bulbasaur.live = true;
                 
             }
-            
-            if(GeneralInformation.character[0].equals("Pikachu"))
-            {
-                hp1 = p.pHP;
-            }
-            if(GeneralInformation.character[0].equals("Bulbasaur"))
-            {
-                hp1 = b.bHP;
-            }
-            if(GeneralInformation.character[1].equals("Charmander"))
-            {
-                hp2 = c.cHP;
-            }
-            
-            
-            
+    
             
         }
         else if(count == 3)
         {
+            nHPLabel.setValue("Ninetales: " + n.nHP);
             if(n.nHP > 0)
             {
                 attack3(n.getX(), n.getY(),  new GreenfootImage("fireAtt.png"));
@@ -333,22 +325,51 @@ public class Battle extends World
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
                 hp1 = p.pHP;
+                pHPLabel.setValue("PikachuHP: " + Pikachu.pHP);
             }
             if(GeneralInformation.character[0].equals("Bulbasaur"))
             {
                 hp1 = b.bHP;
+                bHPLabel.setValue("BulbasaurHP: " + b.bHP);
             }
             if(GeneralInformation.character[1].equals("Charmander"))
             {
                 hp2 = c.cHP;
+                cHPLabel.setValue("CharmanderHP: " + c.cHP);
             }
             if(GeneralInformation.character[1].equals("Torchic"))
             {
                 hp2 = t.tHP;
+                nHPLabel.setValue("NinetalesHP: " + n.nHP);
             }
             if(n.nHP <= 0)
             {
                 removeObject(n);
+            }
+            if(hp1 <= 0 && hp2 <= 0)
+            {
+                Load2 s2 = new Load2();
+                Greenfoot.setWorld(s2);
+                Pikachu.live = true;
+                Charmander.live = true;
+                Bulbasaur.live = true;
+                Torchic.live = true;
+                
+            }
+            
+            if(n.nHP <= 0)
+            {
+                removeObject(nHPLabel);
+                removeObject(n);
+                
+                ToMapFinal tf = new ToMapFinal();
+                addObject(tf, 450, 250);
+                if(p.pikachuX > 900 || cX > 900 || bX > 900 || tX > 900)
+                {
+                    ConclusionScreen cs = new ConclusionScreen();
+                    Greenfoot.setWorld(cs);
+                    
+                }
             }
         }
         
