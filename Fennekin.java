@@ -23,7 +23,6 @@ public class Fennekin extends Characters
     {
         int FennekinX = getX();
         int FennekinY = getY();
-        movementC(fennekinX,fennekinY);
         removeTouching(NormalAttack.class);
     }
     

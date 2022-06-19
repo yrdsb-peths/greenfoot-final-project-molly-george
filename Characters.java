@@ -29,27 +29,27 @@ public class Characters extends Actor
         {
             if(Greenfoot.isKeyDown("a"))
             {
-                setRotation(270);
+                setRotation(0);
                 setLocation(x -= s, y);
             }
             
             if(Greenfoot.isKeyDown("d"))
             {
-                setRotation(90);
+                setRotation(0);
                 setLocation(x += s, y);    
                     
             }
             
             if(Greenfoot.isKeyDown("w"))
             {
-                setRotation(0);
+                setRotation(90);
                 setLocation(x , y -= s);
                     
             }
                 
             if(Greenfoot.isKeyDown("s"))
             {
-                setRotation(180);
+                setRotation(270);
                 setLocation(x , y += s);
                     
             }
@@ -59,19 +59,19 @@ public class Characters extends Actor
         
         if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w"))
         {
-            setRotation(-45);
+            setRotation(405);
         }
         if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
         {
-            setRotation(-135);
+            setRotation(135);
         }
         if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("w"))
         {
-            setRotation(45);
+            setRotation(315);
         }
         if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
         {
-            setRotation(135);
+            setRotation(45);
         }
     
     }

@@ -15,11 +15,15 @@ public class Pikachu extends Characters
     public static int speed = 4;
     public static boolean live = true;
     private SimpleTimer timer = new SimpleTimer();
+    private GreenfootImage[] faceRight = new GreenfootImage[7];
+    private GreenfootImage[] faceLeft = new GreenfootImage[7];
+    private int stepCheck = 0;
     
     public Pikachu()
     {
         pHP = 65;
         setImage(new GreenfootImage("pikachu.png"));
+        
     }
     
     
@@ -27,6 +31,10 @@ public class Pikachu extends Characters
     {
         pikachuX = getX();
         pikachuY = getY();
+        if(Greenfoot.isKeyDown("a"))
+        {
+            
+        }
         if(live == true)
         {
             movementA(pikachuX, pikachuY, speed);
@@ -52,6 +60,8 @@ public class Pikachu extends Characters
             live = false;
             pHP = 0;
         }
+        
+        
         
     }
     

@@ -15,11 +15,24 @@ public class Bulbasaur extends Characters
     public static int damage = 4;
     public static int speed = 4;
     public static boolean live = true;
+    private SimpleTimer timer = new SimpleTimer();
+    private GreenfootImage[] faceRight = new GreenfootImage[7];
+    private GreenfootImage[] faceLeft = new GreenfootImage[7];
+    private int stepCheck = 0;
     
     public Bulbasaur()
     {
         bHP = 50;
         setImage(new GreenfootImage("bulbasaur.png"));
+        for(int i = 1; i <= faceRight.length; i++){
+            faceRight[i - 1] = new GreenfootImage("b" + (i ) + ".png");
+            faceRight[i - 1].mirrorHorizontally();
+            
+            faceLeft[i - 1] =new GreenfootImage("b" + (i ) + ".png");
+            setImage(faceLeft[0]);
+            
+            timer.mark();
+        }
     }
     
     public void act()
@@ -46,7 +59,46 @@ public class Bulbasaur extends Characters
             }
         }
         
+        if(timer.millisElapsed() < 100)
+        {
+            return;
+        }
         
+        if(Greenfoot.isKeyDown("a"))
+        {
+            setImage(faceLeft[stepCheck]);
+            stepCheck++;
+            stepCheck %= 7;
+        }
+        else if(Greenfoot.isKeyDown("d"))
+        {
+            setImage(faceRight[stepCheck]);
+            stepCheck++;
+            stepCheck %= 7;
+        }
+        else if(Greenfoot.isKeyDown("w"))
+        {
+            setRotation(270);
+            setImage(faceLeft[stepCheck]);
+            stepCheck++;
+            stepCheck %= 7;
+        }
+        else if(Greenfoot.isKeyDown("s"))
+        {
+            setRotation(90);
+            setImage(faceLeft[stepCheck]);
+            stepCheck++;
+            stepCheck %= 7;
+        }
+        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
+        {
+            setRotation(45);
+            setImage(faceRight[stepCheck]);
+            stepCheck++;
+            stepCheck %= 7;
+        }
+        
+        timer.mark();
     }
     
     
