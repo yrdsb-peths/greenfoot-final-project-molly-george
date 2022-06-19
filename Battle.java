@@ -17,7 +17,7 @@ public class Battle extends World
     public Torchic t = new Torchic();
     public Ninetales n = new Ninetales();
     public static int  count = 1;
-    public int bX = 0;
+    public int bX;
     public int bY;
     public int bZ;
     public int tX;
@@ -26,7 +26,7 @@ public class Battle extends World
     public int pX;
     public int pY;
     public int pZ;
-    public int cX = 0;
+    public int cX;
     public int cY;
     public int cZ;
     public int hp1;
