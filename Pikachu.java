@@ -65,9 +65,15 @@ public class Pikachu extends Characters
             if(isTouching(FennekinAttack.class))
             {
                 pHP -= 5;
+                removeTouching(FennekinAttack.class);
+            }
+            if(isTouching(NinetalesAttack.class))
+            {
+                pHP -= 8;
+                removeTouching(NinetalesAttack.class);
             }
             
-            removeTouching(FennekinAttack.class);
+            
 
             if(timer.millisElapsed() < 100)
             {

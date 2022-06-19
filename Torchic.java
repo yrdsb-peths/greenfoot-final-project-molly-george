@@ -50,7 +50,55 @@ public class Torchic extends Characters
             if(live == true)
             {
                 movementB(TorchicX, TorchicY, speed);
+                
                 removeTouching(EnemyAttack.class);
+                
+                
+                if(isTouching(NinetalesAttack.class))
+                {
+                    tHP -= 8;
+                    removeTouching(NinetalesAttack.class);
+                }
+                if(timer.millisElapsed() < 100)
+                {
+                    return;
+                }
+                
+                if(Greenfoot.isKeyDown("left"))
+                {
+                    setImage(faceLeft[stepCheck]);
+                    stepCheck++;
+                    stepCheck %= 5;
+                }
+                else if(Greenfoot.isKeyDown("right"))
+                {
+                    setImage(faceRight[stepCheck]);
+                    stepCheck++;
+                    stepCheck %= 5;
+                }
+                else if(Greenfoot.isKeyDown("up"))
+                {
+                    setRotation(270);
+                    setImage(faceLeft[stepCheck]);
+                    stepCheck++;
+                    stepCheck %= 5;
+                }
+                else if(Greenfoot.isKeyDown("down"))
+                {
+                    setRotation(90);
+                    setImage(faceLeft[stepCheck]);
+                    stepCheck++;
+                    stepCheck %= 5;
+                }
+                if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("down"))
+                {
+                    setRotation(45);
+                    setImage(faceRight[stepCheck]);
+                    stepCheck++;
+                    stepCheck %= 5;
+                }
+                    
+                timer.mark();
             }
             if(tHP <= 0)
             {
@@ -58,46 +106,7 @@ public class Torchic extends Characters
                 tHP = 0;
             }
             
-            if(timer.millisElapsed() < 100)
-            {
-                return;
-            }
             
-            if(Greenfoot.isKeyDown("left"))
-            {
-                setImage(faceLeft[stepCheck]);
-                stepCheck++;
-                stepCheck %= 5;
-            }
-            else if(Greenfoot.isKeyDown("right"))
-            {
-                setImage(faceRight[stepCheck]);
-                stepCheck++;
-                stepCheck %= 5;
-            }
-            else if(Greenfoot.isKeyDown("up"))
-            {
-                setRotation(270);
-                setImage(faceLeft[stepCheck]);
-                stepCheck++;
-                stepCheck %= 5;
-            }
-            else if(Greenfoot.isKeyDown("down"))
-            {
-                setRotation(90);
-                setImage(faceLeft[stepCheck]);
-                stepCheck++;
-                stepCheck %= 5;
-            }
-            if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("down"))
-            {
-                setRotation(45);
-                setImage(faceRight[stepCheck]);
-                stepCheck++;
-                stepCheck %= 5;
-            }
-                
-            timer.mark();
         }
     }
     

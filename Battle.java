@@ -34,7 +34,7 @@ public class Battle extends World
     public int hp3;
     public int hp4;
     private int[] cordinate = new int[12];
-    private SimpleTimer[] timerArray = new SimpleTimer[11];
+    private SimpleTimer[] timerArray = new SimpleTimer[12];
     private Label[] labelArray = new Label[8];
     public boolean isThereFire = false; // To detect if there is any fire on the map
     FennekinAttack fa = new FennekinAttack();
@@ -51,7 +51,7 @@ public class Battle extends World
     public Battle()
     {    
         super(900, 506, 1, false); 
-        for( int i = 0; i < 11; i++)
+        for( int i = 0; i < 12; i++)
         {
             timerArray[i] =  new SimpleTimer();
         }
@@ -314,6 +314,7 @@ public class Battle extends World
             if(n.nHP > 0)
             {
                 attack3(n.getX(), n.getY(),  new GreenfootImage("fireAtt.png"));
+                NinetalesAttack(n.getX(), n.getY());
             }
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
@@ -333,8 +334,10 @@ public class Battle extends World
             if(GeneralInformation.character[1].equals("Torchic"))
             {
                 hp2 = t.tHP;
-                labelArray[7].setValue("NinetalesHP: " + n.nHP);
+                labelArray[6].setValue("TorchicHP: " + t.tHP);
             }
+            
+            
             if(n.nHP <= 0)
             {
                 removeObject(n);
@@ -574,5 +577,20 @@ public class Battle extends World
         }
         
         
+    }
+    
+    public void NinetalesAttack(int x, int y)
+    {
+        if(timerArray[11].millisElapsed() > 10000)
+        {
+            for(int i = 1; i < 7; i++)
+            {
+                NinetalesAttack ba = new NinetalesAttack();
+                addObject(ba,x,y);
+                ba.setRotation(i * 60);
+                timerArray[11].mark();
+            }
+            
+        }
     }
 }

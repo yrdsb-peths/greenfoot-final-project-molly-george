@@ -54,8 +54,13 @@ public class Bulbasaur extends Characters
                 if(isTouching(FennekinAttack.class))
                 {
                     bHP -= 5;
+                    removeTouching(FennekinAttack.class);
                 }
-                removeTouching(FennekinAttack.class);
+                if(isTouching(NinetalesAttack.class))
+                {
+                    bHP -= 8;
+                    removeTouching(NinetalesAttack.class);
+                }
                 if(timer.millisElapsed() < 100)
                 {
                     return;
