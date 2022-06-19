@@ -11,11 +11,11 @@ public class IntroScreen extends World
     GreenfootImage image;
     Dialogue dialogue;
     NextButton nextButton = new NextButton();
+    
     /**
      * Constructor for objects of class Introscreen.
      * 
      */
-    
     public IntroScreen()
     {    
         // Create a new world with 853x480 cells with a cell size of 1x1 pixels.
