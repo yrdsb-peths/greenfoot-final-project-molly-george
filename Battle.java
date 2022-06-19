@@ -16,7 +16,9 @@ public class Battle extends World
     public Fennekin f = new Fennekin();
     public Torchic t = new Torchic();
     public Ninetales n = new Ninetales();
-    public static int  count = 1;
+    public static int  count = 3;
+    //use array
+    private int[] axis = new int[16];
     public int bX = 0;
     public int bY;
     public int bZ;
@@ -33,6 +35,7 @@ public class Battle extends World
     public int hp2;
     public int hp3;
     public int hp4;
+    private SimpleTimer[] time = new SimpleTimer[11];
     private SimpleTimer timer = new SimpleTimer();
     private SimpleTimer timer1 = new SimpleTimer();
     private SimpleTimer timerRP = new SimpleTimer();
