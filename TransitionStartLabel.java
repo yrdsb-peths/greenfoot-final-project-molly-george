@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Write a description of class TransitionStartLabel here.
  * a label to start a new level of game on transition screen
  * Molly Wu
- * June 17, 2022
+ * June 2022
  */
 public class TransitionStartLabel extends Actor
 {

@@ -15,11 +15,24 @@ public class Torchic extends Characters
     public static int damage = 4;
     public static int speed = 4;
     public static boolean live = true;
+    private SimpleTimer timer = new SimpleTimer();
+    private GreenfootImage[] faceRight = new GreenfootImage[5];
+    private GreenfootImage[] faceLeft = new GreenfootImage[5];
+    private int stepCheck = 0;
     
     public Torchic()
     {
         tHP = 45;
         setImage(new GreenfootImage("Torchic.png"));
+        for(int i = 1; i <= faceRight.length; i++){
+            faceRight[i - 1] = new GreenfootImage("t" + (i ) + ".png");
+            faceRight[i - 1].mirrorHorizontally();
+            
+            faceLeft[i - 1] =new GreenfootImage("t" + (i ) + ".png");
+            setImage(faceLeft[0]);
+            
+            timer.mark();
+        }
     }
     
     
@@ -45,6 +58,46 @@ public class Torchic extends Characters
                 tHP = 0;
             }
             
+            if(timer.millisElapsed() < 100)
+            {
+                return;
+            }
+            
+            if(Greenfoot.isKeyDown("left"))
+            {
+                setImage(faceLeft[stepCheck]);
+                stepCheck++;
+                stepCheck %= 5;
+            }
+            else if(Greenfoot.isKeyDown("right"))
+            {
+                setImage(faceRight[stepCheck]);
+                stepCheck++;
+                stepCheck %= 5;
+            }
+            else if(Greenfoot.isKeyDown("up"))
+            {
+                setRotation(270);
+                setImage(faceLeft[stepCheck]);
+                stepCheck++;
+                stepCheck %= 5;
+            }
+            else if(Greenfoot.isKeyDown("down"))
+            {
+                setRotation(90);
+                setImage(faceLeft[stepCheck]);
+                stepCheck++;
+                stepCheck %= 5;
+            }
+            if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("down"))
+            {
+                setRotation(45);
+                setImage(faceRight[stepCheck]);
+                stepCheck++;
+                stepCheck %= 5;
+            }
+                
+            timer.mark();
         }
     }
     
