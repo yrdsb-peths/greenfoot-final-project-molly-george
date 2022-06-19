@@ -80,7 +80,8 @@ public class Battle extends World
         
             addObject(e, 250, 150);
             
-            pHPLabel = new Label("PikachuHP: " + Pikachu.pHP, 20);
+            labelArray
+            L = new Label("PikachuHP: " + Pikachu.pHP, 20);
             addObject(pHPLabel, 800, 50);
             
             cHPLabel = new Label("Charmander: " + Charmander.cHP, 20);
