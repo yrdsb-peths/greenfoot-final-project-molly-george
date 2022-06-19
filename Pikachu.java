@@ -23,7 +23,16 @@ public class Pikachu extends Characters
     {
         pHP = 65;
         setImage(new GreenfootImage("pikachu.png"));
-        
+        for(int i = 1; i <= faceRight.length; i++){
+            faceRight[i - 1] = new GreenfootImage("p" + (i ) + ".png");
+            
+            
+            faceLeft[i - 1] =new GreenfootImage("p" + (i ) + ".png");
+            faceLeft[i - 1].mirrorHorizontally();
+            setImage(faceLeft[0]);
+            
+            timer.mark();
+        }
     }
     
     
@@ -60,6 +69,44 @@ public class Pikachu extends Characters
             
             removeTouching(FennekinAttack.class);
             
+            if(timer.millisElapsed() < 100)
+                {
+                    return;
+                }
+                
+            if(Greenfoot.isKeyDown("a"))
+            {
+                setImage(faceLeft[stepCheck]);
+                stepCheck++;
+                stepCheck %= 7;
+            }
+            else if(Greenfoot.isKeyDown("d"))
+            {
+                setImage(faceRight[stepCheck]);
+                stepCheck++;
+                stepCheck %= 7;
+            }
+            else if(Greenfoot.isKeyDown("w"))
+            {
+                setRotation(270);
+                setImage(faceRight[stepCheck]);
+                stepCheck++;
+                stepCheck %= 7;
+            }
+            else if(Greenfoot.isKeyDown("s"))
+            {
+                setRotation(90);
+                setImage(faceRight[stepCheck]);
+                stepCheck++;
+                stepCheck %= 7;
+            }
+            if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
+            {
+                setRotation(45);
+                setImage(faceLeft[stepCheck]);
+                stepCheck++;
+                stepCheck %= 7;
+            }
         }
         if(pHP <= 0)
         {
