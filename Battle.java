@@ -33,6 +33,7 @@ public class Battle extends World
     public int hp2;
     public int hp3;
     public int hp4;
+    private int[] cordinate = new int[12];
     private SimpleTimer[] timerArray = new SimpleTimer[11];
     private Label[] labelArray = new Label[8];
     public boolean isThereFire = false; // To detect if there is any fire on the map
@@ -64,6 +65,11 @@ public class Battle extends World
         labelArray[5] = new Label("FennekinHP: " + f.fHP, 20);
         labelArray[6] = new Label("TorchicHP: " + t.tHP, 20);
         labelArray[7] = new Label("NinetalesHP: " + n.nHP, 20);
+        
+        for(int i = 0; i < 12; i++)
+        {
+            cordinate[i] = 0;
+        }
         
         if(count == 1)
         {
