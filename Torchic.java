@@ -20,6 +20,7 @@ public class Torchic extends Characters
     private GreenfootImage[] faceLeft = new GreenfootImage[5];
     private int stepCheck = 0;
     public static boolean upGrade = false;
+    GreenfootSound ds = new GreenfootSound("damage.wav");
     
     public Torchic()
     {
@@ -43,7 +44,11 @@ public class Torchic extends Characters
         int TorchicY = getY();
         if(enemy == true)
         {
-            removeTouching(NormalAttack.class);
+            if(isTouching(NormalAttack.class))
+            {
+                ds.play();
+                removeTouching(NormalAttack.class);
+            }
             movementC(TorchicX, TorchicY);
         }
         if(enemy != true)

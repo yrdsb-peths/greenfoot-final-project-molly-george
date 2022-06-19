@@ -11,7 +11,7 @@ public class Fennekin extends Characters
     public static int fennekinX;
     public static int fennekinY;
     public static int fHP = 45;
-    public static boolean enemy = true;
+    GreenfootSound ds = new GreenfootSound("damage.wav");
     
     public Fennekin()
     {
@@ -23,7 +23,11 @@ public class Fennekin extends Characters
     {
         int FennekinX = getX();
         int FennekinY = getY();
-        removeTouching(NormalAttack.class);
+        if(isTouching(NormalAttack.class))
+        {
+            ds.play();
+            removeTouching(NormalAttack.class);
+        }
     }
     
     public void movement()

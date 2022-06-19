@@ -11,6 +11,7 @@ public class Eevee extends Characters
     public static int eeveeX;
     public static int eeveeY;
     public static int eHP = 55;
+    GreenfootSound ds = new GreenfootSound("damage.wav");
     
     public Eevee()
     {
@@ -23,7 +24,11 @@ public class Eevee extends Characters
         int eeveeX = getX();
         int eeveeY = getY();
         movementC(eeveeX, eeveeY);
-        removeTouching(NormalAttack.class);
+        if(isTouching(NormalAttack.class))
+        {
+            ds.play();
+            removeTouching(NormalAttack.class);
+        }
     }
     
     

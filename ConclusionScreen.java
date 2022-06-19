@@ -19,6 +19,7 @@ public class ConclusionScreen extends World
         super(600, 400, 1); 
         
         Battle.coins = 0;
+        Battle.count = 1;
         setBackground(new GreenfootImage("conclusionscreen.jpg"));
         
         prepare();

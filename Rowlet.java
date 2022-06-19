@@ -11,7 +11,7 @@ public class Rowlet extends Characters
     public static int rowletX;
     public static int rowletY;
     public static int rHP = 60;
-    public static boolean enemy = true;
+    GreenfootSound ds = new GreenfootSound("damage.wav");
     
     public Rowlet()
     {
@@ -25,7 +25,11 @@ public class Rowlet extends Characters
         int RowletX = getX();
         int RowletY = getY();
         
-        removeTouching(NormalAttack.class);
+        if(isTouching(NormalAttack.class))
+        {
+            ds.play();
+            removeTouching(NormalAttack.class);
+        }
 
     }
     

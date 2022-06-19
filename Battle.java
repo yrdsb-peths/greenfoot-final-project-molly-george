@@ -67,6 +67,8 @@ public class Battle extends World
         labelArray[7] = new Label("NinetalesHP: " + n.nHP, 20);
         Blocker blo = new Blocker();
         
+        
+        
         for(int i = 0; i < 12; i++)
         {
             cordinate[i] = 0;

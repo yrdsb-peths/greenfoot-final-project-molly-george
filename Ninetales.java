@@ -11,7 +11,7 @@ public class Ninetales extends Characters
     public static int ninetalesX;
     public static int ninetalesY;
     public static int nHP = 60;
-    public static boolean enemy = true;
+    GreenfootSound ds = new GreenfootSound("damage.wav");
     
     public Ninetales()
     {
@@ -23,7 +23,11 @@ public class Ninetales extends Characters
     {
         int NinetalesX = getX();
         int NinetalesY = getY();
-        removeTouching(NormalAttack.class);
+        if(isTouching(NormalAttack.class))
+        {
+            ds.play();
+            removeTouching(NormalAttack.class);
+        }
     }
     
     

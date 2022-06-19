@@ -20,6 +20,8 @@ public class Pikachu extends Characters
     private int stepCheck = 0;
     public static boolean upGrade = false;
     
+    
+    
     public Pikachu()
     {
         pHP = 65;

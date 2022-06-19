@@ -20,6 +20,7 @@ public class Bulbasaur extends Characters
     private GreenfootImage[] faceLeft = new GreenfootImage[7];
     private int stepCheck = 0;
     public static boolean upGrade = false;
+    GreenfootSound ds = new GreenfootSound("damage.wav");
     
     public Bulbasaur()
     {
@@ -43,7 +44,13 @@ public class Bulbasaur extends Characters
         
         if(enemy == true)
         {
-            removeTouching(NormalAttack.class);
+            if(isTouching(NormalAttack.class))
+            {
+                ds.play();
+                removeTouching(NormalAttack.class);
+            }
+            
+            
             movementC(bulbasaurX, bulbasaurY);
         }
         if(enemy != true)
