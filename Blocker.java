@@ -8,10 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Blocker extends Actor
 {
-    /**
-     * Act - do whatever the Forest wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public Blocker()
+    {
+        setImage(new GreenfootImage("block1.png"));
+    }
+    
+    
     public void act()
     {
         // Add your action code here.
