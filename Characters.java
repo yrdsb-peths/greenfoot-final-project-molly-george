@@ -23,61 +23,52 @@ public class Characters extends Actor
         
         if(isTouching(Blocker.class))
         {
-            int face = getRotation();
-            setRotation(face + 180);
-            move(10);
+            s = 1;
         }
-        else if(!isTouching(Blocker.class))
+        
+        if(Greenfoot.isKeyDown("a"))
         {
-            if(Greenfoot.isKeyDown("a"))
-            {
-                setRotation(0);
-                setLocation(x -= s, y);
-            }
+            setRotation(0);
+            setLocation(x -= s, y);
+        }
             
-            if(Greenfoot.isKeyDown("d"))
-            {
-                setRotation(0);
-                setLocation(x += s, y);    
+        if(Greenfoot.isKeyDown("d"))
+        {
+            setRotation(0);
+            setLocation(x += s, y);    
                     
-            }
+        }
             
-            if(Greenfoot.isKeyDown("w"))
-            {
-                setRotation(90);
-                setLocation(x , y -= s);
+        if(Greenfoot.isKeyDown("w"))
+        {
+            setRotation(270);
+            setLocation(x , y -= s);
                     
-            }
+        }
                 
-            if(Greenfoot.isKeyDown("s"))
-            {
-                setRotation(270);
-                setLocation(x , y += s);
-                    
-            }
-        
-        
-        }   
-        
-        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w"))
+        if(Greenfoot.isKeyDown("s"))
+        {
+            setRotation(90);
+            setLocation(x , y += s);
+                
+        }
+        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
         {
             setRotation(45);
         }
         if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
         {
-            setRotation(135);
+            setRotation(315);
         }
         if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("w"))
         {
             setRotation(315);
         }
-        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
+        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w"))
         {
-            setRotation(225);
-        }
+            setRotation(45);
+        }  
         
-        
-    
     }
     
     public void movementB(int x, int y, int s)
@@ -85,58 +76,45 @@ public class Characters extends Actor
         
         if(isTouching(Blocker.class))
         {
-                
-        }
-        else if(!isTouching(Blocker.class))
-        {
-            if(Greenfoot.isKeyDown("left"))
-            {
-                setRotation(270);
-                setLocation(x -= s, y);
-            }
+            s = 1;
             
-            if(Greenfoot.isKeyDown("right"))
-            {
-                setRotation(90);
-                setLocation(x += s, y);    
-                    
-            }
+        }
+        
+        if(Greenfoot.isKeyDown("left"))
+        {
+            setRotation(270);
+            setLocation(x -= s, y);
+        }
             
-            if(Greenfoot.isKeyDown("up"))
-            {
-                setRotation(0);
-                setLocation(x , y -= s);
+        if(Greenfoot.isKeyDown("right"))
+        {
+            setRotation(90);
+            setLocation(x += s, y);    
                     
-            }
+        }
+            
+        if(Greenfoot.isKeyDown("up"))
+        {
+            setRotation(0);
+            setLocation(x , y -= s);
+                    
+        }
                 
-            if(Greenfoot.isKeyDown("down"))
-            {
-                setRotation(180);
-                setLocation(x , y += s);
+        if(Greenfoot.isKeyDown("down"))
+        {
+            setRotation(180);
+            setLocation(x , y += s);
                     
-            }
+        }
+            
         
         
-        }   
+    } 
+
         
-        if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("up"))
-        {
-            setRotation(-45);
-        }
-        if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("down"))
-        {
-            setRotation(-135);
-        }
-        if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("up"))
-        {
-            setRotation(45);
-        }
-        if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("down"))
-        {
-            setRotation(135);
-        }
+        
     
-    }
+
     
     public void movementC(int x, int y)
     {

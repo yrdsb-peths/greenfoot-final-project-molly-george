@@ -66,7 +66,7 @@ public class Bulbasaur extends Characters
                 {
                     return;
                 }
-                
+                    
                 if(Greenfoot.isKeyDown("a"))
                 {
                     setImage(faceLeft[stepCheck]);
@@ -81,22 +81,37 @@ public class Bulbasaur extends Characters
                 }
                 else if(Greenfoot.isKeyDown("w"))
                 {
-                    setRotation(270);
-                    setImage(faceLeft[stepCheck]);
+                    setImage(faceRight[stepCheck]);
                     stepCheck++;
                     stepCheck %= 7;
                 }
                 else if(Greenfoot.isKeyDown("s"))
                 {
-                    setRotation(90);
-                    setImage(faceLeft[stepCheck]);
+                    setImage(faceRight[stepCheck]);
                     stepCheck++;
                     stepCheck %= 7;
                 }
                 if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
                 {
-                    setRotation(45);
+                    setImage(faceLeft[stepCheck]);
+                    stepCheck++;
+                    stepCheck %= 7;
+                }
+                if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
+                {
                     setImage(faceRight[stepCheck]);
+                    stepCheck++;
+                    stepCheck %= 7;
+                }
+                if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("w"))
+                {
+                    setImage(faceRight[stepCheck]);
+                    stepCheck++;
+                    stepCheck %= 7;
+                }
+                if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w"))
+                {
+                    setImage(faceLeft[stepCheck]);
                     stepCheck++;
                     stepCheck %= 7;
                 }

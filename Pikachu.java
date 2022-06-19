@@ -95,25 +95,42 @@ public class Pikachu extends Characters
             }
             else if(Greenfoot.isKeyDown("w"))
             {
-                setRotation(270);
                 setImage(faceRight[stepCheck]);
                 stepCheck++;
                 stepCheck %= 7;
             }
             else if(Greenfoot.isKeyDown("s"))
             {
-                setRotation(90);
                 setImage(faceRight[stepCheck]);
                 stepCheck++;
                 stepCheck %= 7;
             }
             if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
             {
-                setRotation(45);
                 setImage(faceLeft[stepCheck]);
                 stepCheck++;
                 stepCheck %= 7;
             }
+            if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
+            {
+                setImage(faceRight[stepCheck]);
+                stepCheck++;
+                stepCheck %= 7;
+            }
+            if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("w"))
+            {
+                setImage(faceRight[stepCheck]);
+                stepCheck++;
+                stepCheck %= 7;
+            }
+            if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w"))
+            {
+                setImage(faceLeft[stepCheck]);
+                stepCheck++;
+                stepCheck %= 7;
+            }
+            
+            timer.mark();
         }
         if(pHP <= 0)
         {
@@ -125,7 +142,24 @@ public class Pikachu extends Characters
         
     }
     
-    
+    /*
+     * if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("up"))
+        {
+            setRotation(-45);
+        }
+        if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("down"))
+        {
+            setRotation(-135);
+        }
+        if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("up"))
+        {
+            setRotation(45);
+        }
+        if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("down"))
+        {
+            setRotation(135);
+        }
+     */
     
     
     

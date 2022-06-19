@@ -75,7 +75,6 @@ public class Charmander extends Characters
                 
             if(Greenfoot.isKeyDown("left"))
             {
-                
                 setImage(faceLeft[stepCheck]);
                 stepCheck++;
                 stepCheck %= 6;
@@ -88,26 +87,41 @@ public class Charmander extends Characters
             }
             else if(Greenfoot.isKeyDown("up"))
             {
-                setRotation(270);
-                setImage(faceLeft[stepCheck]);
+                setImage(faceRight[stepCheck]);
                 stepCheck++;
                 stepCheck %= 6;
             }
             else if(Greenfoot.isKeyDown("down"))
             {
-                setRotation(90);
-                setImage(faceLeft[stepCheck]);
+                setImage(faceRight[stepCheck]);
                 stepCheck++;
                 stepCheck %= 6;
             }
             if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("down"))
             {
-                setRotation(45);
+                setImage(faceLeft[stepCheck]);
+                stepCheck++;
+                stepCheck %= 6;
+            }
+            if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("down"))
+            {
                 setImage(faceRight[stepCheck]);
                 stepCheck++;
                 stepCheck %= 6;
             }
-                
+            if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("up"))
+            {
+                setImage(faceRight[stepCheck]);
+                stepCheck++;
+                stepCheck %= 6;
+            }
+            if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("up"))
+            {
+                setImage(faceLeft[stepCheck]);
+                stepCheck++;
+                stepCheck %= 6;
+            }
+            
             timer.mark();
         }
         if(cHP <= 0)
