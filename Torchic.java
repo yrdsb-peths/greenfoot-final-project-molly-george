@@ -74,49 +74,49 @@ public class Torchic extends Characters
                 {
                     setImage(faceLeft[stepCheck]);
                     stepCheck++;
-                    stepCheck %= 6;
+                    stepCheck %= 5;
                 }
                 else if(Greenfoot.isKeyDown("right"))
                 {
                     setImage(faceRight[stepCheck]);
                     stepCheck++;
-                    stepCheck %= 6;
+                    stepCheck %= 5;
                 }
                 else if(Greenfoot.isKeyDown("up"))
                 {
                     setImage(faceRight[stepCheck]);
                     stepCheck++;
-                    stepCheck %= 6;
+                    stepCheck %= 5;
                 }
                 else if(Greenfoot.isKeyDown("down"))
                 {
                     setImage(faceRight[stepCheck]);
                     stepCheck++;
-                    stepCheck %= 6;
+                    stepCheck %= 5;
                 }
                 if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("down"))
                 {
                     setImage(faceLeft[stepCheck]);
                     stepCheck++;
-                    stepCheck %= 6;
+                    stepCheck %= 5;
                 }
                 if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("down"))
                 {
                     setImage(faceRight[stepCheck]);
                     stepCheck++;
-                    stepCheck %= 6;
+                    stepCheck %= 5;
                 }
                 if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("up"))
                 {
                     setImage(faceRight[stepCheck]);
                     stepCheck++;
-                    stepCheck %= 6;
+                    stepCheck %= 5;
                 }
                 if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("up"))
                 {
                     setImage(faceLeft[stepCheck]);
                     stepCheck++;
-                    stepCheck %= 6;
+                    stepCheck %= 5;
                 }
                 
                 timer.mark();

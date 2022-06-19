@@ -65,7 +65,6 @@ public class Battle extends World
         labelArray[5] = new Label("FennekinHP: " + f.fHP, 20);
         labelArray[6] = new Label("TorchicHP: " + t.tHP, 20);
         labelArray[7] = new Label("NinetalesHP: " + n.nHP, 20);
-        Blocker blo = new Blocker();
         
         
         
@@ -97,8 +96,7 @@ public class Battle extends World
             
             addObject(labelArray[4], 100, 110);
             
-                        
-            addObject(blo, 450, 300);            
+                             
         
         }
         else if(count == 2)

@@ -21,11 +21,6 @@ public class Characters extends Actor
     public void movementA(int x, int y, int s)
     {
         
-        if(isTouching(Blocker.class))
-        {
-            s = 1;
-        }
-        
         if(Greenfoot.isKeyDown("a"))
         {
             setRotation(0);
@@ -73,12 +68,6 @@ public class Characters extends Actor
     
     public void movementB(int x, int y, int s)
     {
-        
-        if(isTouching(Blocker.class))
-        {
-            s = 1;
-            
-        }
         
         if(Greenfoot.isKeyDown("left"))
         {
