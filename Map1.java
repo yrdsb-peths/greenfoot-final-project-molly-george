@@ -5,12 +5,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * this case, it is the first level.
  * 
  * @George Lu && Molly Wu 
- * @version (a version number or a date)
+ * @version June 2022
  */
 public class Map1 extends World
 {
     BulbLogo b = new BulbLogo();
-    
+    /**
+     * Constructor for objects of class Map1.
+     * 
+     */
     public Map1()
     {    
         super(900, 506, 1); 

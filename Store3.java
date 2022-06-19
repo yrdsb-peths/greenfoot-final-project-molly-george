@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class FinalStore here.
+ * Write a description of class Store3 here.
+ * the store before final level
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu && Molly Wu 
+ * @version June 2022
  */
 public class Store3 extends World
 {
@@ -20,6 +21,10 @@ public class Store3 extends World
     private Label coin = new Label(Battle.coins, 30);
 
     private Label tofinalLevel = new Label("click here go to final level",30);
+    /**
+     * Constructor for objects of class Store3.
+     * 
+     */
     public Store3()
     {    
         super(900, 506, 1); 
