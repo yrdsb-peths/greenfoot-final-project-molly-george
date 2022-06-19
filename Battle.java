@@ -16,7 +16,7 @@ public class Battle extends World
     public Fennekin f = new Fennekin();
     public Torchic t = new Torchic();
     public Ninetales n = new Ninetales();
-    public static int  count = 3;
+    public static int  count = 1;
     public int bX;
     public int bY;
     public int bZ;
