@@ -12,7 +12,7 @@ public class ToMapFinal extends NewLabelClass
     
     public ToMapFinal()
     {
-        setImage(new GreenfootImage("Tomap3.png"));
+        setImage(new GreenfootImage("TomapFinal.png"));
     }
     
     public void act()
