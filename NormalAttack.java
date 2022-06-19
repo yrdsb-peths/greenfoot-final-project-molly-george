@@ -10,10 +10,44 @@ public class NormalAttack extends Damage
 {
     public int damage1;
     
+    
     public NormalAttack(GreenfootImage image, int damage)
     {
         setImage(image);
         damage1 = damage;
+        if(Battle.right == true)
+        {
+            setRotation(0);
+        }
+        if(Battle.left == true)
+        {
+            setRotation(180);
+        }
+        if(Battle.up == true)
+        {
+            setRotation(270);
+        }
+        if(Battle.down == true)
+        {
+            setRotation(90);
+        }
+        if(Battle.up && Battle.left)
+        {
+            setRotation(225);
+        }
+        if(Battle.down && Battle.left)
+        {
+            setRotation(135);
+        }
+        if(Battle.down && Battle.right)
+        {
+            setRotation(45);
+        }
+        if(Battle.up && Battle.right)
+        {
+            setRotation(315);
+        }
+        
     }
     
     
@@ -29,6 +63,7 @@ public class NormalAttack extends Damage
         {
             removeTouching(RowletAttack.class);
         }
+        
     }
     
     public void damage()
@@ -59,6 +94,8 @@ public class NormalAttack extends Damage
             Torchic.tHP -= damage1;
         }
     }
+    
+    
     
     
 }

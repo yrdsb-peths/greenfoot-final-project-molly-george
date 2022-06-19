@@ -58,6 +58,10 @@ public class Battle extends World
     FennekinAttack fa2 = new FennekinAttack();
     public static int coins = 0;
     GeneralInformation g;
+    public static boolean right;
+    public static boolean left;
+    public static boolean up;
+    public static boolean down;
    
     
     public Battle()
@@ -176,6 +180,7 @@ public class Battle extends World
     
     public void act()
     {
+        direction();
         if(count == 1)
         {
             pHPLabel.setValue("PikachuHP: " + Pikachu.pHP);
@@ -352,14 +357,14 @@ public class Battle extends World
             pX = p.getX();
             pY = p.getY();
             pZ = p.getRotation();
-            attack1(pX, pY, pZ, Pikachu.damage, new GreenfootImage("pikachuatt.png"));
+            attack1(pX, pY, Pikachu.damage, new GreenfootImage("pikachuatt.png"));
         }
         if(GeneralInformation.character[1].equals("Charmander"))
         {
             cX = c.getX();
             cY = c.getY();
             cZ = c.getRotation();
-            attack2(cX, cY, cZ, Charmander.damage, new GreenfootImage("fireAtt.png"));
+            attack2(cX, cY, Charmander.damage, new GreenfootImage("fireAtt.png"));
         }
         if(GeneralInformation.character[0].equals("Bulbasaur"))
         {
@@ -368,7 +373,7 @@ public class Battle extends World
             bZ = b.getRotation();
             if(Bulbasaur.enemy != true)
             {
-                attack1(bX, bY, bZ, Bulbasaur.damage, new GreenfootImage("plantAtt.png"));
+                attack1(bX, bY,Bulbasaur.damage, new GreenfootImage("plantAtt.png"));
             }
         }
         if(GeneralInformation.character[1].equals("Torchic"))
@@ -378,13 +383,77 @@ public class Battle extends World
             tZ = t.getRotation();
             if(Torchic.enemy != true)
             {
-                attack2(tX, tY, tZ, Torchic.damage, new GreenfootImage("fireAtt.png"));
+                attack2(tX, tY, Torchic.damage, new GreenfootImage("fireAtt.png"));
             }
         }
     }  
     
+    public void direction()
+    {
+        if(Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left"))
+        {
+            left = true;
+            right = false;
+            up = false;
+            down = false;
+        }
+        
+        if(Greenfoot.isKeyDown("d") || Greenfoot.isKeyDown("right"))
+        {
+            left = false;
+            right = true;
+            up = false;
+            down = false;
+        }
+        if(Greenfoot.isKeyDown("w") || Greenfoot.isKeyDown("up"))
+        {
+            up = true;
+            left = false;
+            right = false;
+            down = false;
+        }
+        if(Greenfoot.isKeyDown("s") || Greenfoot.isKeyDown("down"))
+        {
+            up = false;
+            left = false;
+            right = false;
+            down = true;
+        }
+        
+        if((Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w")) || (Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("up")))
+        {
+            up = true;
+            left = true;
+            right = false;
+            down = false;
+        }
+        
+        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s") || (Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("down")))
+        {
+            up = false;
+            left = true;
+            right = false;
+            down = true;
+        }
+        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s") || Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("down"))
+        {
+            up = false;
+            left = false;
+            right = true;
+            down = true;
+        }
+        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("w") || Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("up"))
+        {
+            up = true;
+            left = false;
+            right = true;
+            down = false;;
+        }
+        
+    }
     
-    public void attack1(int x, int y, int z, int damage, GreenfootImage image)
+    
+    public void  attack1(int x, int y,  int damage, GreenfootImage image)
     {
         if(Greenfoot.isKeyDown("space"))
         {
@@ -392,14 +461,13 @@ public class Battle extends World
             {
                 NormalAttack a = new NormalAttack(image, damage);
                 addObject(a,x,y);
-                a.setRotation(z);
                 timer.mark();
                 
             }
         }
     }
     
-    public void attack2(int x, int y, int z, int damage, GreenfootImage image)
+    public void attack2(int x, int y,  int damage, GreenfootImage image)
     {
         if(Greenfoot.isKeyDown("r"))
         {
@@ -407,7 +475,6 @@ public class Battle extends World
             {
                 NormalAttack a = new NormalAttack(image, damage);
                 addObject(a,x,y);
-                a.setRotation(z);
                 timer.mark();
                 
             }
@@ -417,7 +484,7 @@ public class Battle extends World
     
     public void attack3(int x, int y, GreenfootImage image)
     {
-        if(timer1.millisElapsed() > 2000)
+        if(timer1.millisElapsed() > 3000)
         {
             for(int i = 1; i < 9; i++)
             {

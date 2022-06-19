@@ -51,54 +51,56 @@ public class Bulbasaur extends Characters
             {
                 movementA(bulbasaurX, bulbasaurY, speed);
                 removeTouching(EnemyAttack.class);
+                if(timer.millisElapsed() < 100)
+                {
+                    return;
+                }
+                
+                if(Greenfoot.isKeyDown("a"))
+                {
+                    setImage(faceLeft[stepCheck]);
+                    stepCheck++;
+                    stepCheck %= 7;
+                }
+                else if(Greenfoot.isKeyDown("d"))
+                {
+                    setImage(faceRight[stepCheck]);
+                    stepCheck++;
+                    stepCheck %= 7;
+                }
+                else if(Greenfoot.isKeyDown("w"))
+                {
+                    setRotation(270);
+                    setImage(faceLeft[stepCheck]);
+                    stepCheck++;
+                    stepCheck %= 7;
+                }
+                else if(Greenfoot.isKeyDown("s"))
+                {
+                    setRotation(90);
+                    setImage(faceLeft[stepCheck]);
+                    stepCheck++;
+                    stepCheck %= 7;
+                }
+                if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
+                {
+                    setRotation(45);
+                    setImage(faceRight[stepCheck]);
+                    stepCheck++;
+                    stepCheck %= 7;
+                }
+                
+                timer.mark();
             }
             if(bHP <= 0)
             {
                 live = false;
                 bHP = 0;
             }
+            
         }
         
-        if(timer.millisElapsed() < 100)
-        {
-            return;
-        }
         
-        if(Greenfoot.isKeyDown("a"))
-        {
-            setImage(faceLeft[stepCheck]);
-            stepCheck++;
-            stepCheck %= 7;
-        }
-        else if(Greenfoot.isKeyDown("d"))
-        {
-            setImage(faceRight[stepCheck]);
-            stepCheck++;
-            stepCheck %= 7;
-        }
-        else if(Greenfoot.isKeyDown("w"))
-        {
-            setRotation(270);
-            setImage(faceLeft[stepCheck]);
-            stepCheck++;
-            stepCheck %= 7;
-        }
-        else if(Greenfoot.isKeyDown("s"))
-        {
-            setRotation(90);
-            setImage(faceLeft[stepCheck]);
-            stepCheck++;
-            stepCheck %= 7;
-        }
-        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
-        {
-            setRotation(45);
-            setImage(faceRight[stepCheck]);
-            stepCheck++;
-            stepCheck %= 7;
-        }
-        
-        timer.mark();
     }
     
     

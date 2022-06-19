@@ -59,7 +59,7 @@ public class Characters extends Actor
         
         if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w"))
         {
-            setRotation(405);
+            setRotation(45);
         }
         if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
         {
@@ -71,7 +71,7 @@ public class Characters extends Actor
         }
         if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
         {
-            setRotation(45);
+            setRotation(225);
         }
     
     }
