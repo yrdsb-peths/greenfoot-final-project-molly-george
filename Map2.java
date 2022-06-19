@@ -1,15 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MapThirdLevel here.
+ * Write a description of class Map2 here.
+ * second map with second level on it
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu && Molly Wu 
+ * @version June 2022
  */
 public class Map2 extends World
 {
     TorchicLogo t = new TorchicLogo();
-    
+    /**
+     * Constructor for objects of class Map2.
+     * 
+     */
     public Map2()
     {    
         super(900, 506, 1); 

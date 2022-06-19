@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Store3 here.
+ * Write a description of class Store2 here.
+ * the store before second level
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu && Molly Wu 
+ * @version June 2022
  */
 public class Store2 extends World
 {
@@ -18,7 +19,10 @@ public class Store2 extends World
     ToMap t = new ToMap();
     private Label coin = new Label(Battle.coins, 30);
     
-    
+    /**
+     * Constructor for objects of class Store2.
+     * 
+     */
     public Store2()
     {    
         super(900, 506, 1); 

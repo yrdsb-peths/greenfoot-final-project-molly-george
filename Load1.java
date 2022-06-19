@@ -4,13 +4,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Write a description of class Transition1 here.
  * a start screen for level 1
  * 
- * @author Molly Wu
- * @version June 18, 2022
+ * @author George Lu && Molly Wu
+ * @version June 2022
  */
 public class Load1 extends World
 {
     TransitionStartLabel g = new TransitionStartLabel();
-
+    /**
+     * Constructor for objects of class Load1.
+     * 
+     */
     public Load1()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
