@@ -109,7 +109,8 @@ public class Battle extends World
             
             addObject(labelArray[4], 100, 110);
             
-                             
+            cordinate[6] = 350;
+            cordinate[7] = 400;                 
         
         }
         //Initlaze the world for the second level 
@@ -131,6 +132,8 @@ public class Battle extends World
             }
             if(GeneralInformation.character[1].equals("Charmander"))
             {
+                cordinate[6] = 350;
+                cordinate[7] = 400;
                 addObject(c, 350, 400);
                 addObject(labelArray[1], 800, 130);
                 hp2 = c.cHP;
@@ -246,7 +249,7 @@ public class Battle extends World
                 setBackground(new GreenfootImage("3.png"));
                 removeObject(r);
                 removeObject(labelArray[3]);
-                addObject(b, 150, 100);
+                addObject(b, 200, 100);
                 
                 if(b.bHP > 0)
                 {

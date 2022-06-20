@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Charmander extends Characters
 {
-    public int CharmanderX;
-    public int CharmanderY;
+    public static int CharmanderX;
+    public static int CharmanderY;
     public static int cHP = 65;
     public static int damage = 4;
     public static int speed = 4;
@@ -37,8 +37,8 @@ public class Charmander extends Characters
     
     public void act()
     {
-        int CharmanderX = getX();
-        int CharmanderY = getY();
+        CharmanderX = getX();
+        CharmanderY = getY();
         
         play();
         

@@ -59,7 +59,6 @@ public class Bulbasaur extends Characters
                 removeTouching(NormalAttack.class);
             }
             
-            movementC(bulbasaurX, bulbasaurY);
         }
     }
     
