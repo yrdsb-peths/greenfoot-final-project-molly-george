@@ -24,7 +24,7 @@ public class Torchic extends Characters
     
     public Torchic()
     {
-        tHP = 45;
+        tHP = 75;
         setImage(new GreenfootImage("Torchic.png"));
         for(int i = 1; i <= faceRight.length; i++){
             faceRight[i - 1] = new GreenfootImage("t" + (i ) + ".png");

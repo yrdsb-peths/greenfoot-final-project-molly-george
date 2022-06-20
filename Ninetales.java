@@ -10,12 +10,12 @@ public class Ninetales extends Characters
 {
     public static int ninetalesX;
     public static int ninetalesY;
-    public static int nHP = 60;
+    public static int nHP = 200;
     GreenfootSound ds = new GreenfootSound("damage.wav");
     
     public Ninetales()
     {
-        nHP = 60;
+        nHP = 200;
         setImage(new GreenfootImage("Ninetales.png"));
     }
     

@@ -15,7 +15,7 @@ public class Fennekin extends Characters
     
     public Fennekin()
     {
-        fHP = 45;
+        fHP = 90;
         setImage(new GreenfootImage("Fennekin.png"));
     }
     

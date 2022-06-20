@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * This is the world for the fighting, player will encounter enemy pokemons in this world and will beat them to win.
  * 
  * @author George && Molly
- * @version June 19
+ * @version June 
  */
 public class Battle extends World
 {
@@ -19,7 +19,7 @@ public class Battle extends World
     public Ninetales n = new Ninetales();
     
     //This will decide which world the player will be throw in.
-    public static int count = 1;
+    public static int count = 2;
     
     
     //This is use to check the HP of current character and check if they are live or not.
@@ -32,7 +32,7 @@ public class Battle extends World
     private int[] cordinate = new int[8];
     
     //This will crate an array of timer, those timer will be used to help the enmy to attack in approiate time and help with animation.
-    private SimpleTimer[] timerArray = new SimpleTimer[13];
+    private SimpleTimer[] timerArray = new SimpleTimer[14];
     
     //This is the array for the all the label shows the HP of a character.
     private Label[] labelArray = new Label[8];
@@ -65,7 +65,7 @@ public class Battle extends World
         super(900, 506, 1, false); 
         
         //Initlaze the timer array
-        for( int i = 0; i < 13; i++)
+        for( int i = 0; i < 14; i++)
         {
             timerArray[i] =  new SimpleTimer();
         }
@@ -633,11 +633,11 @@ public class Battle extends World
     {
         if(Greenfoot.isKeyDown("r"))
         {
-            if(timerArray[0].millisElapsed() > 500)
+            if(timerArray[13].millisElapsed() > 500)
             {
                 NormalAttack1 a = new NormalAttack1(image, damage);
                 addObject(a,x,y);
-                timerArray[0].mark();
+                timerArray[13].mark();
                 
             }
         }

@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class ConclusionScreen here.
  * 
- * @author Molly Wu 
- * @version June 2022
+ * @author George && Molly
+ * @version June 
  */
 public class ConclusionScreen extends World
 {
