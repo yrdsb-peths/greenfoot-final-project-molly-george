@@ -20,6 +20,6 @@ public class Instructions extends World
         
         setBackground(new GreenfootImage("Screenshot 2022-06-19 202455.jpg"));
         
-        addObject(next3, 700, 430);
+        addObject(next3, 730, 430);
     }
 }

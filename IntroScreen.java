@@ -27,7 +27,7 @@ public class IntroScreen extends World
         addObject(dialogue, 300, 50);
         
         
-        addObject(nextButton, 700, 430);
+        addObject(nextButton, 730, 430);
     }
     
     public void act()

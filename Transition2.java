@@ -35,6 +35,6 @@ public class Transition2 extends World
     private void prepare()
     {
         NextLabel2 nextLabel2 = new NextLabel2();
-        addObject(nextLabel2, 700, 430);
+        addObject(nextLabel2, 730, 430);
     }
 }

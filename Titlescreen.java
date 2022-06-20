@@ -29,6 +29,6 @@ public class Titlescreen extends World
     private void prepare()
     {
         StartLabel startLabel = new StartLabel();
-        addObject(startLabel, 200, 400);
+        addObject(startLabel, 220, 420);
     }
 }
