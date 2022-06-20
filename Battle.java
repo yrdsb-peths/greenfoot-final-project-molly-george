@@ -53,6 +53,10 @@ public class Battle extends World
     public static boolean left;
     public static boolean up;
     public static boolean down;
+    public static boolean right1;
+    public static boolean left1;
+    public static boolean up1;
+    public static boolean down1;
    
     
     public Battle()
@@ -191,6 +195,7 @@ public class Battle extends World
     {
         //This will get the direction for the character to shoot
         direction();
+        direction1();
         
         //This will initlaze the character's property
         initlazeCh();
@@ -474,7 +479,7 @@ public class Battle extends World
     //This will check the direction of the current character and will help player to aim and fire the bullet
     public void direction()
     {
-        if(Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left"))
+        if(Greenfoot.isKeyDown("a"))
         {
             left = true;
             right = false;
@@ -482,21 +487,21 @@ public class Battle extends World
             down = false;
         }
         
-        if(Greenfoot.isKeyDown("d") || Greenfoot.isKeyDown("right"))
+        if(Greenfoot.isKeyDown("d"))
         {
             left = false;
             right = true;
             up = false;
             down = false;
         }
-        if(Greenfoot.isKeyDown("w") || Greenfoot.isKeyDown("up"))
+        if(Greenfoot.isKeyDown("w"))
         {
             up = true;
             left = false;
             right = false;
             down = false;
         }
-        if(Greenfoot.isKeyDown("s") || Greenfoot.isKeyDown("down"))
+        if(Greenfoot.isKeyDown("s"))
         {
             up = false;
             left = false;
@@ -504,7 +509,7 @@ public class Battle extends World
             down = true;
         }
         
-        if((Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w")) || (Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("up")))
+        if((Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("w")))
         {
             up = true;
             left = true;
@@ -512,26 +517,90 @@ public class Battle extends World
             down = false;
         }
         
-        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s") || (Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("down")))
+        if(Greenfoot.isKeyDown("a") && Greenfoot.isKeyDown("s"))
         {
             up = false;
             left = true;
             right = false;
             down = true;
         }
-        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s") || Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("down"))
+        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("s"))
         {
             up = false;
             left = false;
             right = true;
             down = true;
         }
-        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("w") || Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("up"))
+        if(Greenfoot.isKeyDown("d") && Greenfoot.isKeyDown("w"))
         {
             up = true;
             left = false;
             right = true;
             down = false;;
+        }
+        
+    }
+    
+    public void direction1()
+    {
+        if(Greenfoot.isKeyDown("left"))
+        {
+            left1 = true;
+            right1 = false;
+            up1 = false;
+            down1 = false;
+        }
+        
+        if(Greenfoot.isKeyDown("right"))
+        {
+            left1 = false;
+            right1 = true;
+            up1 = false;
+            down1 = false;
+        }
+        if(Greenfoot.isKeyDown("up"))
+        {
+            up1 = true;
+            left1 = false;
+            right1 = false;
+            down1 = false;
+        }
+        if(Greenfoot.isKeyDown("down"))
+        {
+            up1 = false;
+            left1 = false;
+            right1 = false;
+            down1 = true;
+        }
+        
+        if((Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("up")))
+        {
+            up1 = true;
+            left1 = true;
+            right1 = false;
+            down1 = false;
+        }
+        
+        if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("down"))
+        {
+            up1 = false;
+            left1 = true;
+            right1 = false;
+            down1 = true;
+        }
+        if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("down"))
+        {
+            up1 = false;
+            left1 = false;
+            right1 = true;
+            down1 = true;
+        }
+        if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("up"))
+        {
+            up1 = true;
+            left1 = false;
+            right1 = true;
+            down1 = false;;
         }
         
     }
@@ -558,7 +627,7 @@ public class Battle extends World
         {
             if(timerArray[0].millisElapsed() > 500)
             {
-                NormalAttack a = new NormalAttack(image, damage);
+                NormalAttack1 a = new NormalAttack1(image, damage);
                 addObject(a,x,y);
                 timerArray[0].mark();
                 
