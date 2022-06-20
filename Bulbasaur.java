@@ -58,7 +58,11 @@ public class Bulbasaur extends Characters
                 ds.play();
                 removeTouching(NormalAttack.class);
             }
-            
+            if(isTouching(NormalAttack1.class))
+            {
+                ds.play();
+                removeTouching(NormalAttack1.class);
+            }
         }
     }
     
@@ -71,6 +75,7 @@ public class Bulbasaur extends Characters
             {
                 movementA(bulbasaurX, bulbasaurY, speed);
                 removeTouching(EnemyAttack.class);
+                
                 if(isTouching(FennekinAttack.class))
                 {
                     bHP -= 5;

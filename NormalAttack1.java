@@ -68,7 +68,6 @@ public class NormalAttack1 extends Damage
     
     public void damage()
     {
-        
         if(isTouching(Eevee.class))
         {
             Eevee.eHP -= damage2;

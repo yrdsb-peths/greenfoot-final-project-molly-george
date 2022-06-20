@@ -30,6 +30,11 @@ public class Eevee extends Characters
             ds.play();
             removeTouching(NormalAttack.class);
         }
+        if(isTouching(NormalAttack1.class))
+        {
+            ds.play();
+            removeTouching(NormalAttack1.class);
+        }
     }
     
     
