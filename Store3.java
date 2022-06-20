@@ -63,7 +63,11 @@ public class Store3 extends World
         addObject(t1, 750, 400);
         
         addObject(coin, 725, 200);
-        
+
+        Pikachu.pHP = 65;
+        Charmander.cHP = 65;
+        Bulbasaur.bHP = 50;
+        Torchic.tHP = 45;
         GeneralInformation.character[0] = "Pikachu";
         
         GeneralInformation.character[1] = "Charmander";

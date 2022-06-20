@@ -35,6 +35,9 @@ public class Store1 extends World
         GeneralInformation.character[0] = "Pikachu";
         GeneralInformation.character[1] = "Charmander";
         
+        Pikachu.pHP = 65;
+        Charmander.cHP = 65;
+        
     }
     
     public void act()
