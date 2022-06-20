@@ -18,6 +18,7 @@ public class Store1 extends World
      */
     public Store1()
     {    
+        // Create a new world with 900x506 cells with a cell size of 1x1 pixels.
         super(900, 506, 1); 
         
         setBackground("Store.png");

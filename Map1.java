@@ -16,6 +16,7 @@ public class Map1 extends World
      */
     public Map1()
     {    
+        // Create a new world with 900x506 cells with a cell size of 1x1 pixels.
         super(900, 506, 1); 
         setBackground("pokemon map 1.jpg");
         
