@@ -19,7 +19,7 @@ public class Battle extends World
     public Ninetales n = new Ninetales();
     
     //This will decide which world the player will be throw in.
-    public static int  count = 2;
+    public static int count = 2;
     
     
     //This is use to check the HP of current character and check if they are live or not.
@@ -186,11 +186,30 @@ public class Battle extends World
     
     public void act()
     {
+        //This will get the direction for the character to shoot
         direction();
         
+        //This will initlaze the character's property
+        initlazeCh();
         
+        //Get in the first level
+        firstBattle();
+        
+        //Get in the second level
+        secondBattle();
+        
+        //Get in the third level
+        thirdBattle();
+        
+        
+        
+    }  
+    
+    public void firstBattle()
+    {
         if(count == 1)
         {
+            
             labelArray[0].setValue("PikachuHP: " + Pikachu.pHP);
             labelArray[1].setValue("CharmanderHP: " + Charmander.cHP);
             labelArray[2].setValue("EeveeHP: " + Eevee.eHP);
@@ -204,7 +223,7 @@ public class Battle extends World
                 attack3(e.getX(), e.getY(), new GreenfootImage("plantAtt.png"));
             }
             
-            //
+            //get to the second battle in first level
             if(e.eHP <= 0)
             {
                 setBackground(new GreenfootImage("2.png"));
@@ -212,7 +231,6 @@ public class Battle extends World
                 addObject(r, 750, 100);
                 removeObject(labelArray[2]);
             
-                
                 if(r.rHP > 0)
                 {
                     attack3(r.getX(), r.getY(), new GreenfootImage("plantAtt.png"));
@@ -220,6 +238,8 @@ public class Battle extends World
                     rowletAtt(cordinate[6] - 100, cordinate[7] - 100, new GreenfootImage("RowletAtt.png"), timerArray[3]);
                 }
             }
+            
+            //get to the third battle in first level
             if(r.rHP <= 0)
             {
                 setBackground(new GreenfootImage("3.png"));
@@ -233,6 +253,8 @@ public class Battle extends World
                     bulbasaurAttack(b.getX(), b.getY(), new GreenfootImage("BulbasaurAtt.png"));
                 }
             }
+            
+            //Done first level here, reay to go to the second level
             if(b.bHP <= 0)
             {
                 removeObject(b);
@@ -247,6 +269,8 @@ public class Battle extends World
                     coins += 10;
                 }
             }
+            
+            //Check if the character's HP is greater than 0, if not, restart the game
             if(p.pHP <= 0 && c.cHP <= 0)
             {
                 Load1 s1 = new Load1();
@@ -256,9 +280,12 @@ public class Battle extends World
                 
             }
         }
-        else if(count == 2)
+    }
+    
+    public void secondBattle()
+    {
+        if(count == 2)
         {
-            
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
                 hp1 = p.pHP;
@@ -298,7 +325,6 @@ public class Battle extends World
             {
                 removeObject(labelArray[6] );
                 removeObject(t);
-                
                 ToMap3 t3 = new ToMap3();
                 addObject(t3, 450, 250);
                 Map3 s3 = new Map3();
@@ -322,7 +348,11 @@ public class Battle extends World
     
             
         }
-        else if(count == 3)
+    }
+    
+    public void thirdBattle()
+    {
+        if(count == 3)
         {
             labelArray[7].setValue("Ninetales: " + n.nHP);
             if(n.nHP > 0)
@@ -382,7 +412,10 @@ public class Battle extends World
                 }
             }
         }
-        
+    }
+    
+    public void initlazeCh()
+    {
         if(GeneralInformation.character[0].equals("Pikachu"))
         {
             cordinate[4] = p.getX();
@@ -413,7 +446,7 @@ public class Battle extends World
                 attack2(cordinate[2], cordinate[3], Torchic.damage, new GreenfootImage("fireAtt.png"));
             }
         }
-    }  
+    }
     
     public void direction()
     {
