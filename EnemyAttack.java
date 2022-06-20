@@ -28,19 +28,19 @@ public class EnemyAttack extends Damage
     {
         if(isTouching(Pikachu.class))
         {
-            Pikachu.pHP -= 3;
+            Pikachu.pHP -= 5;
         }
         if(isTouching(Charmander.class))
         {
-            Charmander.cHP -= 3;
+            Charmander.cHP -= 5;
         }
         if(Torchic.enemy != true && isTouching(Torchic.class))
         {
-            Torchic.tHP -= 3;
+            Torchic.tHP -= 5;
         }
         if(Bulbasaur.enemy != true && isTouching(Bulbasaur.class))
         {
-            Bulbasaur.bHP -= 3;
+            Bulbasaur.bHP -= 5;
         }
     }
 }
