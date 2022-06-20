@@ -16,7 +16,7 @@ public class Titlescreen extends World
     public Titlescreen()
     {    
         // Create a new world with 853x480 cells with a cell size of 1x1 pixels.
-        super(853, 480, 1); 
+        super(900, 506, 1); 
         setBackground(new GreenfootImage("Titlescreenn.jpg"));
 
         prepare();
