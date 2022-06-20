@@ -447,19 +447,27 @@ public class Battle extends World
         {
             cordinate[4] = p.getX();
             cordinate[5] = p.getY();
-            attack1(cordinate[4], cordinate[5], Pikachu.damage, new GreenfootImage("pikachuatt.png"));
+            if(Pikachu.live == true)
+            {
+                attack1(cordinate[4], cordinate[5], Pikachu.damage, new GreenfootImage("pikachuatt.png"));
+            }
+            
         }
         if(GeneralInformation.character[1].equals("Charmander"))
         {
             cordinate[6] = c.getX();
             cordinate[7] = c.getY();
-            attack2(cordinate[6], cordinate[7], Charmander.damage, new GreenfootImage("fireAtt.png"));
+            if(Charmander.live == true)
+            {
+                attack2(cordinate[6], cordinate[7], Charmander.damage, new GreenfootImage("fireAtt.png"));
+            }
+            
         }
         if(GeneralInformation.character[0].equals("Bulbasaur"))
         {
             cordinate[0] = b.getX();
             cordinate[1] = b.getY();
-            if(Bulbasaur.enemy != true)
+            if(Bulbasaur.enemy != true && Bulbasaur.live == true)
             {
                 attack1(cordinate[0], cordinate[1],Bulbasaur.damage, new GreenfootImage("plantAtt.png"));
             }
@@ -468,7 +476,7 @@ public class Battle extends World
         {
             cordinate[2] = t.getX();
             cordinate[3] = t.getY();
-            if(Torchic.enemy != true)
+            if(Torchic.enemy != true  && Bulbasaur.live == true)
             {
                 attack2(cordinate[2], cordinate[3], Torchic.damage, new GreenfootImage("fireAtt.png"));
             }

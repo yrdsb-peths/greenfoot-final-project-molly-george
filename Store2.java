@@ -59,19 +59,7 @@ public class Store2 extends World
     public void act()
     {
         
-        if(Greenfoot.mouseClicked(p))
-        {
-            GeneralInformation.character[0] = "Pikachu";
-        }
-        if(Greenfoot.mouseClicked(b))
-        {
-            GeneralInformation.character[0] = "Bulbasaur";
-            Bulbasaur.enemy = false;
-        }
-        if(Greenfoot.mouseClicked(c))
-        {
-            GeneralInformation.character[1] = "Charmander";
-        }
+        
         
         
         
@@ -89,6 +77,19 @@ public class Store2 extends World
     
     public void upGrade()
     {
+        if(Greenfoot.mouseClicked(p))
+        {
+            GeneralInformation.character[0] = "Pikachu";
+        }
+        if(Greenfoot.mouseClicked(b))
+        {
+            GeneralInformation.character[0] = "Bulbasaur";
+            Bulbasaur.enemy = false;
+        }
+        if(Greenfoot.mouseClicked(c))
+        {
+            GeneralInformation.character[1] = "Charmander";
+        }
         if(Greenfoot.mouseClicked(u1))
         {
             if(Battle.coins > 0)
