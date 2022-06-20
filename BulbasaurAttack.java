@@ -16,16 +16,17 @@ public class BulbasaurAttack extends Damage
     public BulbasaurAttack(GreenfootImage image)
     {
         setImage(image);
-        
     }
     
     public void act()
     {
+        // Add your action code here.
         move(4);
         if(isTouching(Pikachu.class))
         {
             Pikachu.pHP -= 4;
         }
+        
         if(isTouching(Charmander.class))
         {
             Charmander.cHP -= 4;

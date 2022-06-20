@@ -14,10 +14,4 @@ public class EeveeAttack extends Damage
     {
         setImage(image);
     }
-    
-    
-    public void act()
-    {
-        
-    }
 }

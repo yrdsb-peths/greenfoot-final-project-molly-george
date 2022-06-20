@@ -14,8 +14,4 @@ public class UpGrade extends NewLabelClass
         setImage(new GreenfootImage("upGrade.png"));
     }
     
-    public void act()
-    {
-        // Add your action code here.
-    }
 }

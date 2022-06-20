@@ -14,8 +14,4 @@ public class NextButton extends NewLabelClass
         setImage(new GreenfootImage("Next.png"));
     }
     
-    public void act()
-    {
-        
-    }
 }

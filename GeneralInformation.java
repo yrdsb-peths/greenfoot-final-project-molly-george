@@ -19,7 +19,10 @@ public class GeneralInformation extends Actor
         setImage(new GreenfootImage("toMap1.png"));
     }
     
-    
+    /**
+     * Act - do whatever the GeneralInformation wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act()
     {
         click = Greenfoot.mouseClicked(this);

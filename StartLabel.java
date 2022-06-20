@@ -16,6 +16,7 @@ public class StartLabel extends NewLabelClass
     
     public void act()
     {
+        // Add your action code here.
         if(Greenfoot.mouseClicked(this))
         {
             Transition transition = new Transition();

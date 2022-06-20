@@ -13,9 +13,4 @@ public class FennekinAttack extends Damage
         setImage(new GreenfootImage("FennekinAtt.png"));
     }
     
-    
-    public void act()
-    {
-        
-    }
 }

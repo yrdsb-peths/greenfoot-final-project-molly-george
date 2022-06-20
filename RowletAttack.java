@@ -8,16 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class RowletAttack extends Damage
 {
-    
-    
     public RowletAttack(GreenfootImage image)
     {
         setImage(image);
     }
     
-    
-    public void act()
-    {
-        
-    }
 }
