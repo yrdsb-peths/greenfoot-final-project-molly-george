@@ -39,8 +39,8 @@ public class Bulbasaur extends Characters
     
     public void act()
     {
-        int bulbasaurX = getX();
-        int bulbasaurY = getY();
+        bulbasaurX = getX();
+        bulbasaurY = getY();
         
         enemyT();
         

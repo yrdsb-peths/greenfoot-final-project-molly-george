@@ -40,8 +40,8 @@ public class Torchic extends Characters
     
     public void act()
     {
-        int TorchicX = getX();
-        int TorchicY = getY();
+        TorchicX = getX();
+        TorchicY = getY();
         
         enemyT();
         

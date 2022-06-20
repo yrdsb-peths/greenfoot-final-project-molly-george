@@ -19,7 +19,7 @@ public class Battle extends World
     public Ninetales n = new Ninetales();
     
     //This will decide which world the player will be throw in.
-    public static int count = 1;
+    public static int count = 2;
     
     
     //This is use to check the HP of current character and check if they are live or not.
