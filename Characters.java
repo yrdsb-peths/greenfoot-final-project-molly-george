@@ -95,16 +95,9 @@ public class Characters extends Actor
             setLocation(x , y += s);
                     
         }
-            
-        
-        
+
     } 
 
-        
-        
-    
-
-    
     public void movementC(int x, int y)
     {
         int randomX = (int)Math.random()*(2)+(-1);   

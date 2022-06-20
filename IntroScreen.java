@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Introscreen here.
  * 
- * @author Molly Wu 
+ * @author Molly Wu and George Lu
  * @version June 2022
  */
 public class IntroScreen extends World
