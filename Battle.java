@@ -1,13 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * This is the actual first level that the player battles in.
+ * This is the world for the fighting, player will encounter enemy pokemons in this world and will beat them to win.
  * 
- * @author (your name) 
- * @version check
+ * @author George && Molly
+ * @version June 19
  */
 public class Battle extends World
 {
+    //This will create all the 8 pokemons needed for this game
     public Pikachu p = new Pikachu();
     public Charmander c = new Charmander();
     public Bulbasaur b = new Bulbasaur();
@@ -16,32 +17,38 @@ public class Battle extends World
     public Fennekin f = new Fennekin();
     public Torchic t = new Torchic();
     public Ninetales n = new Ninetales();
+    
+    //This will decide which world the player will be throw in.
     public static int  count = 1;
-    public int bX;
-    public int bY;
-    public int bZ;
-    public int tX;
-    public int tY;
-    public int tZ;
-    public int pX;
-    public int pY;
-    public int pZ;
-    public int cX;
-    public int cY;
-    public int cZ;
+    
+    
+    //This is use to check the HP of current character and check if they are live or not.
     public int hp1;
     public int hp2;
     public int hp3;
     public int hp4;
-    private int[] cordinate = new int[12];
+    
+    //This is the array sotre character's x and y cordinate.
+    private int[] cordinate = new int[8];
+    
+    //This will crate an array of timer, those timer will be used to help the enmy to attack in approiate time and help with animation.
     private SimpleTimer[] timerArray = new SimpleTimer[13];
+    
+    //This is the array for the all the label shows the HP of a character.
     private Label[] labelArray = new Label[8];
+    
+    //Use to help the Fennekin to attack
     public boolean isThereFire = false; // To detect if there is any fire on the map
-    FennekinAttack fa = new FennekinAttack();
-    FennekinAttack fa1 = new FennekinAttack();
-    FennekinAttack fa2 = new FennekinAttack();
+    public FennekinAttack fa = new FennekinAttack();
+    public FennekinAttack fa1 = new FennekinAttack();
+    public FennekinAttack fa2 = new FennekinAttack();
+    
     public static int coins = 0;
-    GeneralInformation g;
+    
+    //initlaze the general information
+    public GeneralInformation g = new GeneralInformation();
+    
+    //Use to check the direction for the bullet
     public static boolean right;
     public static boolean left;
     public static boolean up;
@@ -50,13 +57,16 @@ public class Battle extends World
     
     public Battle()
     {    
+        //Create the size of this map
         super(900, 506, 1, false); 
+        
+        //Initlaze the timer array
         for( int i = 0; i < 13; i++)
         {
             timerArray[i] =  new SimpleTimer();
         }
-        timerArray[7].mark();
-        g = new GeneralInformation();
+        
+        //Initlaze the label array
         labelArray[0] = new Label("PikachuHP: " + Pikachu.pHP, 20);
         labelArray[1] = new Label("Charmander: " + Charmander.cHP, 20);
         labelArray[2] = new Label("Eevee: " + Eevee.eHP, 20);
@@ -66,22 +76,26 @@ public class Battle extends World
         labelArray[6] = new Label("TorchicHP: " + t.tHP, 20);
         labelArray[7] = new Label("NinetalesHP: " + n.nHP, 20);
         
-        
-        for(int i = 0; i < 12; i++)
+        //Initlaze the cordinate array
+        for(int i = 0; i < 8; i++)
         {
             cordinate[i] = 0;
         }
         
+        //Initlaze the world of the first level
         if(count == 1)
         {
             Pikachu.live = true;
             Charmander.live = true;
+            c.cHP = 65;
+            p.pHP = 65;
+            
             setBackground(new GreenfootImage("1.png"));
-        
+
+            //Below will place all the needed object for the first level
             addObject(p, 250, 400);
         
             addObject(c, 350, 400);
-            c.cHP = 65;
         
             addObject(e, 250, 150);
             
@@ -98,23 +112,22 @@ public class Battle extends World
                              
         
         }
+        //Initlaze the world for the second level 
         else if(count == 2)
         {
-            
             setBackground(new GreenfootImage("7.png"));
+            
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
                 addObject(p, 320, 400);
-                labelArray[0] = new Label("PikachuHP: " + Pikachu.pHP, 20);
-                addObject(labelArray[0], 800, 100);
                 hp1 = p.pHP;
+                addObject(labelArray[0], 800, 100);
             }
             if(GeneralInformation.character[0].equals("Bulbasaur"))
             {
                 addObject(b, 250, 400);
-                
-                addObject(labelArray[4], 800, 100);
                 hp1 = b.bHP;
+                addObject(labelArray[4], 800, 100);
             }
             if(GeneralInformation.character[1].equals("Charmander"))
             {
@@ -123,18 +136,15 @@ public class Battle extends World
                 hp2 = c.cHP;
             }
             
-            
-            
             addObject(f, 250, 150); 
             
             addObject(labelArray[5], 100, 80);
-            
-            
             
             addObject(labelArray[6] , 100, 110);
             
             
         }
+        //Initlaze the world for the final level
         else if(count == 3)
         {
             Pikachu.pHP = 65;
@@ -143,18 +153,19 @@ public class Battle extends World
             Torchic.tHP = 45;
             
             addObject(labelArray[7], 100, 80);
+            
+            addObject(n, 450, 125);
+            
             setBackground(new GreenfootImage("9.png"));
         
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
                 addObject(p, 250, 350);
-                labelArray[0] = new Label("PikachuHP: " + Pikachu.pHP, 20);
                 addObject(labelArray[0], 800, 100);
             }
             if(GeneralInformation.character[1].equals("Charmander"))
             {
                 addObject(c, 250, 350);
-                
                 addObject(labelArray[1], 800, 130);
             }
             if(GeneralInformation.character[0].equals("Bulbasaur"))
@@ -169,7 +180,7 @@ public class Battle extends World
                 addObject(labelArray[6] , 800, 130);
             }
             
-            addObject(n, 450, 125);
+            
         }
     }
     
@@ -183,11 +194,13 @@ public class Battle extends World
             labelArray[0].setValue("PikachuHP: " + Pikachu.pHP);
             labelArray[1].setValue("CharmanderHP: " + Charmander.cHP);
             labelArray[2].setValue("EeveeHP: " + Eevee.eHP);
+            labelArray[3].setValue("RowletHP: " + r.rHP);
+            labelArray[4].setValue("BulbasaurHP: " + b.bHP);
             
             if(e.eHP > 0)
             {
-                eeveeAtt(pX - 150, pY - 150, new GreenfootImage("EeveeAtt.png"), timerArray[4]);   
-                eeveeAtt(cX - 150, cY - 150, new GreenfootImage("EeveeAtt.png"), timerArray[5]); 
+                eeveeAtt(cordinate[4] - 150, cordinate[5] - 150, new GreenfootImage("EeveeAtt.png"), timerArray[4]);   
+                eeveeAtt(cordinate[6] - 150, cordinate[7] - 150, new GreenfootImage("EeveeAtt.png"), timerArray[5]); 
                 attack3(e.getX(), e.getY(), new GreenfootImage("plantAtt.png"));
             }
             
@@ -198,12 +211,12 @@ public class Battle extends World
                 addObject(r, 750, 100);
                 removeObject(labelArray[2]);
             
-                labelArray[3].setValue("RowletHP: " + r.rHP);
+                
                 if(r.rHP > 0)
                 {
                     attack3(r.getX(), r.getY(), new GreenfootImage("plantAtt.png"));
-                    rowletAtt(pX - 100, pY - 100, new GreenfootImage("RowletAtt.png"), timerArray[2]);
-                    rowletAtt(cX - 100, cY - 100, new GreenfootImage("RowletAtt.png"), timerArray[3]);
+                    rowletAtt(cordinate[4] - 100, cordinate[5] - 100, new GreenfootImage("RowletAtt.png"), timerArray[2]);
+                    rowletAtt(cordinate[6] - 100, cordinate[7] - 100, new GreenfootImage("RowletAtt.png"), timerArray[3]);
                 }
             }
             if(r.rHP <= 0)
@@ -212,8 +225,6 @@ public class Battle extends World
                 removeObject(r);
                 removeObject(labelArray[3]);
                 addObject(b, 150, 100);
-                
-                labelArray[4].setValue("BulbasaurHP: " + b.bHP);
                 
                 if(b.bHP > 0)
                 {
@@ -227,7 +238,7 @@ public class Battle extends World
                 removeObject(labelArray[4]);
                 ToMap2 t2 = new ToMap2();
                 addObject(t2, 450, 250);
-                if(pX > 900 || cX > 900)
+                if(cordinate[4] > 900 || cordinate[6] > 900)
                 {
                     Map2 m2 = new Map2();
                     Greenfoot.setWorld(m2);
@@ -262,9 +273,9 @@ public class Battle extends World
                 hp2 = c.cHP;
                 labelArray[1].setValue("CharmanderHP: " + Charmander.cHP);
             }
+            
             labelArray[5].setValue("FennekinHP: " + f.fHP);
             labelArray[6].setValue("TorchicHP: " + t.tHP);
-            
             
             if(f.fHP > 0)
             {
@@ -289,9 +300,9 @@ public class Battle extends World
                 
                 ToMap3 t3 = new ToMap3();
                 addObject(t3, 450, 250);
-                if(p.pikachuX > 900 || cX > 900 || bX > 900)
+                Map3 s3 = new Map3();
+                if(p.pikachuX > 900 || cordinate[6] > 900 || cordinate[0] > 900)
                 {
-                    Map3 s3 = new Map3();
                     Greenfoot.setWorld(s3);
                     count++;
                     coins += 20;
@@ -362,7 +373,7 @@ public class Battle extends World
                 
                 ToMapFinal tf = new ToMapFinal();
                 addObject(tf, 450, 250);
-                if(p.pikachuX > 900 || cX > 900 || bX > 900 || tX > 900)
+                if(p.pikachuX > 900 || cordinate[6] > 900 || cordinate[0] > 900 || cordinate[2] > 900)
                 {
                     ConclusionScreen cs = new ConclusionScreen();
                     Greenfoot.setWorld(cs);
@@ -373,36 +384,32 @@ public class Battle extends World
         
         if(GeneralInformation.character[0].equals("Pikachu"))
         {
-            pX = p.getX();
-            pY = p.getY();
-            pZ = p.getRotation();
-            attack1(pX, pY, Pikachu.damage, new GreenfootImage("pikachuatt.png"));
+            cordinate[4] = p.getX();
+            cordinate[5] = p.getY();
+            attack1(cordinate[4], cordinate[5], Pikachu.damage, new GreenfootImage("pikachuatt.png"));
         }
         if(GeneralInformation.character[1].equals("Charmander"))
         {
-            cX = c.getX();
-            cY = c.getY();
-            cZ = c.getRotation();
-            attack2(cX, cY, Charmander.damage, new GreenfootImage("fireAtt.png"));
+            cordinate[6] = c.getX();
+            cordinate[7] = c.getY();
+            attack2(cordinate[6], cordinate[7], Charmander.damage, new GreenfootImage("fireAtt.png"));
         }
         if(GeneralInformation.character[0].equals("Bulbasaur"))
         {
-            bX = b.getX();
-            bY = b.getY();
-            bZ = b.getRotation();
+            cordinate[0] = b.getX();
+            cordinate[1] = b.getY();
             if(Bulbasaur.enemy != true)
             {
-                attack1(bX, bY,Bulbasaur.damage, new GreenfootImage("plantAtt.png"));
+                attack1(cordinate[0], cordinate[1],Bulbasaur.damage, new GreenfootImage("plantAtt.png"));
             }
         }
         if(GeneralInformation.character[1].equals("Torchic"))
         {
-            tX = t.getX();
-            tY = t.getY();
-            tZ = t.getRotation();
+            cordinate[2] = t.getX();
+            cordinate[3] = t.getY();
             if(Torchic.enemy != true)
             {
-                attack2(tX, tY, Torchic.damage, new GreenfootImage("fireAtt.png"));
+                attack2(cordinate[2], cordinate[3], Torchic.damage, new GreenfootImage("fireAtt.png"));
             }
         }
     }  

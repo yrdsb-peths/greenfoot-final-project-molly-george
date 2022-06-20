@@ -35,9 +35,9 @@ public class ConclusionScreen extends World
         addObject(conclusionStatement1, 300, 70);
         
         ConStateI constateI = new ConStateI();
-        addObject(constateI, 300, 150);
+        addObject(constateI, 450, 150);
         
         ConStateii constateii = new ConStateii();
-        addObject(constateii, 300, 250);
+        addObject(constateii, 450, 250);
     }
 }
