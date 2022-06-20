@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * 
- * a start screen for level 1
+ * the class for start screen for level 1
  * 
  * @author George Lu && Molly Wu
  * @version June 2022

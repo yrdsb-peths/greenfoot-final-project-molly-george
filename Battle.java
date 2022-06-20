@@ -731,13 +731,13 @@ public class Battle extends World
     //This is the special attack method for ninetales
     public void ninetalesAttack(int x, int y)
     {
-        if(timerArray[11].millisElapsed() > 10000)
+        if(timerArray[11].millisElapsed() > 6000)
         {
-            for(int i = 1; i < 7; i++)
+            for(int i = 1; i < 9; i++)
             {
                 NinetalesAttack ba = new NinetalesAttack();
                 addObject(ba,x,y);
-                ba.setRotation(i * 60);
+                ba.setRotation(i * 45);
                 timerArray[11].mark();
             }
             

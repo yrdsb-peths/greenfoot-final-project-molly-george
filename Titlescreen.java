@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Titlescreen here.
+ * The start up page class
  * 
  * @author Molly && George 
  * @version June 2022

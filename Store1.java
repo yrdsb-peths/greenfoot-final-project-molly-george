@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Store1 here.
+ * 
  * the store screen before startscreen 1
  * 
  * @author George Lu && Molly Wu 

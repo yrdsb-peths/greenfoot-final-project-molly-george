@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Store3 here.
+ * 
  * the store before final level
  * 
  * @author George Lu && Molly Wu 
