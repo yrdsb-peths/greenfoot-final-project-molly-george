@@ -43,7 +43,6 @@ public class Dialogue extends Actor
          setImage(image[idx]);
          setLocation(coordinate[idx][0],coordinate[idx][1]);
          
-         
     }
     
     /**

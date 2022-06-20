@@ -15,7 +15,7 @@ public class ConclusionScreen extends World
      */
     public ConclusionScreen()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 900x506 cells with a cell size of 1x1 pixels.
         super(900, 506, 1); 
         
         Battle.coins = 0;
