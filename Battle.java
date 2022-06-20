@@ -34,7 +34,7 @@ public class Battle extends World
     public int hp3;
     public int hp4;
     private int[] cordinate = new int[12];
-    private SimpleTimer[] timerArray = new SimpleTimer[12];
+    private SimpleTimer[] timerArray = new SimpleTimer[13];
     private Label[] labelArray = new Label[8];
     public boolean isThereFire = false; // To detect if there is any fire on the map
     FennekinAttack fa = new FennekinAttack();
@@ -51,7 +51,7 @@ public class Battle extends World
     public Battle()
     {    
         super(900, 506, 1, false); 
-        for( int i = 0; i < 12; i++)
+        for( int i = 0; i < 13; i++)
         {
             timerArray[i] =  new SimpleTimer();
         }
@@ -65,7 +65,6 @@ public class Battle extends World
         labelArray[5] = new Label("FennekinHP: " + f.fHP, 20);
         labelArray[6] = new Label("TorchicHP: " + t.tHP, 20);
         labelArray[7] = new Label("NinetalesHP: " + n.nHP, 20);
-        
         
         
         for(int i = 0; i < 12; i++)
@@ -170,13 +169,15 @@ public class Battle extends World
                 addObject(labelArray[6] , 800, 130);
             }
             
-            addObject(n, 200, 150);
+            addObject(n, 450, 125);
         }
     }
     
     public void act()
     {
         direction();
+        
+        
         if(count == 1)
         {
             labelArray[0].setValue("PikachuHP: " + Pikachu.pHP);
