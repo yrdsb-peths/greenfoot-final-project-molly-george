@@ -68,6 +68,12 @@ public class Store3 extends World
         Charmander.cHP = 65;
         Bulbasaur.bHP = 50;
         Torchic.tHP = 45;
+        
+        Pikachu.live = true;
+        Charmander.live = true;
+        Bulbasaur.live = true;
+        Torchic.live = true;
+        
         GeneralInformation.character[0] = "Pikachu";
         
         GeneralInformation.character[1] = "Charmander";
