@@ -22,8 +22,8 @@ public class Rowlet extends Characters
     //This act method let Rowlet do what a enemy should do
     public void act()
     {
-        int RowletX = getX();
-        int RowletY = getY();
+        rowletX = getX();
+        rowletY = getY();
         
         if(isTouching(NormalAttack.class))
         {
