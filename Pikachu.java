@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Pikachu here.
+ * This is the class for pikachu
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -43,10 +43,16 @@ public class Pikachu extends Characters
     {
         pikachuX = getX();
         pikachuY = getY();
-        if(Greenfoot.isKeyDown("a"))
-        {
-            
-        }
+        
+        play();
+        
+        
+        
+    }
+    
+    //This let the player to control the Pikachu
+    public void play()
+    {
         if(live == true)
         {
             movementA(pikachuX, pikachuY, speed);
@@ -139,30 +145,7 @@ public class Pikachu extends Characters
             live = false;
             pHP = 0;
         }
-        
-        
-        
     }
-    
-    /*
-     * if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("up"))
-        {
-            setRotation(-45);
-        }
-        if(Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("down"))
-        {
-            setRotation(-135);
-        }
-        if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("up"))
-        {
-            setRotation(45);
-        }
-        if(Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("down"))
-        {
-            setRotation(135);
-        }
-     */
-    
     
     
 }

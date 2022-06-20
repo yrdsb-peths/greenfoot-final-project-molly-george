@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class BulbasaurLogo2 here.
+ * The second logo class of Bulbasaur
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

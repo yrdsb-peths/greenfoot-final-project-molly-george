@@ -42,6 +42,15 @@ public class Bulbasaur extends Characters
         int bulbasaurX = getX();
         int bulbasaurY = getY();
         
+        enemyT();
+        
+        enemyF();
+        
+    }
+    
+    //This method will make Bulbasaur do what an enemy shoudl do
+    public void enemyT()
+    {
         if(enemy == true)
         {
             if(isTouching(NormalAttack.class))
@@ -50,9 +59,13 @@ public class Bulbasaur extends Characters
                 removeTouching(NormalAttack.class);
             }
             
-            
             movementC(bulbasaurX, bulbasaurY);
         }
+    }
+    
+    //This is the method to make bulbasaur do what the player tell it to do, as it is friendly now
+    public void enemyF()
+    {
         if(enemy != true)
         {
             if(live == true)
@@ -132,12 +145,6 @@ public class Bulbasaur extends Characters
             }
             
         }
-        
-        
     }
-    
-    
-    
-    
 
 }

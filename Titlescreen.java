@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Titlescreen here.
  * 
- * @author Molly Wu 
- * @version May 2022
+ * @author Molly && George 
+ * @version June 2022
  */
 public class Titlescreen extends World
 {

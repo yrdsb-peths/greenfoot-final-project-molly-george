@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Characters here.
+ * The is the character class, contain general information about the characters
  * 
  * @author Molly Wu && George Lu 
  * @version June 2022
@@ -18,6 +18,7 @@ public class Characters extends Actor
         // Add your action code here.
     }
     
+    //The move method for Pikachu and Bulbasaur
     public void movementA(int x, int y, int s)
     {
         
@@ -66,6 +67,7 @@ public class Characters extends Actor
         
     }
     
+    //The move method for Torchic and Charmander
     public void movementB(int x, int y, int s)
     {
         
@@ -98,6 +100,7 @@ public class Characters extends Actor
 
     } 
 
+    //The move method for enemy
     public void movementC(int x, int y)
     {
         int randomX = (int)Math.random()*(2)+(-1);   

@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Fennekin here.
+ * This is the class for Fennekin
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022
@@ -19,6 +19,7 @@ public class Fennekin extends Characters
         setImage(new GreenfootImage("Fennekin.png"));
     }
     
+    //This act method let Fennekin do what a enemy should do
     public void act()
     {
         int FennekinX = getX();
@@ -30,10 +31,5 @@ public class Fennekin extends Characters
         }
     }
     
-    public void movement()
-    {
-        
-        
     
-    }
 }

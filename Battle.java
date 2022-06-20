@@ -19,7 +19,7 @@ public class Battle extends World
     public Ninetales n = new Ninetales();
     
     //This will decide which world the player will be throw in.
-    public static int count = 2;
+    public static int count = 1;
     
     
     //This is use to check the HP of current character and check if they are live or not.
@@ -205,6 +205,7 @@ public class Battle extends World
         
     }  
     
+    //This is the method for the first level, it will add new enemy and change the background as the player beat the current enemy.
     public void firstBattle()
     {
         if(count == 1)
@@ -230,7 +231,7 @@ public class Battle extends World
                 removeObject(e);
                 addObject(r, 750, 100);
                 removeObject(labelArray[2]);
-            
+                
                 if(r.rHP > 0)
                 {
                     attack3(r.getX(), r.getY(), new GreenfootImage("plantAtt.png"));
@@ -254,7 +255,7 @@ public class Battle extends World
                 }
             }
             
-            //Done first level here, reay to go to the second level
+            //Done first level here, ready to go to the second level
             if(b.bHP <= 0)
             {
                 removeObject(b);
@@ -282,10 +283,12 @@ public class Battle extends World
         }
     }
     
+    //This is the method for the second level, it will also add new enemy and change the background as the player beat the current enemy.
     public void secondBattle()
     {
         if(count == 2)
         {
+            //This is to seat the character in team according to player's choice, because now there are 3 pokemons to hoose.
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
                 hp1 = p.pHP;
@@ -302,14 +305,17 @@ public class Battle extends World
                 labelArray[1].setValue("CharmanderHP: " + Charmander.cHP);
             }
             
+            //This will initlaze the HP for the enemy more detail
             labelArray[5].setValue("FennekinHP: " + f.fHP);
             labelArray[6].setValue("TorchicHP: " + t.tHP);
             
             if(f.fHP > 0)
             {
-                attack3(f.getX(), f.getY(),  new GreenfootImage("fireAtt.png"));
+                attack3(250, 150,  new GreenfootImage("fireAtt.png"));
                 fennekinAtt();
             }
+            
+            //Go to the second battle in the second level
             if(f.fHP <= 0)
             {
                 setBackground(new GreenfootImage("8.png"));
@@ -321,6 +327,8 @@ public class Battle extends World
                     attack3(t.getX(), t.getY(),  new GreenfootImage("fireAtt.png"));
                 }
             }
+            
+            //This is to let the player go to the third or the last level
             if(t.tHP <= 0)
             {
                 removeObject(labelArray[6] );
@@ -336,6 +344,7 @@ public class Battle extends World
                 }
             }
             
+            //Check if the character's HP is all 0, if it is, restart
             if(hp1 <= 0 && hp2 <= 0)
             {
                 Load2 s2 = new Load2();
@@ -350,16 +359,22 @@ public class Battle extends World
         }
     }
     
+    
+    //This is the method for the third level
     public void thirdBattle()
     {
         if(count == 3)
         {
+            
+            //Initlaze the HP for ninetales more detail
             labelArray[7].setValue("Ninetales: " + n.nHP);
             if(n.nHP > 0)
             {
-                attack3(n.getX(), n.getY(),  new GreenfootImage("fireAtt.png"));
-                NinetalesAttack(n.getX(), n.getY());
+                attack3(450, 125,  new GreenfootImage("fireAtt.png"));
+                ninetalesAttack(450, 125);
             }
+            
+            //Again, the player will have 4 pokemons to choose, so this will make sure they select the pokemons they want into their team
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
                 hp1 = p.pHP;
@@ -386,6 +401,8 @@ public class Battle extends World
             {
                 removeObject(n);
             }
+            
+            //Check if the character's HP is 0, if it is, restart the game
             if(hp1 <= 0 && hp2 <= 0)
             {
                 Load2 s2 = new Load2();
@@ -397,6 +414,7 @@ public class Battle extends World
                 
             }
             
+            //This will let the player to go to the final, or the ending.
             if(n.nHP <= 0)
             {
                 removeObject(labelArray[7]);
@@ -414,6 +432,7 @@ public class Battle extends World
         }
     }
     
+    //This will initlaze all the necessary information for the friendly pokemon the player can use, like give them the ability to attack, chnage them from enemy to friendly
     public void initlazeCh()
     {
         if(GeneralInformation.character[0].equals("Pikachu"))
@@ -448,6 +467,8 @@ public class Battle extends World
         }
     }
     
+    
+    //This will check the direction of the current character and will help player to aim and fire the bullet
     public void direction()
     {
         if(Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left"))
@@ -512,7 +533,7 @@ public class Battle extends World
         
     }
     
-    
+    //This is the attack method for Pikachu and Bulbasaur
     public void  attack1(int x, int y,  int damage, GreenfootImage image)
     {
         if(Greenfoot.isKeyDown("space"))
@@ -527,6 +548,7 @@ public class Battle extends World
         }
     }
     
+    //This is the attack method for Charmander and Torchic
     public void attack2(int x, int y,  int damage, GreenfootImage image)
     {
         if(Greenfoot.isKeyDown("r"))
@@ -541,7 +563,7 @@ public class Battle extends World
         }
     }
     
-    
+    //Thsi is the attack method for the enemy
     public void attack3(int x, int y, GreenfootImage image)
     {
         if(timerArray[1].millisElapsed() > 3000)
@@ -557,6 +579,7 @@ public class Battle extends World
         }
     }
     
+    //This is the special attack method for Eevee
     public void eeveeAtt(int x, int y, GreenfootImage image, SimpleTimer timer)
     {
         EeveeAttack ea = new EeveeAttack(image);
@@ -567,7 +590,7 @@ public class Battle extends World
         }
     }
 
-    
+    //This is the special attack method for rowlet
     public void rowletAtt(int x, int y, GreenfootImage image, SimpleTimer timer)
     {
         RowletAttack ra = new RowletAttack(image);
@@ -578,6 +601,7 @@ public class Battle extends World
         }
     }
     
+    //This is the special attack method for bulbasaur
     public void bulbasaurAttack(int x, int y, GreenfootImage image)
     {
         if(timerArray[6].millisElapsed() > 5000)
@@ -593,6 +617,7 @@ public class Battle extends World
         }
     }
     
+    //This is the special attack method for Fennekin
     public void fennekinAtt()
     {
         
@@ -622,7 +647,9 @@ public class Battle extends World
         
     }
     
-    public void NinetalesAttack(int x, int y)
+    
+    //This is the special attack method for ninetales
+    public void ninetalesAttack(int x, int y)
     {
         if(timerArray[11].millisElapsed() > 10000)
         {

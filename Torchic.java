@@ -42,6 +42,16 @@ public class Torchic extends Characters
     {
         int TorchicX = getX();
         int TorchicY = getY();
+        
+        enemyT();
+        
+        enemyF();
+        
+    }
+    
+    
+    public void enemyT()
+    {
         if(enemy == true)
         {
             if(isTouching(NormalAttack.class))
@@ -51,6 +61,10 @@ public class Torchic extends Characters
             }
             movementC(TorchicX, TorchicY);
         }
+    }
+    
+    public void enemyF()
+    {
         if(enemy != true)
         {
             if(live == true)
@@ -129,12 +143,5 @@ public class Torchic extends Characters
             
             
         }
-    }
-    
-    public void movement()
-    {
-        
-        
-    
     }
 }

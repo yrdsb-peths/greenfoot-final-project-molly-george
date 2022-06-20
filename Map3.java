@@ -1,8 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Map3 here.
- * final map with final level on it
+ * final map let the player go to the final level
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

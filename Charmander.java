@@ -40,6 +40,13 @@ public class Charmander extends Characters
         int CharmanderX = getX();
         int CharmanderY = getY();
         
+        play();
+        
+    }
+    
+    //This method meant to let charmander control by the player
+    public void play()
+    {
         if(live == true)
         {
             movementB(CharmanderX,CharmanderY, speed);
@@ -129,7 +136,6 @@ public class Charmander extends Characters
             live = false;
             cHP = 0;
         }
-        
     }
     
     

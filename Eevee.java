@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Eevee here.
+ * The class for Eevee
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022
@@ -19,6 +19,7 @@ public class Eevee extends Characters
         setImage(new GreenfootImage("Eevee.png"));
     }
     
+    //This act will let Eevee do what a enemy should do
     public void act()
     {
         int eeveeX = getX();

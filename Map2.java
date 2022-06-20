@@ -1,8 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Map2 here.
- * second map with second level on it
+ * The map for the player to go to the second level
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

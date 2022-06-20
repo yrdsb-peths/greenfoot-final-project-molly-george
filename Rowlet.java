@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Rowlet here.
+ * The class for Rowlet
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -19,7 +19,7 @@ public class Rowlet extends Characters
         setImage(new GreenfootImage("Rowlet.png"));
     }
     
-    
+    //This act method let Rowlet do what a enemy should do
     public void act()
     {
         int RowletX = getX();

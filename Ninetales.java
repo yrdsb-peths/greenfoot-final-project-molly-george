@@ -19,6 +19,7 @@ public class Ninetales extends Characters
         setImage(new GreenfootImage("Ninetales.png"));
     }
     
+    //This class let ninetales do what enemy should do
     public void act()
     {
         int NinetalesX = getX();

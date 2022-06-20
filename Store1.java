@@ -39,6 +39,8 @@ public class Store1 extends World
         Pikachu.pHP = 65;
         Charmander.cHP = 65;
         
+        Bulbasaur.enemy = true;
+        
     }
     
     public void act()

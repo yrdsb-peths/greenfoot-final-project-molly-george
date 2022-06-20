@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Transition1 here.
+ * 
  * a start screen for level 1
  * 
  * @author George Lu && Molly Wu
