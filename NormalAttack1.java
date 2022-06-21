@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class NormalAttack1 here.
+ * This is the second normal attack class for the player
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu && Molly Wu 
+ * @version June 2022
  */
 public class NormalAttack1 extends Damage
 {
@@ -15,6 +15,7 @@ public class NormalAttack1 extends Damage
     {
         setImage(image);
         damage2 = damage;
+        //Check the player's direction
         if(Battle.right1 == true)
         {
             setRotation(0);

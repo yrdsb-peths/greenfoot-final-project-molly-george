@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Ninetales here.
+ * This is the class for Ninetales, contain all the information needed for Ninetales
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022
@@ -19,7 +19,7 @@ public class Ninetales extends Characters
         setImage(new GreenfootImage("Ninetales.png"));
     }
     
-    //This class let ninetales do what enemy should do
+    //This class let ninetales do what enemy should do, like get damage when player attacks it
     public void act()
     {
         int NinetalesX = getX();

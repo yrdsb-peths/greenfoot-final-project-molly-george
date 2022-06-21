@@ -1,14 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class GeneralInformation here.
+ * This is the general information class for the game, contain some information apply to the whole game
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022
  */
 public class GeneralInformation extends Actor
 {
+    //This is the array help the player to choose their pokemon
     public static String[] character = new String[2];
+    
     public int c = 1;
     public static boolean click;
     public static boolean pressSpace;

@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class EnemyAttack here.
+ * This is the class for normal enemy attack
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

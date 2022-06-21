@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class FennekinAttack here.
+ * This is the special attack class for Fennekin
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

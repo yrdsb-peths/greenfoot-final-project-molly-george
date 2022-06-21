@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Dialogue here.
+ * This is where the start up dialogue is
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

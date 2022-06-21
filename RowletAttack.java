@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class RowletAttack here.
+ * The class for Rowlet to attack
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

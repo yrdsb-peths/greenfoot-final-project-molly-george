@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ConStateii here.
+ * This is the class for the conculsion part2
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class BulbasaurAttack here.
+ * This is the class for Bulbasaur to attack
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022
@@ -20,7 +20,7 @@ public class BulbasaurAttack extends Damage
     
     public void act()
     {
-        // Add your action code here.
+        
         move(4);
         if(isTouching(Pikachu.class))
         {

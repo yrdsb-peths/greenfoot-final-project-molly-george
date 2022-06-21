@@ -1,13 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * This is the class for pikachu
+ * This is the class for pikachu, contain all information and method needed.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu && Molly Wu 
+ * @version June 2022
  */
 public class Pikachu extends Characters
 {
+    //The important information of Pikachu
     public static int pikachuX;
     public static int pikachuY;
     public static int pHP = 65;
@@ -45,12 +46,9 @@ public class Pikachu extends Characters
         pikachuY = getY();
         
         play();
-        
-        
-        
     }
     
-    //This let the player to control the Pikachu
+    //This let the player to control the Pikachu, move it, get damage, and attack enemy
     public void play()
     {
         if(live == true)
@@ -83,7 +81,7 @@ public class Pikachu extends Characters
             }
             
             
-
+            //This is the code for the Pikachu's animation
             if(timer.millisElapsed() < 100)
             {
                 return;

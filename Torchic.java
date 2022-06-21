@@ -1,13 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Torchic here.
+ * The class for Torchic, contain all the needed information
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu && Molly Wu 
+ * @version June 2022
  */
 public class Torchic extends Characters
 {
+    //all the needed information for Torchic
     public static int torchicX;
     public static int torchicY;
     public static int tHP = 45;
@@ -49,7 +50,7 @@ public class Torchic extends Characters
         
     }
     
-    
+    //Let Torchic do what a enemy should do, like suffer damage from the player
     public void enemyT()
     {
         if(enemy == true)
@@ -68,6 +69,7 @@ public class Torchic extends Characters
         }
     }
     
+    //This let Torchic do what a friendly pokemons do
     public void enemyF()
     {
         if(enemy != true)
@@ -84,6 +86,8 @@ public class Torchic extends Characters
                     tHP -= 8;
                     removeTouching(NinetalesAttack.class);
                 }
+                
+                //The animation part for Torchic
                 if(timer.millisElapsed() < 100)
                 {
                     return;
