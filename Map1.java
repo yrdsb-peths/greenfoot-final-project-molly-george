@@ -1,8 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * This will be the place for the player to choose the level they go to, in
- * this case, it is the first level.
+ * This is the class of the first map, player use this map to select the level they go to
  * 
  * @George Lu && Molly Wu 
  * @version June 2022
@@ -22,8 +21,7 @@ public class Map1 extends World
         addObject(a, 180, 170);
         
     }
-    
-    
+
     
     public void act()
     {

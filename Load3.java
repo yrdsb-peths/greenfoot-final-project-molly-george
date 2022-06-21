@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * 
- * the class of startscreen for level 3
+ * tThe class for the loading screen before final level
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

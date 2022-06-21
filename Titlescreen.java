@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The start up page class
+ * The start up class of the whole game, player start the game here
  * 
  * @author Molly && George 
  * @version June 2022

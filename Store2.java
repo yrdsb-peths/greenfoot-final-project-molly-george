@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * 
- * the store before second level
+ * The class for second store, let the player choose and upgrade their pokemon
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022
@@ -51,6 +51,7 @@ public class Store2 extends World
         Pikachu.pHP = 65;
         Charmander.cHP = 65;
         Bulbasaur.bHP = 50;
+        
         Pikachu.live = true;
         Charmander.live = true;
         Bulbasaur.live = true;
@@ -70,6 +71,7 @@ public class Store2 extends World
         }
     }
     
+    //Let the player choose and upgrade tehir pokemon
     public void upGrade()
     {
         if(Greenfoot.mouseClicked(p))

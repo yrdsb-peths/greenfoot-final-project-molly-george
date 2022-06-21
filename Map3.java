@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * final map let the player go to the final level
+ * The class of third map, let the player choose go to the final level
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

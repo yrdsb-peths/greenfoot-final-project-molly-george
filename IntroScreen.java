@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Introscreen here.
+ * The intro screen class
  * 
  * @author Molly Wu and George Lu
  * @version June 2022
@@ -12,10 +12,7 @@ public class IntroScreen extends World
     Dialogue dialogue;
     NextButton nextButton = new NextButton();
     
-    /**
-     * Constructor for objects of class Introscreen.
-     * 
-     */
+    
     public IntroScreen()
     {    
         // Create a new world with 900x506 cells with a cell size of 1x1 pixels.

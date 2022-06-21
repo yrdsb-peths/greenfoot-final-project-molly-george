@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * transition screen 2
+ * The class of the second transition screen
  * 
  * @author Molly Wu && George Lu 
  * @version June 2022

@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * 
- * the store before final level
+ * The class of final store, let the player to choose and upgrade their pokemon
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022
@@ -95,6 +95,7 @@ public class Store3 extends World
         }
     }
     
+    //Let the player to upgrade 
     public void upGrade()
     {
         if(Greenfoot.mouseClicked(u1))
@@ -139,6 +140,7 @@ public class Store3 extends World
         }
     }
     
+    //Let the player to choose pokemons
     public void choose()
     {
         if(Greenfoot.mouseClicked(p))

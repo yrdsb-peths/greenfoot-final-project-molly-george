@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * 
- * the store screen before startscreen 1
+ * The class of the first store, tell the player the pokemon they go with
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022
@@ -12,10 +12,7 @@ public class Store1 extends World
     ToMap t = new ToMap();
     Label coin = new Label(Battle.coins, 30);
     
-    /**
-     * Constructor for objects of class Store2.
-     * 
-     */
+    
     public Store1()
     {    
         // Create a new world with 900x506 cells with a cell size of 1x1 pixels.
