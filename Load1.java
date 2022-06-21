@@ -11,7 +11,6 @@ public class Load1 extends World
 {
     TransitionStartLabel g = new TransitionStartLabel();
     
-    
     public Load1()
     {    
         // Create a new world with 900x506 cells with a cell size of 1x1 pixels.
