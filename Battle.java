@@ -377,7 +377,7 @@ public class Battle extends World
     }
     
     
-    //This is the method for the third level£¬it will also add new enemy and change the background as the player beat the current enemy.
+    //This is the method for the third level it will also add new enemy and change the background as the player beat the current enemy.
     //If current enemy HP is 0, it will change to next enemy or map, if player HP is 0, then restart
     public void thirdBattle()
     {
