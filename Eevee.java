@@ -22,8 +22,8 @@ public class Eevee extends Characters
     //This act will let Eevee do what a enemy should do, get hurt from players attack, etc
     public void act()
     {
-        int eeveeX = getX();
-        int eeveeY = getY();
+        eeveeX = getX();
+        eeveeY = getY();
         movementC(eeveeX, eeveeY);
         if(isTouching(NormalAttack.class))
         {

@@ -18,7 +18,14 @@ public class Characters extends Actor
         // Add your action code here.
     }
     
-    //The move method for Pikachu and Bulbasaur
+    /**
+     * This will be the movement method for Pikachu and Bulbasaur
+     *
+     * @param x current x cordinate
+     * @param y current y cordinate
+     * @param s current speed
+     * @return no return
+     */
     public void movementA(int x, int y, int s)
     {
         
@@ -67,7 +74,14 @@ public class Characters extends Actor
         
     }
     
-    //The move method for Torchic and Charmander
+    /**
+     * This will be the movement method for Torchic and Charmander
+     *
+     * @param x current x cordinate
+     * @param y current y cordinate
+     * @param s current speed
+     * @return no return
+     */
     public void movementB(int x, int y, int s)
     {
         
@@ -100,7 +114,13 @@ public class Characters extends Actor
 
     } 
 
-    //The move method for enemy
+    /**
+     * This will be the movement method for enemy
+     *
+     * @param x current x cordinate of enemy
+     * @param y current y cordinate of enemy
+     * @return no return
+     */
     public void movementC(int x, int y)
     {
         int randomX = (int)Math.random()*(2)+(-1);   

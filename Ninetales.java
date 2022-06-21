@@ -22,8 +22,8 @@ public class Ninetales extends Characters
     //This class let ninetales do what enemy should do, like get damage when player attacks it
     public void act()
     {
-        int NinetalesX = getX();
-        int NinetalesY = getY();
+        ninetalesX = getX();
+        ninetalesY = getY();
         if(isTouching(NormalAttack.class))
         {
             ds.play();

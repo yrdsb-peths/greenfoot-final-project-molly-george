@@ -22,8 +22,8 @@ public class Fennekin extends Characters
     //This act method let Fennekin do what a enemy should do, like getting hurt from player's attack
     public void act()
     {
-        int FennekinX = getX();
-        int FennekinY = getY();
+        fennekinX = getX();
+        fennekinY = getY();
         if(isTouching(NormalAttack.class))
         {
             ds.play();
