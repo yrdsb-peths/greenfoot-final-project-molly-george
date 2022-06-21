@@ -10,10 +10,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Map1 extends World
 {
     BulbLogo b = new BulbLogo();
-    /**
-     * Constructor for objects of class Map1.
-     * 
-     */
+    Arrow a =  new Arrow();
+    
     public Map1()
     {    
         // Create a new world with 900x506 cells with a cell size of 1x1 pixels.
@@ -21,6 +19,8 @@ public class Map1 extends World
         setBackground("pokemon map 1.jpg");
         
         addObject(b, 180, 270);
+        addObject(a, 180, 170);
+        
     }
     
     

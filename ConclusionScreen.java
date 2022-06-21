@@ -20,6 +20,11 @@ public class ConclusionScreen extends World
         
         Battle.coins = 0;
         Battle.count = 1;
+        Pikachu.damage = 4;
+        Charmander.damage = 4;
+        Bulbasaur.damage = 5;
+        Torchic.damage = 5;
+        
         setBackground(new GreenfootImage("conclusionscreen.jpg"));
         
         prepare();

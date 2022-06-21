@@ -22,6 +22,8 @@ public class Load2 extends World
         g.clicki = false;
         
         addObject(g,450,400);
+        
+        Torchic.enemy = true;
     }
     
     public void act()

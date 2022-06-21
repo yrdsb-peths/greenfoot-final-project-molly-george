@@ -19,7 +19,7 @@ public class Battle extends World
     public Ninetales n = new Ninetales();
     
     //This will decide which world the player will be throw in.
-    public static int count = 3;
+    public static int count = 1;
     
     
     //This is use to check the HP of current character and check if they are live or not.
@@ -410,8 +410,8 @@ public class Battle extends World
             //Check if the character's HP is 0, if it is, restart the game
             if(hp1 <= 0 && hp2 <= 0)
             {
-                Load2 s2 = new Load2();
-                Greenfoot.setWorld(s2);
+                Load3 s3 = new Load3();
+                Greenfoot.setWorld(s3);
                 Pikachu.live = true;
                 Charmander.live = true;
                 Bulbasaur.live = true;

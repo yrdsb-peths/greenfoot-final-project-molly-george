@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GeneralInformation extends Actor
 {
-    
     public static String[] character = new String[2];
     public int c = 1;
     public static boolean click;
