@@ -10,7 +10,6 @@ public class Instructions extends World
 {
     NextLabel3 next3 = new NextLabel3();
     
-    
     public Instructions()
     {    
         // Create a new world with 900x506 cells with a cell size of 1x1 pixels.

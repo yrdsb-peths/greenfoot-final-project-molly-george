@@ -28,7 +28,7 @@ public class Battle extends World
     public int hp3;
     public int hp4;
     
-    //This is the array sotre character's x and y cordinate.
+    //This is the array store character's x and y cordinate.
     private int[] cordinate = new int[8];
     
     //This will crate an array of timer, those timer will be used to help the enmy to attack in approiate time and help with animation.
@@ -46,7 +46,7 @@ public class Battle extends World
     //The number of coins the player have to upgrade
     public static int coins = 0;
     
-    //initlaze the general information
+    //initlaze the general information class
     public GeneralInformation g = new GeneralInformation();
     
     //Use to check the direction for the bullet
@@ -303,7 +303,7 @@ public class Battle extends World
     {
         if(count == 2)
         {
-            //This is to seat the character in team according to player's choice, because now there are 3 pokemons to choose.
+            //This is to set the character in team according to player's choice, because now there are 3 pokemons to choose.
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
                 hp1 = p.pHP;
@@ -492,7 +492,7 @@ public class Battle extends World
     }
     
     
-    //This will check the direction of the current character and will help player to aim and fire the bullet
+    //This will check the direction of the current character and will help player to aim and fire the bullet, it is for Pikachu and Bulbasaur
     public void direction()
     {
         if(Greenfoot.isKeyDown("a"))
@@ -557,7 +557,7 @@ public class Battle extends World
         
     }
     
-    //Another method to check the direction of the current character and will help player to aim and fire the bullet
+    //Another method to check the direction of the current character and will help player to aim and fire the bullet, it is for Torchic and Charmander
     public void direction1()
     {
         if(Greenfoot.isKeyDown("left"))
@@ -691,7 +691,7 @@ public class Battle extends World
     }
     
     /**
-     * This will be the special attack method for Eevee
+     * This will be the special attack method for Eevee, it will create a tree, once player hit it, player will get HP off
      *
      * @param x Eevee current x cordinate
      * @param y Eevee current y cordinate
@@ -709,7 +709,7 @@ public class Battle extends World
     }
 
     /**
-     * This will be the special attack method for Rowlet, this method will stop the aplyer if the player touch the attack object
+     * This will be the special attack method for Rowlet, this method will stop the player if the player touch the attack object
      *
      * @param x Rowlet current x cordinate
      * @param y Rowlet current y cordinate
@@ -727,7 +727,7 @@ public class Battle extends World
     }
     
     /**
-     * This will be the special attack method for Bulbasaur, shoot out 8 vines for the character
+     * This will be the special attack method for Bulbasaur, shoot out 8 vines to attack the player
      *
      * @param x Bulbasaur current x cordinate
      * @param y Bulbasaur current y cordinate
@@ -757,7 +757,7 @@ public class Battle extends World
         int x = (int)(Math.random()*2)+1;
         int y = (int)(Math.random()*2)+1;
         
-        
+        //add fire
         if(timerArray[7].millisElapsed() > 5000 && !isThereFire)
         {
             addObject(fa,  200, i * 200);
@@ -767,6 +767,7 @@ public class Battle extends World
             timerArray[7].mark();
         }
         
+        //remove fire
         else if(timerArray[7].millisElapsed() > 2000 && isThereFire)
         {
             removeObject(fa);
@@ -781,7 +782,7 @@ public class Battle extends World
     
     
     /**
-     * This will be the special attack method for Ninetales, shoot out 8 fireballs to damage the character
+     * This will be the special attack method for Ninetales, shoot out 8 fireballs to damage the player
      *
      * @param x Ninetales current x cordinate
      * @param y Ninetales current y cordinate

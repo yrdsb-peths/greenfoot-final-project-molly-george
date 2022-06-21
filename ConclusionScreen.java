@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class ConclusionScreen extends World
 {
 
-    //Create a image to tell the plyaer the end of the game, and change some variable back
+    //Create a image to tell the player the end of the game, and change some variable back
     public ConclusionScreen()
     {    
         // Create a new world with 900x506 cells with a cell size of 1x1 pixels.
