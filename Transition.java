@@ -24,10 +24,7 @@ public class Transition extends World
         prepare();
     }
     
-    public void act()
-    {
-        
-    }
+    
     
     /**
      * Prepare the world for the start of the program.

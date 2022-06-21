@@ -84,24 +84,7 @@ public class Store3 extends World
         upGrade();
         coin.setValue(Battle.coins);
         
-        if(Greenfoot.mouseClicked(p))
-        {
-            GeneralInformation.character[0] = "Pikachu";
-        }
-        if(Greenfoot.mouseClicked(b))
-        {
-            GeneralInformation.character[0] = "Bulbasaur";
-            Bulbasaur.enemy = false;
-        }
-        if(Greenfoot.mouseClicked(t))
-        {
-            GeneralInformation.character[1] = "Torchic";
-            Torchic.enemy = false;
-        }
-        if(Greenfoot.mouseClicked(c))
-        {
-            GeneralInformation.character[1] = "Charmander";
-        }
+        choose();
         //slect more than two will overwrite the second one
 
         
@@ -153,6 +136,28 @@ public class Store3 extends World
                 Torchic.upGrade = true;
                 Battle.coins -= 10;
             } 
+        }
+    }
+    
+    public void choose()
+    {
+        if(Greenfoot.mouseClicked(p))
+        {
+            GeneralInformation.character[0] = "Pikachu";
+        }
+        if(Greenfoot.mouseClicked(b))
+        {
+            GeneralInformation.character[0] = "Bulbasaur";
+            Bulbasaur.enemy = false;
+        }
+        if(Greenfoot.mouseClicked(t))
+        {
+            GeneralInformation.character[1] = "Torchic";
+            Torchic.enemy = false;
+        }
+        if(Greenfoot.mouseClicked(c))
+        {
+            GeneralInformation.character[1] = "Charmander";
         }
     }
     

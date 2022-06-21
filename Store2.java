@@ -58,11 +58,6 @@ public class Store2 extends World
     
     public void act()
     {
-        
-        
-        
-        
-        
         upGrade();  
         
         coin.setValue(Battle.coins);

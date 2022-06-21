@@ -19,7 +19,7 @@ public class Battle extends World
     public Ninetales n = new Ninetales();
     
     //This will decide which world the player will be throw in.
-    public static int count = 1;
+    public static int count = 3;
     
     
     //This is use to check the HP of current character and check if they are live or not.
@@ -405,10 +405,7 @@ public class Battle extends World
             }
             
             
-            if(n.nHP <= 0)
-            {
-                removeObject(n);
-            }
+            
             
             //Check if the character's HP is 0, if it is, restart the game
             if(hp1 <= 0 && hp2 <= 0)
@@ -476,7 +473,7 @@ public class Battle extends World
         {
             cordinate[2] = t.getX();
             cordinate[3] = t.getY();
-            if(Torchic.enemy != true  && Bulbasaur.live == true)
+            if(Torchic.enemy != true  && Torchic.live == true)
             {
                 attack2(cordinate[2], cordinate[3], Torchic.damage, new GreenfootImage("fireAtt.png"));
             }
@@ -646,7 +643,7 @@ public class Battle extends World
     //Thsi is the attack method for the enemy
     public void attack3(int x, int y, GreenfootImage image)
     {
-        if(timerArray[1].millisElapsed() > 3000)
+        if(timerArray[1].millisElapsed() > 1700)
         {
             for(int i = 1; i < 9; i++)
             {
@@ -684,7 +681,7 @@ public class Battle extends World
     //This is the special attack method for bulbasaur
     public void bulbasaurAttack(int x, int y, GreenfootImage image)
     {
-        if(timerArray[6].millisElapsed() > 5000)
+        if(timerArray[6].millisElapsed() > 6000)
         {
             for(int i = 1; i < 9; i++)
             {
