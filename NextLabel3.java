@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * The third class for next label
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu && Molly Wu 
+ * @version June 2022
  */
 public class NextLabel3 extends NewLabelClass
 {

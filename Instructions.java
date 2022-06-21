@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * This class will tell the player the basic instruction
  * 
  * @author George && Molly
- * @version June 
+ * @version June 2022
  */
 public class Instructions extends World
 {

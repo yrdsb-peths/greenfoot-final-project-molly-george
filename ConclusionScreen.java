@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The conclusion screen class
  * 
  * @author George && Molly
- * @version June 
+ * @version June 2022
  */
 public class ConclusionScreen extends World
 {

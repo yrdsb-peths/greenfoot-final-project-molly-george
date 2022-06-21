@@ -69,7 +69,7 @@ public class Torchic extends Characters
         }
     }
     
-    //This let Torchic do what a friendly pokemons do
+    //This let Torchic do what a friendly pokemons do, let player control it
     public void enemyF()
     {
         if(enemy != true)

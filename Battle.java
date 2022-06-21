@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * This is the world for the fighting, player will encounter enemy pokemons in this world and will beat them to win.
  * 
  * @author George && Molly
- * @version June 
+ * @version June 2022
  */
 public class Battle extends World
 {
