@@ -222,7 +222,7 @@ public class Battle extends World
     {
         if(count == 1)
         {
-            
+            //Initlaze the needed pokemon HP label 
             labelArray[0].setValue("PikachuHP: " + Pikachu.pHP);
             labelArray[1].setValue("CharmanderHP: " + Charmander.cHP);
             labelArray[2].setValue("EeveeHP: " + Eevee.eHP);
@@ -303,7 +303,7 @@ public class Battle extends World
     {
         if(count == 2)
         {
-            //This is to seat the character in team according to player's choice, because now there are 3 pokemons to hoose.
+            //This is to seat the character in team according to player's choice, because now there are 3 pokemons to choose.
             if(GeneralInformation.character[0].equals("Pikachu"))
             {
                 hp1 = p.pHP;
@@ -436,6 +436,7 @@ public class Battle extends World
                 
                 ToMapFinal tf = new ToMapFinal();
                 addObject(tf, 450, 250);
+                //Check if the player is trying to leave the map, if yes, it will turn the player to the ending screen
                 if(p.pikachuX > 900 || cordinate[6] > 900 || cordinate[0] > 900 || cordinate[2] > 900)
                 {
                     ConclusionScreen cs = new ConclusionScreen();
@@ -621,7 +622,15 @@ public class Battle extends World
         
     }
     
-    //This is the attack method for Pikachu and Bulbasaur
+    
+    /**
+     * This will be the attack method for Pikachu and Bulbasaur
+     *
+     * @param x The pokemons current x cordinate
+     * @param y The pokemons current y cordinate
+     * @param image The attack image for the pokemon
+     * @return no return
+     */
     public void  attack1(int x, int y,  int damage, GreenfootImage image)
     {
         if(Greenfoot.isKeyDown("space"))
@@ -636,7 +645,14 @@ public class Battle extends World
         }
     }
     
-    //This is the attack method for Charmander and Torchic
+    /**
+     * This will be the attack method for Charmander and Torchic
+     *
+     * @param x The pokemons current x cordinate
+     * @param y The pokemons current y cordinate
+     * @param image The attack image for the pokemon
+     * @return no return
+     */
     public void attack2(int x, int y,  int damage, GreenfootImage image)
     {
         if(Greenfoot.isKeyDown("r"))
@@ -651,7 +667,14 @@ public class Battle extends World
         }
     }
     
-    //Thsi is the attack method for the enemy
+    /**
+     * This will be the attack method for enemy
+     *
+     * @param x The enemy current x cordinate
+     * @param y The enemy current y cordinate
+     * @param image The attack image for the enemy
+     * @return no return
+     */
     public void attack3(int x, int y, GreenfootImage image)
     {
         if(timerArray[1].millisElapsed() > 1700)
@@ -667,7 +690,14 @@ public class Battle extends World
         }
     }
     
-    //This is the special attack method for Eevee as it will add trees beside player, player get damage from it
+    /**
+     * This will be the special attack method for Eevee
+     *
+     * @param x Eevee current x cordinate
+     * @param y Eevee current y cordinate
+     * @param timer The timer for this method
+     * @return no return
+     */
     public void eeveeAtt(int x, int y, GreenfootImage image, SimpleTimer timer)
     {
         EeveeAttack ea = new EeveeAttack(image);
@@ -678,7 +708,14 @@ public class Battle extends World
         }
     }
 
-    //This is the special attack method for rowlet, set grass beside player, stop them moving
+    /**
+     * This will be the special attack method for Rowlet, this method will stop the aplyer if the player touch the attack object
+     *
+     * @param x Rowlet current x cordinate
+     * @param y Rowlet current y cordinate
+     * @param timer The timer for this method
+     * @return no return
+     */
     public void rowletAtt(int x, int y, GreenfootImage image, SimpleTimer timer)
     {
         RowletAttack ra = new RowletAttack(image);
@@ -689,7 +726,14 @@ public class Battle extends World
         }
     }
     
-    //This is the special attack method for bulbasaur£¬ it will let it shoot out 8 vine to damage the player
+    /**
+     * This will be the special attack method for Bulbasaur, shoot out 8 vines for the character
+     *
+     * @param x Bulbasaur current x cordinate
+     * @param y Bulbasaur current y cordinate
+     * @param timer The timer for this method
+     * @return no return
+     */
     public void bulbasaurAttack(int x, int y, GreenfootImage image)
     {
         if(timerArray[6].millisElapsed() > 6000)
@@ -736,7 +780,13 @@ public class Battle extends World
     }
     
     
-    //This is the special attack method for ninetales, let it shoot out fire to cause damge to player
+    /**
+     * This will be the special attack method for Ninetales, shoot out 8 fireballs to damage the character
+     *
+     * @param x Ninetales current x cordinate
+     * @param y Ninetales current y cordinate
+     * @return no return
+     */
     public void ninetalesAttack(int x, int y)
     {
         if(timerArray[11].millisElapsed() > 6000)
