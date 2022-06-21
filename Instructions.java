@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The class toi contain for instruction
+ * This class will tell the player the basic instruction
  * 
  * @author George && Molly
  * @version June 
@@ -9,10 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Instructions extends World
 {
     NextLabel3 next3 = new NextLabel3();
-    /**
-     * Constructor for objects of class Instructions.
-     * 
-     */
+    
+    
     public Instructions()
     {    
         // Create a new world with 900x506 cells with a cell size of 1x1 pixels.

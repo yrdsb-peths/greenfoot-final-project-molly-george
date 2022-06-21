@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ConclusionScreen here.
+ * The conclusion screen class
  * 
  * @author George && Molly
  * @version June 
@@ -9,10 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class ConclusionScreen extends World
 {
 
-    /**
-     * Constructor for objects of class ConclusionScreen.
-     * 
-     */
+    //Create a image to tell the plyaer the end of the game, and change some variable back
     public ConclusionScreen()
     {    
         // Create a new world with 900x506 cells with a cell size of 1x1 pixels.

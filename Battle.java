@@ -43,6 +43,7 @@ public class Battle extends World
     public FennekinAttack fa1 = new FennekinAttack();
     public FennekinAttack fa2 = new FennekinAttack();
     
+    //The number of coins the player have to upgrade
     public static int coins = 0;
     
     //initlaze the general information
@@ -117,6 +118,7 @@ public class Battle extends World
             cordinate[7] = 400;                 
         
         }
+        
         //Initlaze the world for the second level 
         else if(count == 2)
         {
@@ -151,6 +153,7 @@ public class Battle extends World
             
             
         }
+        
         //Initlaze the world for the final level
         else if(count == 3)
         {
@@ -213,7 +216,8 @@ public class Battle extends World
         
     }  
     
-    //This is the method for the first level, it will add new enemy and change the background as the player beat the current enemy.
+    //This is the method for the first level, it will add new enemy and change the background as the player beat the current enemy. 
+    //If current enemy HP is 0, it will change to next enemy or map, if player HP is 0, then restart
     public void firstBattle()
     {
         if(count == 1)
@@ -225,6 +229,7 @@ public class Battle extends World
             labelArray[3].setValue("RowletHP: " + r.rHP);
             labelArray[4].setValue("BulbasaurHP: " + b.bHP);
             
+            //Let Eevee attack
             if(e.eHP > 0)
             {
                 eeveeAtt(cordinate[4] - 150, cordinate[5] - 150, new GreenfootImage("EeveeAtt.png"), timerArray[4]);   
@@ -232,7 +237,7 @@ public class Battle extends World
                 attack3(e.getX(), e.getY(), new GreenfootImage("plantAtt.png"));
             }
             
-            //get to the second battle in first level
+            //get to the second battle in first level and let Rowlet attack
             if(e.eHP <= 0)
             {
                 setBackground(new GreenfootImage("2.png"));
@@ -248,7 +253,7 @@ public class Battle extends World
                 }
             }
             
-            //get to the third battle in first level
+            //get to the third battle in first level and let Bulbasaur mattack
             if(r.rHP <= 0)
             {
                 setBackground(new GreenfootImage("3.png"));
@@ -270,6 +275,7 @@ public class Battle extends World
                 removeObject(labelArray[4]);
                 ToMap2 t2 = new ToMap2();
                 addObject(t2, 450, 250);
+                //Check if player is out of map, if yes, let them change map
                 if(cordinate[4] > 900 || cordinate[6] > 900)
                 {
                     Map2 m2 = new Map2();
@@ -292,6 +298,7 @@ public class Battle extends World
     }
     
     //This is the method for the second level, it will also add new enemy and change the background as the player beat the current enemy.
+    //If current enemy HP is 0, it will change to next enemy or map, if player HP is 0, then restart
     public void secondBattle()
     {
         if(count == 2)
@@ -317,13 +324,14 @@ public class Battle extends World
             labelArray[5].setValue("FennekinHP: " + f.fHP);
             labelArray[6].setValue("TorchicHP: " + t.tHP);
             
+            //Let Fennekin attack
             if(f.fHP > 0)
             {
                 attack3(250, 150,  new GreenfootImage("fireAtt.png"));
                 fennekinAtt();
             }
             
-            //Go to the second battle in the second level
+            //Go to the second battle in the second level and let Torchic attack
             if(f.fHP <= 0)
             {
                 setBackground(new GreenfootImage("8.png"));
@@ -344,6 +352,7 @@ public class Battle extends World
                 ToMap3 t3 = new ToMap3();
                 addObject(t3, 450, 250);
                 Map3 s3 = new Map3();
+                //Check if player is out of map, if yes, let them change map
                 if(p.pikachuX > 900 || cordinate[6] > 900 || cordinate[0] > 900)
                 {
                     Greenfoot.setWorld(s3);
@@ -368,7 +377,8 @@ public class Battle extends World
     }
     
     
-    //This is the method for the third level
+    //This is the method for the third level£¬it will also add new enemy and change the background as the player beat the current enemy.
+    //If current enemy HP is 0, it will change to next enemy or map, if player HP is 0, then restart
     public void thirdBattle()
     {
         if(count == 3)
@@ -376,6 +386,8 @@ public class Battle extends World
             
             //Initlaze the HP for ninetales more detail
             labelArray[7].setValue("Ninetales: " + n.nHP);
+            
+            //Let Ninetales to attack
             if(n.nHP > 0)
             {
                 attack3(450, 125,  new GreenfootImage("fireAtt.png"));
@@ -403,9 +415,6 @@ public class Battle extends World
                 hp2 = t.tHP;
                 labelArray[6].setValue("TorchicHP: " + t.tHP);
             }
-            
-            
-            
             
             //Check if the character's HP is 0, if it is, restart the game
             if(hp1 <= 0 && hp2 <= 0)
@@ -437,7 +446,8 @@ public class Battle extends World
         }
     }
     
-    //This will initlaze all the necessary information for the friendly pokemon the player can use, like give them the ability to attack, chnage them from enemy to friendly
+    //This will initlaze all the necessary information for the friendly pokemon the player can use, like give them the ability to attack, change them from enemy to friendly
+    //Or get the cordinate
     public void initlazeCh()
     {
         if(GeneralInformation.character[0].equals("Pikachu"))
@@ -546,6 +556,7 @@ public class Battle extends World
         
     }
     
+    //Another method to check the direction of the current character and will help player to aim and fire the bullet
     public void direction1()
     {
         if(Greenfoot.isKeyDown("left"))
@@ -656,7 +667,7 @@ public class Battle extends World
         }
     }
     
-    //This is the special attack method for Eevee
+    //This is the special attack method for Eevee as it will add trees beside player, player get damage from it
     public void eeveeAtt(int x, int y, GreenfootImage image, SimpleTimer timer)
     {
         EeveeAttack ea = new EeveeAttack(image);
@@ -667,7 +678,7 @@ public class Battle extends World
         }
     }
 
-    //This is the special attack method for rowlet
+    //This is the special attack method for rowlet, set grass beside player, stop them moving
     public void rowletAtt(int x, int y, GreenfootImage image, SimpleTimer timer)
     {
         RowletAttack ra = new RowletAttack(image);
@@ -678,7 +689,7 @@ public class Battle extends World
         }
     }
     
-    //This is the special attack method for bulbasaur
+    //This is the special attack method for bulbasaur£¬ it will let it shoot out 8 vine to damage the player
     public void bulbasaurAttack(int x, int y, GreenfootImage image)
     {
         if(timerArray[6].millisElapsed() > 6000)
@@ -694,7 +705,7 @@ public class Battle extends World
         }
     }
     
-    //This is the special attack method for Fennekin
+    //This is the special attack method for Fennekin, let it set fire beside player, player will suffer damage if they touch it
     public void fennekinAtt()
     {
         
@@ -725,7 +736,7 @@ public class Battle extends World
     }
     
     
-    //This is the special attack method for ninetales
+    //This is the special attack method for ninetales, let it shoot out fire to cause damge to player
     public void ninetalesAttack(int x, int y)
     {
         if(timerArray[11].millisElapsed() > 6000)
