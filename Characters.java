@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The is the character class, contain general information about the characters
+ * The is the main character class, contain general information about the characters, allow them to move
  * 
  * @author Molly Wu && George Lu 
  * @version June 2022

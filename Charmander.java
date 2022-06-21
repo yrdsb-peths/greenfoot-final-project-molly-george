@@ -1,15 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Charmander here.
+ * The main class for Charmander, contain all the needed information, HP, speed, damage
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022
  */
 public class Charmander extends Characters
 {
-    public static int CharmanderX;
-    public static int CharmanderY;
+    //All the variable needed for Charmander
+    public static int charmanderX;
+    public static int charmanderY;
     public static int cHP = 65;
     public static int damage = 4;
     public static int speed = 4;
@@ -37,8 +38,8 @@ public class Charmander extends Characters
     
     public void act()
     {
-        CharmanderX = getX();
-        CharmanderY = getY();
+        charmanderX = getX();
+        charmanderY = getY();
         
         play();
         
@@ -47,9 +48,10 @@ public class Charmander extends Characters
     //This method meant to let charmander control by the player
     public void play()
     {
+        //If .charmander live, then do all the following, thye name is what it do
         if(live == true)
         {
-            movementB(CharmanderX,CharmanderY, speed);
+            movementB(charmanderX,charmanderY, speed);
             removeTouching(EnemyAttack.class);
             if(isTouching(EeveeAttack.class))
             {
@@ -75,6 +77,8 @@ public class Charmander extends Characters
                 cHP -= 8;
                 removeTouching(NinetalesAttack.class);
             }
+            
+            //This is the animation part for Charmander
             if(timer.millisElapsed() < 100)
             {
                 return;

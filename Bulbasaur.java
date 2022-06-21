@@ -1,13 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Bulbasaur here.
+ * This is the main class of Bulbasaur, this will contain all the information, like is enemy or not, the HP, the move speed
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022
  */
 public class Bulbasaur extends Characters
 {
+    //All the varibale needed for Bulbasaur
     public static int bulbasaurX;
     public static int bulbasaurY;
     public static int bHP = 50;
@@ -48,7 +49,7 @@ public class Bulbasaur extends Characters
         
     }
     
-    //This method will make Bulbasaur do what an enemy shoudl do
+    //This method will make Bulbasaur do what an enemy should do when it is enemy
     public void enemyT()
     {
         if(enemy == true)
@@ -86,6 +87,8 @@ public class Bulbasaur extends Characters
                     bHP -= 8;
                     removeTouching(NinetalesAttack.class);
                 }
+                
+                //Below is just the animation of Bulbasaur
                 if(timer.millisElapsed() < 100)
                 {
                     return;
