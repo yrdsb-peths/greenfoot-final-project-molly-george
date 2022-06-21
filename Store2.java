@@ -28,6 +28,7 @@ public class Store2 extends World
         super(900, 506, 1); 
         
         setBackground("Store.png");
+        
         addObject(p,135,125);
 
         addObject(c,440,125);
@@ -71,7 +72,7 @@ public class Store2 extends World
         }
     }
     
-    //Let the player choose and upgrade tehir pokemon
+    //Let the player choose and upgrade their pokemon
     public void upGrade()
     {
         if(Greenfoot.mouseClicked(p))

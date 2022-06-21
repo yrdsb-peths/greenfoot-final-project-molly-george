@@ -87,7 +87,6 @@ public class Store3 extends World
         choose();
         //slect more than two will overwrite the second one
 
-        
         if(t1.click == true)
         {
             Load3 b = new Load3();

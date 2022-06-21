@@ -48,7 +48,7 @@ public class Charmander extends Characters
     //This method meant to let charmander control by the player
     public void play()
     {
-        //If .charmander live, then do all the following, thye name is what it do
+        //If .charmander live, then do all the following, the name is what it do
         if(live == true)
         {
             movementB(charmanderX,charmanderY, speed);
