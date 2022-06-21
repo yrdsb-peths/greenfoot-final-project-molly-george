@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ToMapFinal here.
+ * The class for the final to map
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

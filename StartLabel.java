@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class StartLabel here.
+ * The start up button
  * 
  * @author Molly Wu 
  * @version May 2022

@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class NextLabel2 here.
+ * The second class for next label
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

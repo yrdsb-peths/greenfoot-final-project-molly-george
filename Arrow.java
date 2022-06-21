@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Arrow here.
+ * This is the class for the arrow label
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author George Lu && Molly Wu 
+ * @version June 2022
  */
 public class Arrow extends NewLabelClass
 {

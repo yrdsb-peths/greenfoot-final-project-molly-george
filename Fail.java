@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Fail here.
+ * This is the class show the fail label
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

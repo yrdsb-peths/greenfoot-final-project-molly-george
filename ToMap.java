@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ToMap here.
+ * The class for the first to map button
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022

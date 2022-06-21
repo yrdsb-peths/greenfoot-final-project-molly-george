@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class NextButton here.
+ * This is class for the next button, it allows the player to know when and where to continoue.
  * 
  * @author George Lu && Molly Wu 
  * @version June 2022
